@@ -26,6 +26,43 @@
 		743BE5AA23BD7947000BE177 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A923BD7947000BE177 /* RxSwift */; };
 		743BE5AC23BD7947000BE177 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5AB23BD7947000BE177 /* RxCocoa */; };
 		743BE5AF23BD7A0A000BE177 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5AE23BD7A0A000BE177 /* ReactiveCocoa */; };
+		743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B223BD7CC9000BE177 /* ListResponse.swift */; };
+		743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B323BD7CC9000BE177 /* ListRequest.swift */; };
+		743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B523BD7CC9000BE177 /* Specie.swift */; };
+		743BE5E823BD7CCA000BE177 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B623BD7CC9000BE177 /* Vehicle.swift */; };
+		743BE5E923BD7CCA000BE177 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B723BD7CC9000BE177 /* Film.swift */; };
+		743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B823BD7CC9000BE177 /* Planet.swift */; };
+		743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B923BD7CC9000BE177 /* Starship.swift */; };
+		743BE5EC23BD7CCA000BE177 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BA23BD7CC9000BE177 /* People.swift */; };
+		743BE5ED23BD7CCA000BE177 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BD23BD7CC9000BE177 /* NetworkService.swift */; };
+		743BE5EE23BD7CCA000BE177 /* ReactiveNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BF23BD7CC9000BE177 /* ReactiveNetworkService.swift */; };
+		743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C023BD7CC9000BE177 /* Encodable+Dictionary.swift */; };
+		743BE5F023BD7CCA000BE177 /* Route+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C123BD7CC9000BE177 /* Route+URLRequestConvertible.swift */; };
+		743BE5F123BD7CCA000BE177 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C323BD7CC9000BE177 /* Policy.swift */; };
+		743BE5F223BD7CCA000BE177 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C423BD7CC9000BE177 /* Path.swift */; };
+		743BE5F323BD7CCA000BE177 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C523BD7CC9000BE177 /* Route.swift */; };
+		743BE5F423BD7CCA000BE177 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C623BD7CC9000BE177 /* Endpoint.swift */; };
+		743BE5F523BD7CCA000BE177 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C823BD7CC9000BE177 /* FavoriteService.swift */; };
+		743BE5F623BD7CCA000BE177 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5CA23BD7CC9000BE177 /* ServiceAssembly.swift */; };
+		743BE5F823BD7CCA000BE177 /* ApisAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */; };
+		743BE5FB23BD7CCA000BE177 /* EntityAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */; };
+		743BE5FC23BD7CCA000BE177 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D123BD7CC9000BE177 /* Curry.swift */; };
+		743BE5FD23BD7CCA000BE177 /* Observable+merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D223BD7CC9000BE177 /* Observable+merge.swift */; };
+		743BE5FE23BD7CCA000BE177 /* Weakify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D323BD7CC9000BE177 /* Weakify.swift */; };
+		743BE5FF23BD7CCA000BE177 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D423BD7CC9000BE177 /* UIViewController+Rx.swift */; };
+		743BE60023BD7CCA000BE177 /* String+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D523BD7CC9000BE177 /* String+URLComponents.swift */; };
+		743BE60123BD7CCA000BE177 /* AppPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D723BD7CCA000BE177 /* AppPolicies.swift */; };
+		743BE60223BD7CCA000BE177 /* AppPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D823BD7CCA000BE177 /* AppPaths.swift */; };
+		743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D923BD7CCA000BE177 /* AppEndpoints.swift */; };
+		743BE60423BD7CCA000BE177 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DB23BD7CCA000BE177 /* Films.swift */; };
+		743BE60523BD7CCA000BE177 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DC23BD7CCA000BE177 /* Planets.swift */; };
+		743BE60623BD7CCA000BE177 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DD23BD7CCA000BE177 /* Species.swift */; };
+		743BE60723BD7CCA000BE177 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DE23BD7CCA000BE177 /* Vehicles.swift */; };
+		743BE60823BD7CCA000BE177 /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DF23BD7CCA000BE177 /* Peoples.swift */; };
+		743BE60923BD7CCA000BE177 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E023BD7CCA000BE177 /* Starships.swift */; };
+		743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */; };
+		743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */; };
+		743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +74,43 @@
 		743BE58323BD582F000BE177 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		743BE58623BD582F000BE177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		743BE58823BD582F000BE177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		743BE5B223BD7CC9000BE177 /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
+		743BE5B323BD7CC9000BE177 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
+		743BE5B523BD7CC9000BE177 /* Specie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
+		743BE5B623BD7CC9000BE177 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		743BE5B723BD7CC9000BE177 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		743BE5B823BD7CC9000BE177 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		743BE5B923BD7CC9000BE177 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		743BE5BA23BD7CC9000BE177 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		743BE5BD23BD7CC9000BE177 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		743BE5BF23BD7CC9000BE177 /* ReactiveNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveNetworkService.swift; sourceTree = "<group>"; };
+		743BE5C023BD7CC9000BE177 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		743BE5C123BD7CC9000BE177 /* Route+URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		743BE5C323BD7CC9000BE177 /* Policy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
+		743BE5C423BD7CC9000BE177 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		743BE5C523BD7CC9000BE177 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		743BE5C623BD7CC9000BE177 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		743BE5C823BD7CC9000BE177 /* FavoriteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
+		743BE5CA23BD7CC9000BE177 /* ServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApisAssembly.swift; sourceTree = "<group>"; };
+		743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityAssembly.swift; sourceTree = "<group>"; };
+		743BE5D123BD7CC9000BE177 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		743BE5D223BD7CC9000BE177 /* Observable+merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+merge.swift"; sourceTree = "<group>"; };
+		743BE5D323BD7CC9000BE177 /* Weakify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakify.swift; sourceTree = "<group>"; };
+		743BE5D423BD7CC9000BE177 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		743BE5D523BD7CC9000BE177 /* String+URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLComponents.swift"; sourceTree = "<group>"; };
+		743BE5D723BD7CCA000BE177 /* AppPolicies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPolicies.swift; sourceTree = "<group>"; };
+		743BE5D823BD7CCA000BE177 /* AppPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPaths.swift; sourceTree = "<group>"; };
+		743BE5D923BD7CCA000BE177 /* AppEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEndpoints.swift; sourceTree = "<group>"; };
+		743BE5DB23BD7CCA000BE177 /* Films.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		743BE5DC23BD7CCA000BE177 /* Planets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		743BE5DD23BD7CCA000BE177 /* Species.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		743BE5DE23BD7CCA000BE177 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		743BE5DF23BD7CCA000BE177 /* Peoples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peoples.swift; sourceTree = "<group>"; };
+		743BE5E023BD7CCA000BE177 /* Starships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
+		743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsApi.swift; sourceTree = "<group>"; };
+		743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsApi.swift; sourceTree = "<group>"; };
+		743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +156,13 @@
 		743BE57923BD582D000BE177 /* Spin.SwiftUI.Demo */ = {
 			isa = PBXGroup;
 			children = (
+				743BE5C923BD7CC9000BE177 /* Assemblies */,
+				743BE5E123BD7CCA000BE177 /* Apis */,
+				743BE5DA23BD7CCA000BE177 /* Entity */,
+				743BE5B023BD7CC9000BE177 /* Models */,
+				743BE5D623BD7CCA000BE177 /* Routes */,
+				743BE5BB23BD7CC9000BE177 /* Services */,
+				743BE5D023BD7CC9000BE177 /* Tools */,
 				743BE57A23BD582D000BE177 /* AppDelegate.swift */,
 				743BE57C23BD582D000BE177 /* SceneDelegate.swift */,
 				743BE57E23BD582D000BE177 /* ContentView.swift */,
@@ -99,6 +180,140 @@
 				743BE58323BD582F000BE177 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		743BE5B023BD7CC9000BE177 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5B423BD7CC9000BE177 /* Domain */,
+				743BE5B123BD7CC9000BE177 /* Request */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		743BE5B123BD7CC9000BE177 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5B223BD7CC9000BE177 /* ListResponse.swift */,
+				743BE5B323BD7CC9000BE177 /* ListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		743BE5B423BD7CC9000BE177 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5B823BD7CC9000BE177 /* Planet.swift */,
+				743BE5BA23BD7CC9000BE177 /* People.swift */,
+				743BE5B923BD7CC9000BE177 /* Starship.swift */,
+				743BE5B523BD7CC9000BE177 /* Specie.swift */,
+				743BE5B623BD7CC9000BE177 /* Vehicle.swift */,
+				743BE5B723BD7CC9000BE177 /* Film.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		743BE5BB23BD7CC9000BE177 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5BC23BD7CC9000BE177 /* Network */,
+				743BE5C723BD7CC9000BE177 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		743BE5BC23BD7CC9000BE177 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5BD23BD7CC9000BE177 /* NetworkService.swift */,
+				743BE5BE23BD7CC9000BE177 /* ReactiveNetworkService */,
+				743BE5C223BD7CC9000BE177 /* Routing */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		743BE5BE23BD7CC9000BE177 /* ReactiveNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5BF23BD7CC9000BE177 /* ReactiveNetworkService.swift */,
+				743BE5C023BD7CC9000BE177 /* Encodable+Dictionary.swift */,
+				743BE5C123BD7CC9000BE177 /* Route+URLRequestConvertible.swift */,
+			);
+			path = ReactiveNetworkService;
+			sourceTree = "<group>";
+		};
+		743BE5C223BD7CC9000BE177 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5C323BD7CC9000BE177 /* Policy.swift */,
+				743BE5C423BD7CC9000BE177 /* Path.swift */,
+				743BE5C523BD7CC9000BE177 /* Route.swift */,
+				743BE5C623BD7CC9000BE177 /* Endpoint.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		743BE5C723BD7CC9000BE177 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5C823BD7CC9000BE177 /* FavoriteService.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		743BE5C923BD7CC9000BE177 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5CA23BD7CC9000BE177 /* ServiceAssembly.swift */,
+				743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */,
+				743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		743BE5D023BD7CC9000BE177 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5D123BD7CC9000BE177 /* Curry.swift */,
+				743BE5D223BD7CC9000BE177 /* Observable+merge.swift */,
+				743BE5D323BD7CC9000BE177 /* Weakify.swift */,
+				743BE5D423BD7CC9000BE177 /* UIViewController+Rx.swift */,
+				743BE5D523BD7CC9000BE177 /* String+URLComponents.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		743BE5D623BD7CCA000BE177 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5D723BD7CCA000BE177 /* AppPolicies.swift */,
+				743BE5D823BD7CCA000BE177 /* AppPaths.swift */,
+				743BE5D923BD7CCA000BE177 /* AppEndpoints.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		743BE5DA23BD7CCA000BE177 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5DC23BD7CCA000BE177 /* Planets.swift */,
+				743BE5DF23BD7CCA000BE177 /* Peoples.swift */,
+				743BE5E023BD7CCA000BE177 /* Starships.swift */,
+				743BE5DB23BD7CCA000BE177 /* Films.swift */,
+				743BE5DD23BD7CCA000BE177 /* Species.swift */,
+				743BE5DE23BD7CCA000BE177 /* Vehicles.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		743BE5E123BD7CCA000BE177 /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */,
+				743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */,
+				743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */,
+			);
+			path = Apis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,9 +412,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743BE60723BD7CCA000BE177 /* Vehicles.swift in Sources */,
+				743BE5F223BD7CCA000BE177 /* Path.swift in Sources */,
+				743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */,
+				743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */,
+				743BE5F623BD7CCA000BE177 /* ServiceAssembly.swift in Sources */,
+				743BE60623BD7CCA000BE177 /* Species.swift in Sources */,
+				743BE60123BD7CCA000BE177 /* AppPolicies.swift in Sources */,
 				743BE57B23BD582D000BE177 /* AppDelegate.swift in Sources */,
 				743BE57D23BD582D000BE177 /* SceneDelegate.swift in Sources */,
+				743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */,
+				743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */,
+				743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */,
 				743BE57F23BD582D000BE177 /* ContentView.swift in Sources */,
+				743BE5FF23BD7CCA000BE177 /* UIViewController+Rx.swift in Sources */,
+				743BE5F123BD7CCA000BE177 /* Policy.swift in Sources */,
+				743BE5F523BD7CCA000BE177 /* FavoriteService.swift in Sources */,
+				743BE5FE23BD7CCA000BE177 /* Weakify.swift in Sources */,
+				743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */,
+				743BE5F323BD7CCA000BE177 /* Route.swift in Sources */,
+				743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */,
+				743BE60023BD7CCA000BE177 /* String+URLComponents.swift in Sources */,
+				743BE5FB23BD7CCA000BE177 /* EntityAssembly.swift in Sources */,
+				743BE5E823BD7CCA000BE177 /* Vehicle.swift in Sources */,
+				743BE60823BD7CCA000BE177 /* Peoples.swift in Sources */,
+				743BE5FC23BD7CCA000BE177 /* Curry.swift in Sources */,
+				743BE5EC23BD7CCA000BE177 /* People.swift in Sources */,
+				743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */,
+				743BE5F423BD7CCA000BE177 /* Endpoint.swift in Sources */,
+				743BE60923BD7CCA000BE177 /* Starships.swift in Sources */,
+				743BE5E923BD7CCA000BE177 /* Film.swift in Sources */,
+				743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */,
+				743BE5F823BD7CCA000BE177 /* ApisAssembly.swift in Sources */,
+				743BE5F023BD7CCA000BE177 /* Route+URLRequestConvertible.swift in Sources */,
+				743BE5ED23BD7CCA000BE177 /* NetworkService.swift in Sources */,
+				743BE5EE23BD7CCA000BE177 /* ReactiveNetworkService.swift in Sources */,
+				743BE5FD23BD7CCA000BE177 /* Observable+merge.swift in Sources */,
+				743BE60423BD7CCA000BE177 /* Films.swift in Sources */,
+				743BE60223BD7CCA000BE177 /* AppPaths.swift in Sources */,
+				743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */,
+				743BE60523BD7CCA000BE177 /* Planets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
