@@ -9,31 +9,38 @@
 import SwiftUI
 
 struct AppView: View {
+
+    let planetsView: PlanetsView
+    let peoplesView: PeoplesView
+    let starshipsView: StarshipsView
+
     var body: some View {
         TabView {
-            PlanetsView()
+            planetsView
                 .tabItem {
                     Image(systemName: "mappin.and.ellipse")
                     Text("Planets (Reactive)")
-                }
+            }
 
-            PeoplesView()
+            peoplesView
                 .tabItem {
                     Image(systemName: "person")
                     Text("Peoples (Rx)")
-                }
+            }
 
-            StarshipsView()
+            starshipsView
                 .tabItem {
                     Image(systemName: "airplane")
                     Text("Starships (Combine)")
-                }
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView()
+        AppView(planetsView: PlanetsView(store: Store<PlanetsFeature.State>(value: .idle)),
+                peoplesView: PeoplesView(store: Store<PeoplesFeature.State>(value: .idle)),
+                starshipsView: StarshipsView(store: Store<StarshipsFeature.State>(value: .idle)))
     }
 }

@@ -65,6 +65,36 @@
 		7464BA6223BE260800ACA419 /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6123BE260800ACA419 /* PlanetsView.swift */; };
 		7464BA6423BE261500ACA419 /* PeoplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6323BE261500ACA419 /* PeoplesView.swift */; };
 		7464BA6623BE262B00ACA419 /* StarshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6523BE262B00ACA419 /* StarshipsView.swift */; };
+		7464BA6B23BE27D300ACA419 /* PlanetsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */; };
+		7464BA6C23BE27D300ACA419 /* PlanetsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */; };
+		7464BA6D23BE27D300ACA419 /* PlanetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6923BE27D300ACA419 /* PlanetsState.swift */; };
+		7464BA6E23BE27D300ACA419 /* PlanetsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6A23BE27D300ACA419 /* PlanetsAction.swift */; };
+		7464BA7023BE280400ACA419 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6F23BE280400ACA419 /* Store.swift */; };
+		7464BA7523BE2F9900ACA419 /* PeoplesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */; };
+		7464BA7623BE2F9900ACA419 /* PeoplesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7223BE2F9900ACA419 /* PeoplesState.swift */; };
+		7464BA7723BE2F9900ACA419 /* PeoplesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7323BE2F9900ACA419 /* PeoplesAction.swift */; };
+		7464BA7823BE2F9900ACA419 /* PeoplesFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */; };
+		7464BA7D23BE2FA400ACA419 /* StarshipsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */; };
+		7464BA7E23BE2FA400ACA419 /* StarshipsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */; };
+		7464BA7F23BE2FA400ACA419 /* StarshipsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */; };
+		7464BA8023BE2FA400ACA419 /* StarshipsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7C23BE2FA400ACA419 /* StarshipsAction.swift */; };
+		7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */; };
+		7464BA8923BE2FD200ACA419 /* PlanetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8423BE2FD200ACA419 /* PlanetAction.swift */; };
+		7464BA8A23BE2FD200ACA419 /* PlanetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8523BE2FD200ACA419 /* PlanetState.swift */; };
+		7464BA8B23BE2FD200ACA419 /* PlanetSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8623BE2FD200ACA419 /* PlanetSpin.swift */; };
+		7464BA8C23BE2FD200ACA419 /* PlanetFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */; };
+		7464BA8D23BE2FD200ACA419 /* PlanetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */; };
+		7464BA9423BE2FEE00ACA419 /* PeopleFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */; };
+		7464BA9523BE2FEE00ACA419 /* PeopleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */; };
+		7464BA9623BE2FEE00ACA419 /* PeopleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9123BE2FEE00ACA419 /* PeopleSpin.swift */; };
+		7464BA9723BE2FEE00ACA419 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9223BE2FEE00ACA419 /* PeopleState.swift */; };
+		7464BA9823BE2FEE00ACA419 /* PeopleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9323BE2FEE00ACA419 /* PeopleAction.swift */; };
+		7464BA9F23BE302000ACA419 /* StarshipAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9A23BE302000ACA419 /* StarshipAction.swift */; };
+		7464BAA023BE302000ACA419 /* StarshipState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9B23BE302000ACA419 /* StarshipState.swift */; };
+		7464BAA123BE302000ACA419 /* StarshipSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9C23BE302000ACA419 /* StarshipSpin.swift */; };
+		7464BAA223BE302000ACA419 /* StarshipFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */; };
+		7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9E23BE302000ACA419 /* StarshipReducer.swift */; };
+		7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +146,36 @@
 		7464BA6123BE260800ACA419 /* PlanetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsView.swift; sourceTree = "<group>"; };
 		7464BA6323BE261500ACA419 /* PeoplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesView.swift; sourceTree = "<group>"; };
 		7464BA6523BE262B00ACA419 /* StarshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsView.swift; sourceTree = "<group>"; };
+		7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsReducer.swift; sourceTree = "<group>"; };
+		7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsFeedback.swift; sourceTree = "<group>"; };
+		7464BA6923BE27D300ACA419 /* PlanetsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsState.swift; sourceTree = "<group>"; };
+		7464BA6A23BE27D300ACA419 /* PlanetsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsAction.swift; sourceTree = "<group>"; };
+		7464BA6F23BE280400ACA419 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesReducer.swift; sourceTree = "<group>"; };
+		7464BA7223BE2F9900ACA419 /* PeoplesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesState.swift; sourceTree = "<group>"; };
+		7464BA7323BE2F9900ACA419 /* PeoplesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesAction.swift; sourceTree = "<group>"; };
+		7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesFeedback.swift; sourceTree = "<group>"; };
+		7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsFeedback.swift; sourceTree = "<group>"; };
+		7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsState.swift; sourceTree = "<group>"; };
+		7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsReducer.swift; sourceTree = "<group>"; };
+		7464BA7C23BE2FA400ACA419 /* StarshipsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsAction.swift; sourceTree = "<group>"; };
+		7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAssembly.swift; sourceTree = "<group>"; };
+		7464BA8423BE2FD200ACA419 /* PlanetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetAction.swift; sourceTree = "<group>"; };
+		7464BA8523BE2FD200ACA419 /* PlanetState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetState.swift; sourceTree = "<group>"; };
+		7464BA8623BE2FD200ACA419 /* PlanetSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetSpin.swift; sourceTree = "<group>"; };
+		7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetFeedback.swift; sourceTree = "<group>"; };
+		7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetReducer.swift; sourceTree = "<group>"; };
+		7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleFeedback.swift; sourceTree = "<group>"; };
+		7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleReducer.swift; sourceTree = "<group>"; };
+		7464BA9123BE2FEE00ACA419 /* PeopleSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleSpin.swift; sourceTree = "<group>"; };
+		7464BA9223BE2FEE00ACA419 /* PeopleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
+		7464BA9323BE2FEE00ACA419 /* PeopleAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleAction.swift; sourceTree = "<group>"; };
+		7464BA9A23BE302000ACA419 /* StarshipAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipAction.swift; sourceTree = "<group>"; };
+		7464BA9B23BE302000ACA419 /* StarshipState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipState.swift; sourceTree = "<group>"; };
+		7464BA9C23BE302000ACA419 /* StarshipSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipSpin.swift; sourceTree = "<group>"; };
+		7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipFeedback.swift; sourceTree = "<group>"; };
+		7464BA9E23BE302000ACA419 /* StarshipReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipReducer.swift; sourceTree = "<group>"; };
+		7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +332,8 @@
 				743BE5CA23BD7CC9000BE177 /* ServiceAssembly.swift */,
 				743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */,
 				743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */,
+				7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */,
+				7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -284,6 +346,7 @@
 				743BE5D323BD7CC9000BE177 /* Weakify.swift */,
 				743BE5D423BD7CC9000BE177 /* UIViewController+Rx.swift */,
 				743BE5D523BD7CC9000BE177 /* String+URLComponents.swift */,
+				7464BA6F23BE280400ACA419 /* Store.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -325,8 +388,11 @@
 			isa = PBXGroup;
 			children = (
 				7464BA5E23BE25D400ACA419 /* Planets */,
+				7464BA8323BE2FBD00ACA419 /* Planet */,
 				7464BA5F23BE25DF00ACA419 /* Peoples */,
+				7464BA8E23BE2FDD00ACA419 /* People */,
 				7464BA6023BE25E600ACA419 /* Starships */,
+				7464BA9923BE300100ACA419 /* Starship */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -335,6 +401,10 @@
 			isa = PBXGroup;
 			children = (
 				7464BA6123BE260800ACA419 /* PlanetsView.swift */,
+				7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */,
+				7464BA6A23BE27D300ACA419 /* PlanetsAction.swift */,
+				7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */,
+				7464BA6923BE27D300ACA419 /* PlanetsState.swift */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -343,6 +413,10 @@
 			isa = PBXGroup;
 			children = (
 				7464BA6323BE261500ACA419 /* PeoplesView.swift */,
+				7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */,
+				7464BA7323BE2F9900ACA419 /* PeoplesAction.swift */,
+				7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */,
+				7464BA7223BE2F9900ACA419 /* PeoplesState.swift */,
 			);
 			path = Peoples;
 			sourceTree = "<group>";
@@ -351,8 +425,48 @@
 			isa = PBXGroup;
 			children = (
 				7464BA6523BE262B00ACA419 /* StarshipsView.swift */,
+				7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */,
+				7464BA7C23BE2FA400ACA419 /* StarshipsAction.swift */,
+				7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */,
+				7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */,
 			);
 			path = Starships;
+			sourceTree = "<group>";
+		};
+		7464BA8323BE2FBD00ACA419 /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				7464BA8623BE2FD200ACA419 /* PlanetSpin.swift */,
+				7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */,
+				7464BA8423BE2FD200ACA419 /* PlanetAction.swift */,
+				7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */,
+				7464BA8523BE2FD200ACA419 /* PlanetState.swift */,
+			);
+			path = Planet;
+			sourceTree = "<group>";
+		};
+		7464BA8E23BE2FDD00ACA419 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				7464BA9123BE2FEE00ACA419 /* PeopleSpin.swift */,
+				7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */,
+				7464BA9323BE2FEE00ACA419 /* PeopleAction.swift */,
+				7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */,
+				7464BA9223BE2FEE00ACA419 /* PeopleState.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		7464BA9923BE300100ACA419 /* Starship */ = {
+			isa = PBXGroup;
+			children = (
+				7464BA9A23BE302000ACA419 /* StarshipAction.swift */,
+				7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */,
+				7464BA9E23BE302000ACA419 /* StarshipReducer.swift */,
+				7464BA9C23BE302000ACA419 /* StarshipSpin.swift */,
+				7464BA9B23BE302000ACA419 /* StarshipState.swift */,
+			);
+			path = Starship;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,43 +566,73 @@
 				7464BA6623BE262B00ACA419 /* StarshipsView.swift in Sources */,
 				743BE60723BD7CCA000BE177 /* Vehicles.swift in Sources */,
 				743BE5F223BD7CCA000BE177 /* Path.swift in Sources */,
+				7464BA8C23BE2FD200ACA419 /* PlanetFeedback.swift in Sources */,
+				7464BA7023BE280400ACA419 /* Store.swift in Sources */,
 				743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */,
 				743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */,
 				743BE5F623BD7CCA000BE177 /* ServiceAssembly.swift in Sources */,
 				743BE60623BD7CCA000BE177 /* Species.swift in Sources */,
 				743BE60123BD7CCA000BE177 /* AppPolicies.swift in Sources */,
 				743BE57B23BD582D000BE177 /* AppDelegate.swift in Sources */,
+				7464BA7723BE2F9900ACA419 /* PeoplesAction.swift in Sources */,
 				743BE57D23BD582D000BE177 /* SceneDelegate.swift in Sources */,
 				7464BA6423BE261500ACA419 /* PeoplesView.swift in Sources */,
+				7464BA9823BE2FEE00ACA419 /* PeopleAction.swift in Sources */,
+				7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */,
+				7464BA8A23BE2FD200ACA419 /* PlanetState.swift in Sources */,
+				7464BA7F23BE2FA400ACA419 /* StarshipsReducer.swift in Sources */,
+				7464BA9423BE2FEE00ACA419 /* PeopleFeedback.swift in Sources */,
 				743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */,
 				743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */,
 				743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */,
 				743BE57F23BD582D000BE177 /* AppView.swift in Sources */,
 				743BE5FF23BD7CCA000BE177 /* UIViewController+Rx.swift in Sources */,
 				743BE5F123BD7CCA000BE177 /* Policy.swift in Sources */,
+				7464BA8B23BE2FD200ACA419 /* PlanetSpin.swift in Sources */,
+				7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */,
 				7464BA6223BE260800ACA419 /* PlanetsView.swift in Sources */,
+				7464BA7D23BE2FA400ACA419 /* StarshipsFeedback.swift in Sources */,
+				7464BAA023BE302000ACA419 /* StarshipState.swift in Sources */,
 				743BE5F523BD7CCA000BE177 /* FavoriteService.swift in Sources */,
+				7464BA9623BE2FEE00ACA419 /* PeopleSpin.swift in Sources */,
+				7464BA8023BE2FA400ACA419 /* StarshipsAction.swift in Sources */,
+				7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */,
+				7464BA9523BE2FEE00ACA419 /* PeopleReducer.swift in Sources */,
 				743BE5FE23BD7CCA000BE177 /* Weakify.swift in Sources */,
+				7464BA9723BE2FEE00ACA419 /* PeopleState.swift in Sources */,
+				7464BA6B23BE27D300ACA419 /* PlanetsReducer.swift in Sources */,
 				743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */,
 				743BE5F323BD7CCA000BE177 /* Route.swift in Sources */,
+				7464BA7823BE2F9900ACA419 /* PeoplesFeedback.swift in Sources */,
 				743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */,
+				7464BA9F23BE302000ACA419 /* StarshipAction.swift in Sources */,
 				743BE60023BD7CCA000BE177 /* String+URLComponents.swift in Sources */,
+				7464BA6E23BE27D300ACA419 /* PlanetsAction.swift in Sources */,
+				7464BA6C23BE27D300ACA419 /* PlanetsFeedback.swift in Sources */,
 				743BE5FB23BD7CCA000BE177 /* EntityAssembly.swift in Sources */,
 				743BE5E823BD7CCA000BE177 /* Vehicle.swift in Sources */,
 				743BE60823BD7CCA000BE177 /* Peoples.swift in Sources */,
+				7464BA8D23BE2FD200ACA419 /* PlanetReducer.swift in Sources */,
 				743BE5FC23BD7CCA000BE177 /* Curry.swift in Sources */,
+				7464BA7E23BE2FA400ACA419 /* StarshipsState.swift in Sources */,
 				743BE5EC23BD7CCA000BE177 /* People.swift in Sources */,
 				743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */,
 				743BE5F423BD7CCA000BE177 /* Endpoint.swift in Sources */,
+				7464BA7523BE2F9900ACA419 /* PeoplesReducer.swift in Sources */,
 				743BE60923BD7CCA000BE177 /* Starships.swift in Sources */,
+				7464BAA223BE302000ACA419 /* StarshipFeedback.swift in Sources */,
 				743BE5E923BD7CCA000BE177 /* Film.swift in Sources */,
 				743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */,
 				743BE5F823BD7CCA000BE177 /* ApisAssembly.swift in Sources */,
+				7464BA6D23BE27D300ACA419 /* PlanetsState.swift in Sources */,
 				743BE5F023BD7CCA000BE177 /* Route+URLRequestConvertible.swift in Sources */,
 				743BE5ED23BD7CCA000BE177 /* NetworkService.swift in Sources */,
+				7464BAA123BE302000ACA419 /* StarshipSpin.swift in Sources */,
 				743BE5EE23BD7CCA000BE177 /* ReactiveNetworkService.swift in Sources */,
+				7464BA8923BE2FD200ACA419 /* PlanetAction.swift in Sources */,
 				743BE5FD23BD7CCA000BE177 /* Observable+merge.swift in Sources */,
 				743BE60423BD7CCA000BE177 /* Films.swift in Sources */,
+				7464BA7623BE2F9900ACA419 /* PeoplesState.swift in Sources */,
 				743BE60223BD7CCA000BE177 /* AppPaths.swift in Sources */,
 				743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */,
 				743BE60523BD7CCA000BE177 /* Planets.swift in Sources */,
