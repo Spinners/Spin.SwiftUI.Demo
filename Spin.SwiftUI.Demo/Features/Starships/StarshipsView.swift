@@ -1,0 +1,21 @@
+//
+//  StarshipsView.swift
+//  Spin.SwiftUI.Demo
+//
+//  Created by Thibault Wittemberg on 2020-01-02.
+//  Copyright © 2020 Spinners. All rights reserved.
+//
+
+import SwiftUI
+
+struct StarshipsView: View {
+    var body: some View {
+        Text("Starships")
+    }
+}
+
+struct StarshipsView_Previews: PreviewProvider {
+    static var previews: some View {
+        StarshipsView()
+    }
+}
