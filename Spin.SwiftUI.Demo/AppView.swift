@@ -39,8 +39,8 @@ struct AppView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(planetsView: PlanetsView(store: Store<PlanetsFeature.State>(value: .idle)),
-                peoplesView: PeoplesView(store: Store<PeoplesFeature.State>(value: .idle)),
-                starshipsView: StarshipsView(store: Store<StarshipsFeature.State>(value: .idle)))
+        AppView(planetsView: PlanetsView(context: ReactiveViewContext(state: .idle)),
+                peoplesView: PeoplesView(context: RxViewContext(state: .idle)),
+                starshipsView: StarshipsView(context: CombineViewContext(state: .idle)))
     }
 }

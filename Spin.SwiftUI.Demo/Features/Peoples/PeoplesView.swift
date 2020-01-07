@@ -6,45 +6,72 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
+import RxSwift
 import SwiftUI
 
 struct PeoplesView: View {
 
     @ObservedObject
-    var store: Store<PeoplesFeature.State>
+    var context: RxViewContext<PeoplesFeature.State, PeoplesFeature.Action>
+
+    let disposeBag = DisposeBag()
 
     var body: some View {
-        switch self.store.value {
-        case .idle:
-            return renderIdleState()
-        case .loading(let page):
-            return renderLoadingState(page: page)
-        case .loaded(let peoples, _, _):
-            return renderLoadedState(peoples: peoples)
-        case .failed:
-            return renderFailState()
+        NavigationView {
+            ZStack {
+                VStack {
+                    // PEOPLES LIST
+                    List(self.context.state.peoples) { viewItem in
+                        NavigationLink(destination: PeopleView()) {
+                            PeoplesRowView(peopleViewItem: viewItem)
+                        }
+                    }
+                    .disabled(self.context.state.isLoading)
+                    .opacity(self.context.state.isLoading ? 0.0: 1.0)
+                    .frame(height: UIScreen.main.bounds.height / 2)
+
+                    // PREVIOUS AND NEXT BUTTONS
+                    VStack {
+                        HStack {
+                            Button(action: {
+                                self.context.send(mutation: .loadPrevious)
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Previous")
+                                    Spacer()
+                                }                    }
+                                .disabled(!self.context.state.hasPreviousPage)
+
+                            Button(action: {
+                                self.context.send(mutation: .loadNext)
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Next")
+                                    Spacer()
+                                }
+                            }
+                            .disabled(!self.context.state.hasNextPage)
+                        }
+                        Spacer()
+                    }
+                    .padding()
+                }
+                .padding(0)
+                ActivityIndicatorView(isLoading: self.context.state.isLoading)
+            }
+            .navigationBarTitle("Peoples")
+
         }
-    }
-
-    private func renderIdleState() -> Text {
-        return Text(verbatim: "IDLE")
-    }
-
-    private func renderLoadingState(page: Int?) -> Text {
-        return Text(verbatim: "LOADING PAGE \(page ?? 0)")
-    }
-
-    private func renderLoadedState(peoples: [(People, Bool)]) -> Text {
-        return Text(verbatim: "LOADED")
-    }
-
-    private func renderFailState() -> Text {
-        return Text(verbatim: "FAIL")
+        .onAppear {
+            self.context.send(mutation: .load)
+        }
     }
 }
 
 struct PeoplesView_Previews: PreviewProvider {
     static var previews: some View {
-        PeoplesView(store: Store<PeoplesFeature.State>(value: .idle))
+        PeoplesView(context: RxViewContext(state: .idle))
     }
 }

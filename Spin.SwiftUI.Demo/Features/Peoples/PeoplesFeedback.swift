@@ -22,9 +22,12 @@ extension PeoplesFeature {
             guard case let .loading(page) = state else { return .empty() }
 
             return loadEntityFunction(page)
-                .map { .succeedLoad(peoples: $0.0, previousPage: $0.1, nextPage: $0.2) }
-                .catchErrorJustReturn(.failLoad)
-                .asObservable()
+                .map {
+                    let viewItems = $0.0.map { PeoplesFeature.State.ViewItem(title: $0.0.name, isFavorite: $0.1) }
+                    return .succeedLoad(peoples: viewItems, previousPage: $0.1, nextPage: $0.2)
+            }
+            .catchErrorJustReturn(.failLoad)
+            .asObservable()
         }
     }
 }

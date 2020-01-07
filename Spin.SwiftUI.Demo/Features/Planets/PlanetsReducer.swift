@@ -8,6 +8,7 @@
 
 extension PlanetsFeature {
     static func reducer(state: PlanetsFeature.State, action: PlanetsFeature.Action) -> PlanetsFeature.State {
+        print("----- RECEIVED IN REDUCER: \(state), \(action)")
         switch (state, action) {
         case (_, .failLoad):
             return .failed

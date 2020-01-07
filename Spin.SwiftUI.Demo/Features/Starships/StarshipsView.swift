@@ -6,44 +6,71 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
+import Combine
 import SwiftUI
 
 struct StarshipsView: View {
     @ObservedObject
-    var store: Store<StarshipsFeature.State>
+    var context: CombineViewContext<StarshipsFeature.State, StarshipsFeature.Action>
+
+    var disposeBag = [AnyCancellable]()
 
     var body: some View {
-        switch self.store.value {
-        case .idle:
-            return renderIdleState()
-        case .loading(let page):
-            return renderLoadingState(page: page)
-        case .loaded(let starships, _, _):
-            return renderLoadedState(starships: starships)
-        case .failed:
-            return renderFailState()
+        NavigationView {
+            ZStack {
+                VStack {
+                    // STARSHIPS LIST
+                    List(self.context.state.starships) { viewItem in
+                        NavigationLink(destination: StarshipView()) {
+                            StarshipsRowView(starshipViewItem: viewItem)
+                        }
+                    }
+                    .disabled(self.context.state.isLoading)
+                    .opacity(self.context.state.isLoading ? 0.0: 1.0)
+                    .frame(height: UIScreen.main.bounds.height / 2)
+
+                    // PREVIOUS AND NEXT BUTTONS
+                    VStack {
+                        HStack {
+                            Button(action: {
+                                self.context.send(mutation: .loadPrevious)
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Previous")
+                                    Spacer()
+                                }                    }
+                                .disabled(!self.context.state.hasPreviousPage)
+
+                            Button(action: {
+                                self.context.send(mutation: .loadNext)
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Next")
+                                    Spacer()
+                                }
+                            }
+                            .disabled(!self.context.state.hasNextPage)
+                        }
+                        Spacer()
+                    }
+                    .padding()
+                }
+                .padding(0)
+                ActivityIndicatorView(isLoading: self.context.state.isLoading)
+            }
+            .navigationBarTitle("Starships")
+
         }
-    }
-
-    private func renderIdleState() -> Text {
-        return Text(verbatim: "IDLE")
-    }
-
-    private func renderLoadingState(page: Int?) -> Text {
-        return Text(verbatim: "LOADING PAGE \(page ?? 0)")
-    }
-
-    private func renderLoadedState(starships: [(Starship, Bool)]) -> Text {
-        return Text(verbatim: "LOADED")
-    }
-
-    private func renderFailState() -> Text {
-        return Text(verbatim: "FAIL")
+        .onAppear {
+            self.context.send(mutation: .load)
+        }
     }
 }
 
 struct StarshipsView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipsView(store: Store<StarshipsFeature.State>(value: .idle))
+        StarshipsView(context: CombineViewContext(state: .idle))
     }
 }

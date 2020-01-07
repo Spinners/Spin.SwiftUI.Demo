@@ -6,7 +6,11 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
-struct Planet: Decodable {
+struct Planet: Decodable, Identifiable {
+    var id: String {
+        self.url
+    }
+
     let name: String
     let diameter: String
     let rotationPeriod: String

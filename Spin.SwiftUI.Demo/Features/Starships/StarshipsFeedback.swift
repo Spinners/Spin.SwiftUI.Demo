@@ -16,14 +16,15 @@ extension StarshipsFeature {
         static func loadPage(loadEntityFunction: (Int?) -> AnyPublisher<([(Starship, Bool)], Int?, Int?), NetworkError>,
                              state: StarshipsFeature.State) -> AnyPublisher<StarshipsFeature.Action, Never> {
 
-            print("<FEEDBACK> loadPage, state: \(state)")
-
             guard case let .loading(page) = state else { return Empty().eraseToAnyPublisher() }
 
             return loadEntityFunction(page)
-                .map { StarshipsFeature.Action.succeedLoad(starships: $0.0, previousPage: $0.1, nextPage: $0.2) }
-                .replaceError(with: StarshipsFeature.Action.failLoad)
-                .eraseToAnyPublisher()
+                .map {
+                    let viewItems = $0.0.map { StarshipsFeature.State.ViewItem(title: $0.0.name, isFavorite: $0.1) }
+                    return StarshipsFeature.Action.succeedLoad(starships: viewItems, previousPage: $0.1, nextPage: $0.2)
+            }
+            .replaceError(with: StarshipsFeature.Action.failLoad)
+            .eraseToAnyPublisher()
         }
     }
 }

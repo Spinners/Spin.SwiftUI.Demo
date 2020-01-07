@@ -6,6 +6,13 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
+import Combine
+import ReactiveSwift
+import RxSwift
+import Spin_Combine
+import Spin_ReactiveSwift
+import Spin_RxSwift
+import Spin_Swift
 import SwiftUI
 import Swinject
 
@@ -21,15 +28,58 @@ final class FeatureAssembly: Assembly {
         }
 
         container.register(PlanetsView.self) { resolver -> PlanetsView in
-            return PlanetsView(store: Store(value: PlanetsFeature.State.idle))
+            let initialState = PlanetsFeature.State.idle
+            let loadFeedback = resolver.resolve(PlanetsFeedbackFunction.self)!
+            let viewContext = ReactiveViewContext<PlanetsFeature.State, PlanetsFeature.Action>(state: initialState)
+            let view = PlanetsView(context: viewContext)
+
+            // build Spin with the builder pattern
+            Spinner
+                .from(initialState: initialState)
+                .add(feedback: viewContext.toFeedback())
+                .add(feedback: ReactiveFeedback(feedback: loadFeedback, on: QueueScheduler()))
+                .reduce(with: ReactiveReducer(reducer: PlanetsFeature.reducer))
+                .spin()
+                .disposed(by: view.disposeBag)
+
+            return view
         }
 
         container.register(PeoplesView.self) { resolver -> PeoplesView in
-            return PeoplesView(store: Store(value: PeoplesFeature.State.idle))
+            let initialState = PeoplesFeature.State.idle
+            let loadFeedback = resolver.resolve(PeoplesFeedbackFunction.self)!
+            let viewContext = RxViewContext<PeoplesFeature.State, PeoplesFeature.Action>(state: initialState)
+            let view = PeoplesView(context: viewContext)
+
+            // build Spin with the builder pattern
+            Spinner
+                .from(initialState: initialState)
+                .add(feedback: viewContext.toFeedback())
+                .add(feedback: RxFeedback(feedback: loadFeedback, on: SerialDispatchQueueScheduler(qos: .userInteractive)))
+                .reduce(with: RxReducer(reducer: PeoplesFeature.reducer))
+                .spin()
+                .disposed(by: view.disposeBag)
+
+            return view
         }
 
         container.register(StarshipsView.self) { resolver -> StarshipsView in
-            return StarshipsView(store: Store(value: StarshipsFeature.State.idle))
+            let initialState = StarshipsFeature.State.idle
+            let loadFeedback = resolver.resolve(StarshipsFeedbackFunction.self)!
+            let viewContext = CombineViewContext<StarshipsFeature.State, StarshipsFeature.Action>(state: initialState)
+            let feedbackScheduler = resolver.resolve(AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions>.self)!
+            var view = StarshipsView(context: viewContext)
+
+            // build Spin with the builder pattern
+            Spinner
+                .from(initialState: initialState)
+                .add(feedback: viewContext.toFeedback())
+                .add(feedback: CombineFeedback(feedback: loadFeedback, on: feedbackScheduler))
+                .reduce(with: CombineReducer(reducer: StarshipsFeature.reducer))
+                .spin()
+                .disposed(by: &view.disposeBag)
+
+            return view
         }
     }
 }
