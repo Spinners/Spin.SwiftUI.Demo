@@ -71,7 +71,6 @@
 		7464BA6C23BE27D300ACA419 /* PlanetsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */; };
 		7464BA6D23BE27D300ACA419 /* PlanetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6923BE27D300ACA419 /* PlanetsState.swift */; };
 		7464BA6E23BE27D300ACA419 /* PlanetsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6A23BE27D300ACA419 /* PlanetsAction.swift */; };
-		7464BA7023BE280400ACA419 /* CombineViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6F23BE280400ACA419 /* CombineViewContext.swift */; };
 		7464BA7523BE2F9900ACA419 /* PeoplesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */; };
 		7464BA7623BE2F9900ACA419 /* PeoplesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7223BE2F9900ACA419 /* PeoplesState.swift */; };
 		7464BA7723BE2F9900ACA419 /* PeoplesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7323BE2F9900ACA419 /* PeoplesAction.swift */; };
@@ -97,8 +96,6 @@
 		7464BAA223BE302000ACA419 /* StarshipFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */; };
 		7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9E23BE302000ACA419 /* StarshipReducer.swift */; };
 		7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */; };
-		7464BAA723BEA85100ACA419 /* ReactiveViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA623BEA85100ACA419 /* ReactiveViewContext.swift */; };
-		7464BAA923BEA9D100ACA419 /* RxViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA823BEA9D100ACA419 /* RxViewContext.swift */; };
 		74BB458A23C198AA002FC67A /* PlanetsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458923C198AA002FC67A /* PlanetsRowView.swift */; };
 		74BB458C23C2AA86002FC67A /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458B23C2AA86002FC67A /* PlanetView.swift */; };
 		74BB458E23C2BA43002FC67A /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458D23C2BA43002FC67A /* ActivityIndicatorView.swift */; };
@@ -161,7 +158,6 @@
 		7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsFeedback.swift; sourceTree = "<group>"; };
 		7464BA6923BE27D300ACA419 /* PlanetsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsState.swift; sourceTree = "<group>"; };
 		7464BA6A23BE27D300ACA419 /* PlanetsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsAction.swift; sourceTree = "<group>"; };
-		7464BA6F23BE280400ACA419 /* CombineViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewContext.swift; sourceTree = "<group>"; };
 		7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesReducer.swift; sourceTree = "<group>"; };
 		7464BA7223BE2F9900ACA419 /* PeoplesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesState.swift; sourceTree = "<group>"; };
 		7464BA7323BE2F9900ACA419 /* PeoplesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesAction.swift; sourceTree = "<group>"; };
@@ -187,8 +183,6 @@
 		7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipFeedback.swift; sourceTree = "<group>"; };
 		7464BA9E23BE302000ACA419 /* StarshipReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipReducer.swift; sourceTree = "<group>"; };
 		7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
-		7464BAA623BEA85100ACA419 /* ReactiveViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewContext.swift; sourceTree = "<group>"; };
-		7464BAA823BEA9D100ACA419 /* RxViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewContext.swift; sourceTree = "<group>"; };
 		74BB458923C198AA002FC67A /* PlanetsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsRowView.swift; sourceTree = "<group>"; };
 		74BB458B23C2AA86002FC67A /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
 		74BB458D23C2BA43002FC67A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -365,9 +359,6 @@
 				743BE5D323BD7CC9000BE177 /* Weakify.swift */,
 				743BE5D423BD7CC9000BE177 /* UIViewController+Rx.swift */,
 				743BE5D523BD7CC9000BE177 /* String+URLComponents.swift */,
-				7464BA6F23BE280400ACA419 /* CombineViewContext.swift */,
-				7464BAA623BEA85100ACA419 /* ReactiveViewContext.swift */,
-				7464BAA823BEA9D100ACA419 /* RxViewContext.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -591,12 +582,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7464BA6623BE262B00ACA419 /* StarshipsView.swift in Sources */,
-				7464BAA723BEA85100ACA419 /* ReactiveViewContext.swift in Sources */,
 				74BB458A23C198AA002FC67A /* PlanetsRowView.swift in Sources */,
 				743BE60723BD7CCA000BE177 /* Vehicles.swift in Sources */,
 				743BE5F223BD7CCA000BE177 /* Path.swift in Sources */,
 				7464BA8C23BE2FD200ACA419 /* PlanetFeedback.swift in Sources */,
-				7464BA7023BE280400ACA419 /* CombineViewContext.swift in Sources */,
 				743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */,
 				743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */,
 				743BE5F623BD7CCA000BE177 /* ServiceAssembly.swift in Sources */,
@@ -632,7 +621,6 @@
 				7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */,
 				7464BA9523BE2FEE00ACA419 /* PeopleReducer.swift in Sources */,
 				743BE5FE23BD7CCA000BE177 /* Weakify.swift in Sources */,
-				7464BAA923BEA9D100ACA419 /* RxViewContext.swift in Sources */,
 				7464BA9723BE2FEE00ACA419 /* PeopleState.swift in Sources */,
 				7464BA6B23BE27D300ACA419 /* PlanetsReducer.swift in Sources */,
 				743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */,
@@ -872,7 +860,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
+				minimumVersion = 0.3.0;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {

@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import Spin_RxSwift
 import SwiftUI
 
 struct PeoplesView: View {
