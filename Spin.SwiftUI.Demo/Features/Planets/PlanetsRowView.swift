@@ -10,14 +10,15 @@ import SwiftUI
 
 struct PlanetsRowView: View {
 
-    let planetViewItem: PlanetsFeature.State.ViewItem
+    let planet: Planet
+    let isFavorite: Bool
 
     var body: some View {
         HStack {
-            if planetViewItem.isFavorite {
+            if isFavorite {
                 Image(systemName: "star.fill")
             }
-            Text(planetViewItem.title)
+            Text(planet.name)
             Spacer()
         }
     }
@@ -25,6 +26,6 @@ struct PlanetsRowView: View {
 
 struct PlanetsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetsRowView(planetViewItem: PlanetsFeature.State.ViewItem(title: "Dagoba", isFavorite: true))
+        PlanetsRowView(planet: .empty, isFavorite: true)
     }
 }

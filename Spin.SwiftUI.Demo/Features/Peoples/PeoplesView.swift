@@ -13,7 +13,10 @@ import SwiftUI
 struct PeoplesView: View {
 
     @ObservedObject
-    var context: RxViewContext<PeoplesFeature.State, PeoplesFeature.Action>
+    var context: RxViewContext<PeoplesFeature.State, PeoplesFeature.Event>
+
+    @EnvironmentObject
+    var viewBuilder: ViewBuilder
 
     let disposeBag = DisposeBag()
 
@@ -23,8 +26,8 @@ struct PeoplesView: View {
                 VStack {
                     // PEOPLES LIST
                     List(self.context.state.peoples) { viewItem in
-                        NavigationLink(destination: PeopleView()) {
-                            PeoplesRowView(peopleViewItem: viewItem)
+                        NavigationLink(destination: self.viewBuilder.makePeopleView(with: viewItem.people)) {
+                            PeoplesRowView(people: viewItem.people, isFavorite: viewItem.isFavorite)
                         }
                     }
                     .disabled(self.context.state.isLoading)
@@ -35,7 +38,7 @@ struct PeoplesView: View {
                     VStack {
                         HStack {
                             Button(action: {
-                                self.context.send(mutation: .loadPrevious)
+                                self.context.emit(.loadPrevious)
                             }) {
                                 HStack {
                                     Spacer()
@@ -45,7 +48,7 @@ struct PeoplesView: View {
                                 .disabled(!self.context.state.hasPreviousPage)
 
                             Button(action: {
-                                self.context.send(mutation: .loadNext)
+                                self.context.emit(.loadNext)
                             }) {
                                 HStack {
                                     Spacer()
@@ -60,19 +63,21 @@ struct PeoplesView: View {
                     .padding()
                 }
                 .padding(0)
-                ActivityIndicatorView(isLoading: self.context.state.isLoading)
+                ActivityIndicatorView(isLoading: self.context.state.isLoading, style: .large)
             }
             .navigationBarTitle("Peoples")
-
-        }
-        .onAppear {
-            self.context.send(mutation: .load)
+            .onAppear {
+                self.context.emit(.load)
+            }
         }
     }
 }
 
+import Swinject
+
 struct PeoplesView_Previews: PreviewProvider {
     static var previews: some View {
         PeoplesView(context: RxViewContext(state: .idle))
+            .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

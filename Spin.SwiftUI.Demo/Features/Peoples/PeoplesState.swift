@@ -1,6 +1,6 @@
 //
 //  FilmsState.swift
-//  Spin.iOS.Sample
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-09-02.
 //  Copyright © 2019 Spinners. All rights reserved.
@@ -14,12 +14,15 @@ extension PeoplesFeature {
         case failed
 
         struct ViewItem: Identifiable {
+            let people: People
+            let isFavorite: Bool
+
             var id: String {
-                self.title
+                self.people.url
             }
 
-            let title: String
-            let isFavorite: Bool
+            static let empty = ViewItem(people: .empty,
+                                        isFavorite: false)
         }
     }
 }

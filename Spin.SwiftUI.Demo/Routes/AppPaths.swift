@@ -10,7 +10,7 @@ public enum VersatilePath {
     case path(path: String)
 }
 
-public enum PeoplePath {
+public enum PeoplesPath {
     case peoples
     case people(id: String)
     case peopleSearch(query: String)
@@ -56,7 +56,7 @@ extension VersatilePath: Path {
     }
 }
 
-extension PeoplePath: Path {
+extension PeoplesPath: Path {
     public var description: String {
         switch self {
         case .peoples:

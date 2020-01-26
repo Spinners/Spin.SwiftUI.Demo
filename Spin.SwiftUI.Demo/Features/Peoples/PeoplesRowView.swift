@@ -9,14 +9,15 @@
 import SwiftUI
 
 struct PeoplesRowView: View {
-    let peopleViewItem: PeoplesFeature.State.ViewItem
+    let people: People
+    let isFavorite: Bool
 
     var body: some View {
         HStack {
-            if peopleViewItem.isFavorite {
+            if isFavorite {
                 Image(systemName: "star.fill")
             }
-            Text(peopleViewItem.title)
+            Text(people.name)
             Spacer()
         }
     }
@@ -24,6 +25,6 @@ struct PeoplesRowView: View {
 
 struct PeoplesRowView_Previews: PreviewProvider {
     static var previews: some View {
-        PeoplesRowView(peopleViewItem: PeoplesFeature.State.ViewItem(title: "Dagoba", isFavorite: true))
+        PeoplesRowView(people: .empty, isFavorite: true)
     }
 }

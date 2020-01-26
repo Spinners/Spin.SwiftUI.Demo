@@ -1,6 +1,6 @@
 //
 //  FilmsState.swift
-//  Spin.iOS.Sample
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-09-02.
 //  Copyright © 2019 Spinners. All rights reserved.
@@ -14,12 +14,15 @@ extension StarshipsFeature {
         case failed
 
         struct ViewItem: Identifiable {
-            var id: String {
-                 self.title
-             }
-
-            let title: String
+            let starship: Starship
             let isFavorite: Bool
+
+            var id: String {
+                self.starship.url
+            }
+
+            static let empty = ViewItem(starship: .empty,
+                                        isFavorite: false)
         }
     }
 }

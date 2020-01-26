@@ -1,6 +1,6 @@
 //
 //  PlanetsApi.swift
-//  FeedbackLoopDemo
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-11-23.
 //  Copyright © 2019 WarpFactor. All rights reserved.
@@ -18,6 +18,12 @@ extension Planets {
             if let page = page {
                 route.set(parameter: ListRequest(page: page))
             }
+
+            return networkService.fetchReactive(route: route)
+        }
+
+        static func loadOne(baseUrl: String, networkService: NetworkService, id: String) -> SignalProducer<Planet, NetworkError> {
+            let route = Route<EntityEndpoint<Planet>>(baseUrl: baseUrl, endpoint: EntityEndpoint<Planet>(path: PlanetsPath.planet(id: id)))
 
             return networkService.fetchReactive(route: route)
         }

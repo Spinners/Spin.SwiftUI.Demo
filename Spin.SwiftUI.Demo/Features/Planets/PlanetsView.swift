@@ -13,7 +13,10 @@ import SwiftUI
 struct PlanetsView: View {
 
     @ObservedObject
-    var context: ReactiveViewContext<PlanetsFeature.State, PlanetsFeature.Action>
+    var context: ReactiveViewContext<PlanetsFeature.State, PlanetsFeature.Event>
+
+    @EnvironmentObject
+    var viewBuilder: ViewBuilder
 
     let disposeBag = CompositeDisposable()
 
@@ -23,8 +26,8 @@ struct PlanetsView: View {
                 VStack {
                     // PLANETS LIST
                     List(self.context.state.planets) { viewItem in
-                        NavigationLink(destination: PlanetView()) {
-                            PlanetsRowView(planetViewItem: viewItem)
+                        NavigationLink(destination: self.viewBuilder.makePlanetView(with: viewItem.planet)) {
+                            PlanetsRowView(planet: viewItem.planet, isFavorite: viewItem.isFavorite)
                         }
                     }
                     .disabled(self.context.state.isLoading)
@@ -35,17 +38,18 @@ struct PlanetsView: View {
                     VStack {
                         HStack {
                             Button(action: {
-                                self.context.send(mutation: .loadPrevious)
+                                self.context.emit(.loadPrevious)
                             }) {
                                 HStack {
                                     Spacer()
                                     Text("Previous")
                                     Spacer()
-                                }                    }
-                                .disabled(!self.context.state.hasPreviousPage)
+                                }
+                            }
+                            .disabled(!self.context.state.hasPreviousPage)
 
                             Button(action: {
-                                self.context.send(mutation: .loadNext)
+                                self.context.emit(.loadNext)
                             }) {
                                 HStack {
                                     Spacer()
@@ -60,19 +64,21 @@ struct PlanetsView: View {
                     .padding()
                 }
                 .padding(0)
-                ActivityIndicatorView(isLoading: self.context.state.isLoading)
+                ActivityIndicatorView(isLoading: self.context.state.isLoading, style: .large)
             }
             .navigationBarTitle("Planets")
-
-        }
-        .onAppear {
-            self.context.send(mutation: .load)
+            .onAppear {
+                self.context.emit(.load)
+            }
         }
     }
 }
 
+import Swinject
+
 struct PlanetsView_Previews: PreviewProvider {
     static var previews: some View {
         PlanetsView(context: ReactiveViewContext(state: .idle))
+            .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

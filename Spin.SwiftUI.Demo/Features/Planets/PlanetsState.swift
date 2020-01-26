@@ -1,6 +1,6 @@
 //
 //  FilmsState.swift
-//  Spin.iOS.Sample
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-09-02.
 //  Copyright © 2019 Spinners. All rights reserved.
@@ -13,14 +13,17 @@ extension PlanetsFeature {
         case loading(page: Int? = nil)
         case loaded(data: [ViewItem], previousPage: Int?, nextPage: Int?)
         case failed
-        
+
         struct ViewItem: Identifiable {
+            let planet: Planet
+            let isFavorite: Bool
+
             var id: String {
-                self.title
+                self.planet.url
             }
 
-            let title: String
-            let isFavorite: Bool
+            static let empty = ViewItem(planet: .empty,
+                                        isFavorite: false)
         }
     }
 }

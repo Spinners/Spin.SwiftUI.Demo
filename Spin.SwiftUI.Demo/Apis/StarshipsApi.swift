@@ -1,6 +1,6 @@
 //
 //  StarshipsApi.swift
-//  FeedbackLoopDemo
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-11-23.
 //  Copyright © 2019 WarpFactor. All rights reserved.

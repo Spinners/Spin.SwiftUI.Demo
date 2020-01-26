@@ -10,7 +10,7 @@ struct Planet: Decodable, Identifiable {
     var id: String {
         self.url
     }
-
+    
     let name: String
     let diameter: String
     let rotationPeriod: String
@@ -42,4 +42,21 @@ struct Planet: Decodable, Identifiable {
         case created
         case edited
     }
+}
+
+extension Planet {
+    static let empty = Planet(name: "",
+                              diameter: "",
+                              rotationPeriod: "",
+                              orbitalPeriod: "",
+                              gravity: "",
+                              population: "",
+                              climate: "",
+                              terrain: "",
+                              surfaceWater: "",
+                              residents: [],
+                              films: [],
+                              url: "",
+                              created: "",
+                              edited: "")
 }

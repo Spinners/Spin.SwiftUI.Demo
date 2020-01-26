@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift",
         "state": {
           "branch": null,
-          "revision": "b772fa0b624926e6e2f21acbb79297736a05c585",
-          "version": "6.1.0"
+          "revision": "e8703715afe26a8efbb2ecfdb3454d648f58d691",
+          "version": "6.2.0"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/Spinners/Spin.Swift",
         "state": {
           "branch": null,
-          "revision": "e250034d159bfd80ef7da01d2c840f9135a649fe",
-          "version": "0.3.0"
+          "revision": "1a173703cc0e0e0244e35ab8218137f90b766cb8",
+          "version": "0.5.0"
         }
       },
       {

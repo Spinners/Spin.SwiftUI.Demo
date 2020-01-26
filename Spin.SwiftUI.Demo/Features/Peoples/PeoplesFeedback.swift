@@ -1,6 +1,6 @@
 //
 //  PeoplesFeedback.swift
-//  FeedbackLoopDemo
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-11-17.
 //  Copyright © 2019 WarpFactor. All rights reserved.
@@ -18,12 +18,12 @@ extension PeoplesFeature {
         /////////////////////////////////////////////
 
         static func loadPage(loadEntityFunction: (Int?) -> Single<([(People, Bool)], Int?, Int?)>,
-                             state: PeoplesFeature.State) -> Observable<PeoplesFeature.Action> {
+                             state: PeoplesFeature.State) -> Observable<PeoplesFeature.Event> {
             guard case let .loading(page) = state else { return .empty() }
 
             return loadEntityFunction(page)
                 .map {
-                    let viewItems = $0.0.map { PeoplesFeature.State.ViewItem(title: $0.0.name, isFavorite: $0.1) }
+                    let viewItems = $0.0.map { PeoplesFeature.State.ViewItem(people: $0.0, isFavorite: $0.1) }
                     return .succeedLoad(peoples: viewItems, previousPage: $0.1, nextPage: $0.2)
             }
             .catchErrorJustReturn(.failLoad)

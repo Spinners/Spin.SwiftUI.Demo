@@ -9,14 +9,15 @@
 import SwiftUI
 
 struct StarshipsRowView: View {
-    let starshipViewItem: StarshipsFeature.State.ViewItem
+    let starship: Starship
+    let isFavorite: Bool
 
     var body: some View {
         HStack {
-            if starshipViewItem.isFavorite {
+            if isFavorite {
                 Image(systemName: "star.fill")
             }
-            Text(starshipViewItem.title)
+            Text(starship.name)
             Spacer()
         }
     }
@@ -24,6 +25,6 @@ struct StarshipsRowView: View {
 
 struct StarshipsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipsRowView(starshipViewItem: StarshipsFeature.State.ViewItem(title: "Enterprise", isFavorite: true))
+        StarshipsRowView(starship: .empty, isFavorite: true)
     }
 }

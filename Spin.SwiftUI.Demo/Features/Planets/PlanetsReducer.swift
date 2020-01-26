@@ -1,15 +1,14 @@
 //
 //  PlanetsReducer.swift
-//  Spin.iOS.Sample
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-09-02.
 //  Copyright © 2019 Spinners. All rights reserved.
 //
 
 extension PlanetsFeature {
-    static func reducer(state: PlanetsFeature.State, action: PlanetsFeature.Action) -> PlanetsFeature.State {
-        print("----- RECEIVED IN REDUCER: \(state), \(action)")
-        switch (state, action) {
+    static func reducer(state: PlanetsFeature.State, event: PlanetsFeature.Event) -> PlanetsFeature.State {
+        switch (state, event) {
         case (_, .failLoad):
             return .failed
         case (_, .load):
@@ -18,8 +17,8 @@ extension PlanetsFeature {
             return .loading(page: previousPage)
         case (.loaded(_, _, let nextPage), .loadNext) where nextPage != nil:
             return .loading(page: nextPage)
-        case (_, .succeedLoad(let planets, let previousPage, let nextPage)):
-            return .loaded(data: planets, previousPage: previousPage, nextPage: nextPage)
+        case (_, .succeedLoad(let viewItems, let previousPage, let nextPage)):
+            return .loaded(data: viewItems, previousPage: previousPage, nextPage: nextPage)
         default:
             return state
         }

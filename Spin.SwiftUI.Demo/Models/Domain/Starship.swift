@@ -45,3 +45,23 @@ struct Starship: Decodable {
             case edited
     }
 }
+
+extension Starship {
+    static let empty = Starship(name: "",
+                                model: "",
+                                starshipClass: "",
+                                manufacturer: "",
+                                costInCredits: "",
+                                length: "",
+                                crew: "",
+                                passengers: "",
+                                maxAtmospheringSpeed: "",
+                                hyperdriveRating: "",
+                                mglt: "",
+                                cargoCapacity: "",
+                                films: [],
+                                pilots: [],
+                                url: "",
+                                created: "",
+                                edited: "")
+}

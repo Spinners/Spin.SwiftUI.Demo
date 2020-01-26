@@ -43,3 +43,22 @@ struct People: Decodable {
         case edited
     }
 }
+
+extension People {
+    static let empty = People(name: "",
+                              birthyear: "",
+                              eyeColor: "",
+                              gender: "",
+                              hairColor: "",
+                              height: "",
+                              mass: "",
+                              skinColor: "",
+                              homeworld: "",
+                              films: [],
+                              species: [],
+                              starships: [],
+                              vehicles: [],
+                              url: "",
+                              created: "",
+                              edited: "")
+}

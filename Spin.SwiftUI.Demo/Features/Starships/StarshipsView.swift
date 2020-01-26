@@ -11,8 +11,12 @@ import Spin_Combine
 import SwiftUI
 
 struct StarshipsView: View {
+    
     @ObservedObject
-    var context: CombineViewContext<StarshipsFeature.State, StarshipsFeature.Action>
+    var context: CombineViewContext<StarshipsFeature.State, StarshipsFeature.Event>
+
+    @EnvironmentObject
+    var viewBuilder: ViewBuilder
 
     var disposeBag = [AnyCancellable]()
 
@@ -22,8 +26,8 @@ struct StarshipsView: View {
                 VStack {
                     // STARSHIPS LIST
                     List(self.context.state.starships) { viewItem in
-                        NavigationLink(destination: StarshipView()) {
-                            StarshipsRowView(starshipViewItem: viewItem)
+                        NavigationLink(destination: self.viewBuilder.makeStarshipView(with: viewItem.starship)) {
+                            StarshipsRowView(starship: viewItem.starship, isFavorite: viewItem.isFavorite)
                         }
                     }
                     .disabled(self.context.state.isLoading)
@@ -34,7 +38,7 @@ struct StarshipsView: View {
                     VStack {
                         HStack {
                             Button(action: {
-                                self.context.send(mutation: .loadPrevious)
+                                self.context.emit(.loadPrevious)
                             }) {
                                 HStack {
                                     Spacer()
@@ -44,7 +48,7 @@ struct StarshipsView: View {
                                 .disabled(!self.context.state.hasPreviousPage)
 
                             Button(action: {
-                                self.context.send(mutation: .loadNext)
+                                self.context.emit(.loadNext)
                             }) {
                                 HStack {
                                     Spacer()
@@ -59,19 +63,21 @@ struct StarshipsView: View {
                     .padding()
                 }
                 .padding(0)
-                ActivityIndicatorView(isLoading: self.context.state.isLoading)
+                ActivityIndicatorView(isLoading: self.context.state.isLoading, style: .large)
             }
             .navigationBarTitle("Starships")
-
-        }
-        .onAppear {
-            self.context.send(mutation: .load)
+            .onAppear {
+                self.context.emit(.load)
+            }
         }
     }
 }
 
+import Swinject
+
 struct StarshipsView_Previews: PreviewProvider {
     static var previews: some View {
         StarshipsView(context: CombineViewContext(state: .idle))
+            .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

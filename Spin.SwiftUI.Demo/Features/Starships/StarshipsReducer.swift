@@ -1,33 +1,26 @@
 //
 //  PlanetsReducer.swift
-//  Spin.iOS.Sample
+//  Spin.SwiftUI.Demo
 //
 //  Created by Thibault Wittemberg on 2019-09-02.
 //  Copyright © 2019 Spinners. All rights reserved.
 //
 
 extension StarshipsFeature {
-    static func reducer(state: StarshipsFeature.State, action: StarshipsFeature.Action) -> StarshipsFeature.State {
-
-        let result: StarshipsFeature.State
-
-        switch (state, action) {
+    static func reducer(state: StarshipsFeature.State, event: StarshipsFeature.Event) -> StarshipsFeature.State {
+        switch (state, event) {
         case (_, .failLoad):
-            result = .failed
+            return .failed
         case (_, .load):
-            result = .loading(page: nil)
+            return .loading(page: nil)
         case (.loaded(_, let previousPage, _), .loadPrevious) where previousPage != nil:
-            result = .loading(page: previousPage)
+            return .loading(page: previousPage)
         case (.loaded(_, _, let nextPage), .loadNext) where nextPage != nil:
-            result = .loading(page: nextPage)
-        case (_, .succeedLoad(let starships, let previousPage, let nextPage)):
-            result = .loaded(data: starships, previousPage: previousPage, nextPage: nextPage)
+            return .loading(page: nextPage)
+        case (_, .succeedLoad(let viewItems, let previousPage, let nextPage)):
+            return .loaded(data: viewItems, previousPage: previousPage, nextPage: nextPage)
         default:
-            result = state
+            return state
         }
-
-        print("<REDUCER> state: \(state), action: \(action), result state: \(result)")
-
-        return result
     }
 }
