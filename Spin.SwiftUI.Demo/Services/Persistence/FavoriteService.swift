@@ -9,7 +9,6 @@
 import Foundation
 
 class FavoriteService {
-    private var storage = [String: Bool]()
 
     init() {}
 

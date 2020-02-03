@@ -33,6 +33,9 @@ struct PlanetView: View {
                                isLoading: self.context.state.isEnablingFavorite)
             }
         }
+        .onDisappear {
+            self.disposeBag.dispose()
+        }
     }
 }
 

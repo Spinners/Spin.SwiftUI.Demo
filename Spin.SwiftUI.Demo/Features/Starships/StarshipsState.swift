@@ -28,6 +28,16 @@ extension StarshipsFeature {
 }
 
 extension StarshipsFeature.State {
+
+    // hack to avoir list animations
+    var id: String {
+        switch self {
+        case .loaded(let data, _, _):
+            return data.map { $0.starship.url }.joined()
+        default:
+            return ""
+        }
+    }
     var isLoading: Bool {
         if case .loading(_) = self {
             return true

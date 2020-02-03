@@ -15,7 +15,7 @@ final class ServiceAssembly: Assembly {
     func assemble(container: Container) {
         container.register(FavoriteService.self, factory: { _ in
             FavoriteService()
-        })
+        }).inObjectScope(.container)
 
         container.register(NetworkService.self) { _ in
             ReactiveNetworkService()
@@ -26,7 +26,7 @@ final class ServiceAssembly: Assembly {
         }
 
         container.register(AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions>.self) { _ -> AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions> in
-            return DispatchQueue(label: "feedback_queue \(UUID().uuidString)", qos: .userInteractive).eraseToAnyScheduler()
+            return DispatchQueue(label: "feedback_queue_\(UUID().uuidString)", qos: .userInteractive).eraseToAnyScheduler()
         }
     }
 }

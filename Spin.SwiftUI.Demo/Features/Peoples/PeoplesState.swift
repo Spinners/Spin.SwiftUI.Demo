@@ -28,6 +28,17 @@ extension PeoplesFeature {
 }
 
 extension PeoplesFeature.State {
+
+    // hack to avoir list animations
+    var id: String {
+        switch self {
+        case .loaded(let data, _, _):
+            return data.map { $0.people.url }.joined()
+        default:
+            return ""
+        }
+    }
+
     var isLoading: Bool {
         if case .loading(_) = self {
             return true

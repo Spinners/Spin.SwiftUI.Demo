@@ -20,7 +20,7 @@ final class FeatureAssembly: Assembly {
     func assemble(container: Container) {
 
         container.register(PlanetsView.self) { resolver -> PlanetsView in
-            let initialState = PlanetsFeature.State.loading(page: nil)
+            let initialState = PlanetsFeature.State.idle
             let loadFeedback = resolver.resolve(PlanetsFeedbackFunction.self)!
             let viewContext = ReactiveViewContext<PlanetsFeature.State, PlanetsFeature.Event>(state: initialState)
             let view = PlanetsView(context: viewContext)
@@ -28,7 +28,7 @@ final class FeatureAssembly: Assembly {
             // build Spin with the builder pattern
             Spinner
                 .from(initialState: initialState)
-                .add(feedback: viewContext.toFeedback())
+                .add(feedback: ReactiveFeedback(viewContext: viewContext))
                 .add(feedback: ReactiveFeedback(effect: loadFeedback, on: QueueScheduler()))
                 .reduce(with: ReactiveReducer(reducer: PlanetsFeature.reducer))
                 .spin()
@@ -38,7 +38,7 @@ final class FeatureAssembly: Assembly {
         }
 
         container.register(PeoplesView.self) { resolver -> PeoplesView in
-            let initialState = PeoplesFeature.State.loading(page: nil)
+            let initialState = PeoplesFeature.State.idle
             let loadFeedback = resolver.resolve(PeoplesFeedbackFunction.self)!
             let viewContext = RxViewContext<PeoplesFeature.State, PeoplesFeature.Event>(state: initialState)
             let view = PeoplesView(context: viewContext)
@@ -46,7 +46,7 @@ final class FeatureAssembly: Assembly {
             // build Spin with the builder pattern
             Spinner
                 .from(initialState: initialState)
-                .add(feedback: viewContext.toFeedback())
+                .add(feedback: RxFeedback(viewContext: viewContext))
                 .add(feedback: RxFeedback(effect: loadFeedback, on: SerialDispatchQueueScheduler(qos: .userInteractive)))
                 .reduce(with: RxReducer(reducer: PeoplesFeature.reducer))
                 .spin()
@@ -56,7 +56,7 @@ final class FeatureAssembly: Assembly {
         }
 
         container.register(StarshipsView.self) { resolver -> StarshipsView in
-            let initialState = StarshipsFeature.State.loading(page: nil)
+            let initialState = StarshipsFeature.State.idle
             let loadFeedback = resolver.resolve(StarshipsFeedbackFunction.self)!
             let viewContext = CombineViewContext<StarshipsFeature.State, StarshipsFeature.Event>(state: initialState)
             let feedbackScheduler = resolver.resolve(AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions>.self)!
@@ -65,7 +65,7 @@ final class FeatureAssembly: Assembly {
             // build Spin with the builder pattern
             Spinner
                 .from(initialState: initialState)
-                .add(feedback: viewContext.toFeedback())
+                .add(feedback: CombineFeedback(viewContext: viewContext))
                 .add(feedback: CombineFeedback(effect: loadFeedback, on: feedbackScheduler))
                 .reduce(with: CombineReducer(reducer: StarshipsFeature.reducer))
                 .spin()
@@ -83,8 +83,8 @@ final class FeatureAssembly: Assembly {
 
             // build Spin with declarative pattern
             ReactiveSpin(initialState: initialState,
-                                    reducer: ReactiveReducer(reducer: PlanetFeature.reducer)) {
-                viewContext.toFeedback()
+                         reducer: ReactiveReducer(reducer: PlanetFeature.reducer)) {
+                ReactiveFeedback(viewContext: viewContext)
                 ReactiveFeedback(effect: loadFavoriteFeedback).execute(on: QueueScheduler())
                 ReactiveFeedback(effect: persistFavoriteFeedback).execute(on: QueueScheduler())
             }
@@ -105,7 +105,7 @@ final class FeatureAssembly: Assembly {
             // build Spin with declarative pattern
             RxSpin(initialState: initialState,
                    reducer: RxReducer(reducer: PeopleFeature.reducer)) {
-                viewContext.toFeedback()
+                RxFeedback(viewContext: viewContext)
                 RxFeedback(effect: loadFavoriteFeedback).execute(on: SerialDispatchQueueScheduler(qos: .userInteractive))
                 RxFeedback(effect: persistFavoriteFeedback).execute(on: SerialDispatchQueueScheduler(qos: .userInteractive))
             }
@@ -128,7 +128,7 @@ final class FeatureAssembly: Assembly {
             // build Spin with declarative pattern
             CombineSpin(initialState: initialState,
                         reducer: CombineReducer(reducer: StarshipFeature.reducer)) {
-                viewContext.toFeedback()
+                CombineFeedback(viewContext: viewContext)
                 CombineFeedback(effect: loadFavoriteFeedback).execute(on: feedbackScheduler)
                 CombineFeedback(effect: persistFavoriteFeedback).execute(on: feedbackScheduler)
             }

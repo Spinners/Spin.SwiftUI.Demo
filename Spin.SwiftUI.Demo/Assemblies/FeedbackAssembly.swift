@@ -5,6 +5,7 @@
 //  Created by Thibault Wittemberg on 2019-12-20.
 //  Copyright © 2019 WarpFactor. All rights reserved.
 //
+import Foundation
 
 import Combine
 import ReactiveSwift

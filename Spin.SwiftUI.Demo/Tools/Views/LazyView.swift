@@ -17,6 +17,6 @@ struct LazyView<Content: View>: View {
     }
 
     var body: some View {
-        builder()
+        return builder()
     }
 }

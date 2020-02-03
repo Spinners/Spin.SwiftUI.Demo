@@ -30,8 +30,6 @@ extension StarshipFeature {
         /////////////////////////////////////////////
         static func persist(persistFavoriteFunction: (Bool, String) -> Void,
                             state: StarshipFeature.State) -> AnyPublisher<StarshipFeature.Event, Never> {
-            print("persist with state \(state)")
-
             guard case let .enablingFavorite(starship, favorite) = state else { return Empty().eraseToAnyPublisher() }
 
             persistFavoriteFunction(favorite, starship.url)

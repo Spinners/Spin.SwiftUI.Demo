@@ -6,6 +6,8 @@
 //  Copyright © 2019 Spinners. All rights reserved.
 //
 
+import Foundation
+
 extension PlanetsFeature {
 
     enum State {
@@ -29,6 +31,17 @@ extension PlanetsFeature {
 }
 
 extension PlanetsFeature.State {
+
+    // hack to avoir list animations
+    var id: String {
+        switch self {
+        case .loaded(let data, _, _):
+            return data.map { $0.planet.url }.joined()
+        default:
+            return ""
+        }
+    }
+
     var isLoading: Bool {
         if case .loading(_) = self {
             return true

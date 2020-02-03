@@ -22,19 +22,5 @@ extension Planets {
                     return (planetsAndFavorite, previousPage, nextPage)
             }
         }
-
-        static func search(baseUrl: String, networkService: NetworkService, query: String) -> SignalProducer<[Planet], NetworkError> {
-            let route = Route<ListEndpoint<Planet>>(baseUrl: baseUrl, endpoint: ListEndpoint<Planet>(path: PlanetsPath.planetSearch(query: query)))
-            return networkService.fetchReactive(route: route).map { $0.results }
-        }
-
-        static func loadOne(loadApisFunction: (String) -> SignalProducer<Planet, NetworkError>,
-                            isFavoriteFunction: @escaping (String) -> Bool,
-                            id: String) -> SignalProducer<(Planet, Bool), NetworkError> {
-            return loadApisFunction(id).map { planet -> (Planet, Bool) in
-                let isFavorite = isFavoriteFunction(planet.url)
-                return (planet, isFavorite)
-            }
-        }
     }
 }

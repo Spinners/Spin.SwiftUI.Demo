@@ -30,6 +30,7 @@ struct PlanetsView: View {
                             PlanetsRowView(planet: viewItem.planet, isFavorite: viewItem.isFavorite)
                         }
                     }
+                    .id(self.context.state.id) // hack to avoid list animation
                     .disabled(self.context.state.isLoading)
                     .opacity(self.context.state.isLoading ? 0.0: 1.0)
                     .frame(height: UIScreen.main.bounds.height / 2)
