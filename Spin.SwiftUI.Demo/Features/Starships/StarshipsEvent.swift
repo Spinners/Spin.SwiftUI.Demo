@@ -11,7 +11,7 @@ extension StarshipsFeature {
         case load
         case loadPrevious
         case loadNext
-        case succeedLoad(starships: [StarshipsFeature.State.ViewItem], previousPage: Int?, nextPage: Int?)
+        case succeedLoad(starships: [StarshipsFeature.State.ViewItem], currentPage: Int?, previousPage: Int?, nextPage: Int?)
         case failLoad
     }
 }

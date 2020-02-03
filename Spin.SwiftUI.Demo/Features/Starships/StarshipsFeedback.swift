@@ -21,7 +21,10 @@ extension StarshipsFeature {
             return loadEntityFunction(page)
                 .map {
                     let viewItems = $0.0.map { StarshipsFeature.State.ViewItem(starship: $0.0, isFavorite: $0.1) }
-                    return StarshipsFeature.Event.succeedLoad(starships: viewItems, previousPage: $0.1, nextPage: $0.2)
+                    return StarshipsFeature.Event.succeedLoad(starships: viewItems,
+                                                              currentPage: page,
+                                                              previousPage: $0.1,
+                                                              nextPage: $0.2)
             }
             .replaceError(with: StarshipsFeature.Event.failLoad)
             .eraseToAnyPublisher()

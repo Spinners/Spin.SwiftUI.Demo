@@ -24,7 +24,10 @@ extension PeoplesFeature {
             return loadEntityFunction(page)
                 .map {
                     let viewItems = $0.0.map { PeoplesFeature.State.ViewItem(people: $0.0, isFavorite: $0.1) }
-                    return .succeedLoad(peoples: viewItems, previousPage: $0.1, nextPage: $0.2)
+                    return .succeedLoad(peoples: viewItems,
+                                        currentPage: page,
+                                        previousPage: $0.1,
+                                        nextPage: $0.2)
             }
             .catchErrorJustReturn(.failLoad)
             .asObservable()

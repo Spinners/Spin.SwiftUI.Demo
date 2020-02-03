@@ -37,6 +37,8 @@ struct PeoplesView: View {
 
                     // PREVIOUS AND NEXT BUTTONS
                     VStack {
+                        Spacer()
+
                         HStack {
                             Button(action: {
                                 self.context.emit(.loadPrevious)

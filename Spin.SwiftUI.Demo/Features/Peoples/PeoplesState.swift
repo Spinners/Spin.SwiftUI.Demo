@@ -10,7 +10,7 @@ extension PeoplesFeature {
     enum State {
         case idle
         case loading(page: Int? = nil)
-        case loaded(data: [ViewItem], previousPage: Int?, nextPage: Int?)
+        case loaded(data: [ViewItem], currentPage: Int?, previousPage: Int?, nextPage: Int?)
         case failed
 
         struct ViewItem: Identifiable {
@@ -32,7 +32,7 @@ extension PeoplesFeature.State {
     // hack to avoir list animations
     var id: String {
         switch self {
-        case .loaded(let data, _, _):
+        case .loaded(let data, _, _, _):
             return data.map { $0.people.url }.joined()
         default:
             return ""
@@ -56,7 +56,7 @@ extension PeoplesFeature.State {
     }
 
     var peoples: [PeoplesFeature.State.ViewItem] {
-        if case .loaded(let data, _, _) = self {
+        if case .loaded(let data, _, _, _) = self {
             return data
         }
 
@@ -64,7 +64,7 @@ extension PeoplesFeature.State {
     }
 
     var hasPreviousPage: Bool {
-        if case .loaded(_, let previous, _) = self, previous != nil {
+        if case .loaded(_, _, let previous, _) = self, previous != nil {
             return true
         }
 
@@ -72,7 +72,7 @@ extension PeoplesFeature.State {
     }
 
     var hasNextPage: Bool {
-        if case .loaded(_, _, let next) = self, next != nil {
+        if case .loaded(_, _, _, let next) = self, next != nil {
             return true
         }
 

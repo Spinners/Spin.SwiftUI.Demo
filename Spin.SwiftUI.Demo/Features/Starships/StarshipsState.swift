@@ -10,7 +10,7 @@ extension StarshipsFeature {
     enum State {
         case idle
         case loading(page: Int? = nil)
-        case loaded(data: [ViewItem], previousPage: Int?, nextPage: Int?)
+        case loaded(data: [ViewItem], currentPage: Int?, previousPage: Int?, nextPage: Int?)
         case failed
 
         struct ViewItem: Identifiable {
@@ -32,7 +32,7 @@ extension StarshipsFeature.State {
     // hack to avoir list animations
     var id: String {
         switch self {
-        case .loaded(let data, _, _):
+        case .loaded(let data, _, _, _):
             return data.map { $0.starship.url }.joined()
         default:
             return ""
@@ -55,7 +55,7 @@ extension StarshipsFeature.State {
     }
 
     var starships: [StarshipsFeature.State.ViewItem] {
-        if case .loaded(let data, _, _) = self {
+        if case .loaded(let data, _, _, _) = self {
             return data
         }
 
@@ -63,7 +63,7 @@ extension StarshipsFeature.State {
     }
 
     var hasPreviousPage: Bool {
-        if case .loaded(_, let previous, _) = self, previous != nil {
+        if case .loaded(_, _, let previous, _) = self, previous != nil {
             return true
         }
 
@@ -71,7 +71,7 @@ extension StarshipsFeature.State {
     }
 
     var hasNextPage: Bool {
-        if case .loaded(_, _, let next) = self, next != nil {
+        if case .loaded(_, _, _, let next) = self, next != nil {
             return true
         }
 

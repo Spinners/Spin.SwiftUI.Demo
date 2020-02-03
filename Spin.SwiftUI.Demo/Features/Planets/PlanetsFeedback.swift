@@ -24,6 +24,7 @@ extension PlanetsFeature {
                 .map {
                     let viewItems = $0.0.map { PlanetsFeature.State.ViewItem(planet: $0.0, isFavorite: $0.1) }
                     return .succeedLoad(planets: viewItems,
+                                        currentPage: page,
                                         previousPage: $0.1,
                                         nextPage: $0.2)
 

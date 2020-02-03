@@ -34,9 +34,11 @@ struct PlanetsView: View {
                     .disabled(self.context.state.isLoading)
                     .opacity(self.context.state.isLoading ? 0.0: 1.0)
                     .frame(height: UIScreen.main.bounds.height / 2)
-                    
+
                     // PREVIOUS AND NEXT BUTTONS
                     VStack {
+                        Spacer()
+
                         HStack {
                             Button(action: {
                                 self.context.emit(.loadPrevious)
