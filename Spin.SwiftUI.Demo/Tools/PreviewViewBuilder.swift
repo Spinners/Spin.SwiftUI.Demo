@@ -12,29 +12,29 @@ import Spin_RxSwift
 
 class PreviewViewBuilder: ViewBuilder {
     override func makePlanetsView() -> PlanetsView {
-        return PlanetsView(context: ReactiveViewContext(state: PlanetsFeature.State.idle))
+        return PlanetsView(uiSpin: ReactiveUISpin.makeWith(initialState: .idle))
     }
 
     override func makePeoplesView() -> PeoplesView {
-        return PeoplesView(context: RxViewContext(state: PeoplesFeature.State.idle))
+        return PeoplesView(uiSpin: RxUISpin.makeWith(initialState: .idle))
     }
 
     override func makeStarshipsView() -> StarshipsView {
-        return StarshipsView(context: CombineViewContext(state: StarshipsFeature.State.idle))
+        return StarshipsView(uiSpin: CombineUISpin.makeWith(initialState: .idle))
     }
 
     override func makePlanetView(with planet: Planet) -> LazyView<PlanetView> {
-        let content = PlanetView(context: ReactiveViewContext(state: PlanetFeature.State.loading(planet: planet)))
+        let content = PlanetView(uiSpin: ReactiveUISpin.makeWith(initialState: .loading(planet: planet)))
         return LazyView(content)
     }
 
     override func makePeopleView(with people: People) -> LazyView<PeopleView> {
-        let content = PeopleView(context: RxViewContext(state: PeopleFeature.State.loading(people: people)))
+        let content = PeopleView(uiSpin: RxUISpin.makeWith(initialState: .loading(people: people)))
         return LazyView(content)
     }
 
     override func makeStarshipView(with starship: Starship) -> LazyView<StarshipView> {
-        let content = StarshipView(context: CombineViewContext(state: StarshipFeature.State.loading(starship: starship)))
+        let content = StarshipView(uiSpin: CombineUISpin.makeWith(initialState: .loading(starship: starship)))
         return LazyView(content)
     }
 }

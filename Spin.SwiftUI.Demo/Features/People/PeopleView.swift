@@ -12,25 +12,23 @@ import SwiftUI
 
 struct PeopleView: View {
     @ObservedObject
-    var context: RxViewContext<PeopleFeature.State, PeopleFeature.Event>
-
-    let disposeBag = DisposeBag()
+    var uiSpin: RxUISpin<PeopleFeature.State, PeopleFeature.Event>
 
     var body: some View {
         VStack {
-            Text(self.context.state.people.name)
+            Text(self.uiSpin.state.people.name)
                 .fontWeight(.black)
             Form {
-                LabelAndText(label: "Name", text: self.context.state.people.name)
-                LabelAndText(label: "Gender", text: self.context.state.people.gender)
-                LabelAndText(label: "Eye Color", text: self.context.state.people.eyeColor)
-                LabelAndText(label: "Skin Color", text: self.context.state.people.skinColor)
-                LabelAndText(label: "Mass", text: self.context.state.people.mass)
-                LabelAndText(label: "Height", text: self.context.state.people.height)
-                LabelAndText(label: "Hair Color", text: self.context.state.people.hairColor)
+                LabelAndText(label: "Name", text: self.uiSpin.state.people.name)
+                LabelAndText(label: "Gender", text: self.uiSpin.state.people.gender)
+                LabelAndText(label: "Eye Color", text: self.uiSpin.state.people.eyeColor)
+                LabelAndText(label: "Skin Color", text: self.uiSpin.state.people.skinColor)
+                LabelAndText(label: "Mass", text: self.uiSpin.state.people.mass)
+                LabelAndText(label: "Height", text: self.uiSpin.state.people.height)
+                LabelAndText(label: "Hair Color", text: self.uiSpin.state.people.hairColor)
                 LabelAndToggle(label: "Favorite",
-                               isSelected: self.context.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
-                               isLoading: self.context.state.isEnablingFavorite)
+                               isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
+                               isLoading: self.uiSpin.state.isEnablingFavorite)
             }
         }
     }
@@ -38,6 +36,6 @@ struct PeopleView: View {
 
 struct PeopleView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleView(context: RxViewContext(state: .loading(people: .empty)))
+        PeopleView(uiSpin: RxUISpin.makeWith(initialState: .loading(people: .empty)))
     }
 }

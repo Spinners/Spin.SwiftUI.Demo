@@ -11,47 +11,46 @@ import Spin_RxSwift
 import SwiftUI
 
 struct PeoplesView: View {
-
+    
     @ObservedObject
-    var context: RxViewContext<PeoplesFeature.State, PeoplesFeature.Event>
-
+    var uiSpin: RxUISpin<PeoplesFeature.State, PeoplesFeature.Event>
+    
     @EnvironmentObject
     var viewBuilder: ViewBuilder
-
-    let disposeBag = DisposeBag()
-
+    
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
                     // PEOPLES LIST
-                    List(self.context.state.peoples) { viewItem in
+                    List(self.uiSpin.state.peoples) { viewItem in
                         NavigationLink(destination: self.viewBuilder.makePeopleView(with: viewItem.people)) {
                             PeoplesRowView(people: viewItem.people, isFavorite: viewItem.isFavorite)
                         }
                     }
-                    .id(self.context.state.id) // hack to avoid list animation
-                    .disabled(self.context.state.isLoading)
-                    .opacity(self.context.state.isLoading ? 0.0: 1.0)
-                    .frame(height: UIScreen.main.bounds.height / 2)
-
+                        .id(self.uiSpin.state.id) // hack to avoid list animation
+                        .disabled(self.uiSpin.state.isLoading)
+                        .opacity(self.uiSpin.state.isLoading ? 0.0: 1.0)
+                        .frame(height: UIScreen.main.bounds.height / 2)
+                    
                     // PREVIOUS AND NEXT BUTTONS
                     VStack {
                         Spacer()
-
+                        
                         HStack {
                             Button(action: {
-                                self.context.emit(.loadPrevious)
+                                self.uiSpin.emit(.loadPrevious)
                             }) {
                                 HStack {
                                     Spacer()
                                     Text("Previous")
                                     Spacer()
-                                }                    }
-                                .disabled(!self.context.state.hasPreviousPage)
-
+                                }
+                            }
+                            .disabled(!self.uiSpin.state.hasPreviousPage)
+                            
                             Button(action: {
-                                self.context.emit(.loadNext)
+                                self.uiSpin.emit(.loadNext)
                             }) {
                                 HStack {
                                     Spacer()
@@ -59,18 +58,18 @@ struct PeoplesView: View {
                                     Spacer()
                                 }
                             }
-                            .disabled(!self.context.state.hasNextPage)
+                            .disabled(!self.uiSpin.state.hasNextPage)
                         }
                         Spacer()
                     }
                     .padding()
                 }
                 .padding(0)
-                ActivityIndicatorView(isLoading: self.context.state.isLoading, style: .large)
+                ActivityIndicatorView(isLoading: self.uiSpin.state.isLoading, style: .large)
             }
             .navigationBarTitle("Peoples")
             .onAppear {
-                self.context.emit(.load)
+                self.uiSpin.emit(.load)
             }
         }
     }
@@ -80,7 +79,7 @@ import Swinject
 
 struct PeoplesView_Previews: PreviewProvider {
     static var previews: some View {
-        PeoplesView(context: RxViewContext(state: .idle))
+        PeoplesView(uiSpin: RxUISpin.makeWith(initialState: .idle))
             .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

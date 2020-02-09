@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ApisAssembly(),
         EntityAssembly(),
         FeedbackAssembly(),
+        SpinAssembly(),
         FeatureAssembly()
     ])
 

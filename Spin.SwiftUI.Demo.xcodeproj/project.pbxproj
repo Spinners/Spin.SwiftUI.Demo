@@ -97,6 +97,10 @@
 		74BB459023C2C0FD002FC67A /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458F23C2C0FD002FC67A /* PeopleView.swift */; };
 		74BB459223C2C119002FC67A /* PeoplesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB459123C2C119002FC67A /* PeoplesRowView.swift */; };
 		74C7C65323D14CAF00422FCE /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7C65223D14CAF00422FCE /* LazyView.swift */; };
+		74EDF15323F0BB760036EC4E /* SpinAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15223F0BB760036EC4E /* SpinAssembly.swift */; };
+		74EDF15523F0BD2C0036EC4E /* ReactiveUISpin+preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15423F0BD2C0036EC4E /* ReactiveUISpin+preview.swift */; };
+		74EDF15723F0BF000036EC4E /* RxUISpin+preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15623F0BF000036EC4E /* RxUISpin+preview.swift */; };
+		74EDF15923F0BF370036EC4E /* CombineUISpin+preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15823F0BF370036EC4E /* CombineUISpin+preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +184,10 @@
 		74BB458F23C2C0FD002FC67A /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		74BB459123C2C119002FC67A /* PeoplesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesRowView.swift; sourceTree = "<group>"; };
 		74C7C65223D14CAF00422FCE /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		74EDF15223F0BB760036EC4E /* SpinAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinAssembly.swift; sourceTree = "<group>"; };
+		74EDF15423F0BD2C0036EC4E /* ReactiveUISpin+preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveUISpin+preview.swift"; sourceTree = "<group>"; };
+		74EDF15623F0BF000036EC4E /* RxUISpin+preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxUISpin+preview.swift"; sourceTree = "<group>"; };
+		74EDF15823F0BF370036EC4E /* CombineUISpin+preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineUISpin+preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +356,7 @@
 				743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */,
 				743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */,
 				7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */,
+				74EDF15223F0BB760036EC4E /* SpinAssembly.swift */,
 				7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */,
 			);
 			path = Assemblies;
@@ -361,6 +370,9 @@
 				74B45A9E23CE7AF8009191DD /* ViewBuilder.swift */,
 				74B45AA223CE7F65009191DD /* PreviewViewBuilder.swift */,
 				7404A04823DD0B83000B75DD /* Partial.swift */,
+				74EDF15423F0BD2C0036EC4E /* ReactiveUISpin+preview.swift */,
+				74EDF15623F0BF000036EC4E /* RxUISpin+preview.swift */,
+				74EDF15823F0BF370036EC4E /* CombineUISpin+preview.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -590,6 +602,7 @@
 				7464BA7723BE2F9900ACA419 /* PeoplesEvent.swift in Sources */,
 				743BE57D23BD582D000BE177 /* SceneDelegate.swift in Sources */,
 				7464BA6423BE261500ACA419 /* PeoplesView.swift in Sources */,
+				74EDF15523F0BD2C0036EC4E /* ReactiveUISpin+preview.swift in Sources */,
 				7464BA9823BE2FEE00ACA419 /* PeopleEvent.swift in Sources */,
 				7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */,
 				7464BA8A23BE2FD200ACA419 /* PlanetState.swift in Sources */,
@@ -598,6 +611,7 @@
 				74BB459223C2C119002FC67A /* PeoplesRowView.swift in Sources */,
 				745B731F23C422690064B0E6 /* StarshipsRowView.swift in Sources */,
 				743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */,
+				74EDF15723F0BF000036EC4E /* RxUISpin+preview.swift in Sources */,
 				743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */,
 				743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */,
 				743BE57F23BD582D000BE177 /* AppView.swift in Sources */,
@@ -632,6 +646,7 @@
 				7464BA8D23BE2FD200ACA419 /* PlanetReducer.swift in Sources */,
 				7464BA7E23BE2FA400ACA419 /* StarshipsState.swift in Sources */,
 				743BE5EC23BD7CCA000BE177 /* People.swift in Sources */,
+				74EDF15323F0BB760036EC4E /* SpinAssembly.swift in Sources */,
 				7404A04923DD0B83000B75DD /* Partial.swift in Sources */,
 				743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */,
 				743BE5F423BD7CCA000BE177 /* Endpoint.swift in Sources */,
@@ -652,6 +667,7 @@
 				74B45AA323CE7F65009191DD /* PreviewViewBuilder.swift in Sources */,
 				743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */,
 				743BE60523BD7CCA000BE177 /* PlanetsEntity.swift in Sources */,
+				74EDF15923F0BF370036EC4E /* CombineUISpin+preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,7 +868,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.0;
+				minimumVersion = 0.7.2;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {

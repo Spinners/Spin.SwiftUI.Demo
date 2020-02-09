@@ -12,25 +12,23 @@ import SwiftUI
 
 struct StarshipView: View {
     @ObservedObject
-    var context: CombineViewContext<StarshipFeature.State, StarshipFeature.Event>
-
-    var disposeBag = [AnyCancellable]()
+    var uiSpin: CombineUISpin<StarshipFeature.State, StarshipFeature.Event>
 
     var body: some View {
         VStack {
-            Text(self.context.state.starship.name)
+            Text(self.uiSpin.state.starship.name)
                 .fontWeight(.black)
             Form {
-                LabelAndText(label: "Name", text: self.context.state.starship.name)
-                LabelAndText(label: "Model", text: self.context.state.starship.model)
-                LabelAndText(label: "Class", text: self.context.state.starship.starshipClass)
-                LabelAndText(label: "Manufacturer", text: self.context.state.starship.manufacturer)
-                LabelAndText(label: "Cost in credits", text: self.context.state.starship.costInCredits)
-                LabelAndText(label: "Length", text: self.context.state.starship.length)
-                LabelAndText(label: "Crew", text: self.context.state.starship.crew)
+                LabelAndText(label: "Name", text: self.uiSpin.state.starship.name)
+                LabelAndText(label: "Model", text: self.uiSpin.state.starship.model)
+                LabelAndText(label: "Class", text: self.uiSpin.state.starship.starshipClass)
+                LabelAndText(label: "Manufacturer", text: self.uiSpin.state.starship.manufacturer)
+                LabelAndText(label: "Cost in credits", text: self.uiSpin.state.starship.costInCredits)
+                LabelAndText(label: "Length", text: self.uiSpin.state.starship.length)
+                LabelAndText(label: "Crew", text: self.uiSpin.state.starship.crew)
                 LabelAndToggle(label: "Favorite",
-                               isSelected: self.context.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
-                               isLoading: self.context.state.isEnablingFavorite)
+                               isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
+                               isLoading: self.uiSpin.state.isEnablingFavorite)
             }
         }
     }
@@ -38,6 +36,6 @@ struct StarshipView: View {
 
 struct StarshipView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipView(context: CombineViewContext(state: .loading(starship: .empty)))
+        StarshipView(uiSpin: CombineUISpin.makeWith(initialState: .loading(starship: .empty)))
     }
 }

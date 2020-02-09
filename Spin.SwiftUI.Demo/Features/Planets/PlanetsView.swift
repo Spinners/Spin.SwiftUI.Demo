@@ -13,26 +13,24 @@ import SwiftUI
 struct PlanetsView: View {
 
     @ObservedObject
-    var context: ReactiveViewContext<PlanetsFeature.State, PlanetsFeature.Event>
+    var uiSpin: ReactiveUISpin<PlanetsFeature.State, PlanetsFeature.Event>
 
     @EnvironmentObject
     var viewBuilder: ViewBuilder
-
-    let disposeBag = CompositeDisposable()
 
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
                     // PLANETS LIST
-                    List(self.context.state.planets) { viewItem in
+                    List(self.uiSpin.state.planets) { viewItem in
                         NavigationLink(destination: self.viewBuilder.makePlanetView(with: viewItem.planet)) {
                             PlanetsRowView(planet: viewItem.planet, isFavorite: viewItem.isFavorite)
                         }
                     }
-                    .id(self.context.state.id) // hack to avoid list animation
-                    .disabled(self.context.state.isLoading)
-                    .opacity(self.context.state.isLoading ? 0.0: 1.0)
+                    .id(self.uiSpin.state.id) // hack to avoid list animation
+                    .disabled(self.uiSpin.state.isLoading)
+                    .opacity(self.uiSpin.state.isLoading ? 0.0: 1.0)
                     .frame(height: UIScreen.main.bounds.height / 2)
 
                     // PREVIOUS AND NEXT BUTTONS
@@ -41,7 +39,7 @@ struct PlanetsView: View {
 
                         HStack {
                             Button(action: {
-                                self.context.emit(.loadPrevious)
+                                self.uiSpin.emit(.loadPrevious)
                             }) {
                                 HStack {
                                     Spacer()
@@ -49,10 +47,10 @@ struct PlanetsView: View {
                                     Spacer()
                                 }
                             }
-                            .disabled(!self.context.state.hasPreviousPage)
+                            .disabled(!self.uiSpin.state.hasPreviousPage)
 
                             Button(action: {
-                                self.context.emit(.loadNext)
+                                self.uiSpin.emit(.loadNext)
                             }) {
                                 HStack {
                                     Spacer()
@@ -60,18 +58,18 @@ struct PlanetsView: View {
                                     Spacer()
                                 }
                             }
-                            .disabled(!self.context.state.hasNextPage)
+                            .disabled(!self.uiSpin.state.hasNextPage)
                         }
                         Spacer()
                     }
                     .padding()
                 }
                 .padding(0)
-                ActivityIndicatorView(isLoading: self.context.state.isLoading, style: .large)
+                ActivityIndicatorView(isLoading: self.uiSpin.state.isLoading, style: .large)
             }
             .navigationBarTitle("Planets")
             .onAppear {
-                self.context.emit(.load)
+                self.uiSpin.emit(.load)
             }
         }
     }
@@ -81,7 +79,7 @@ import Swinject
 
 struct PlanetsView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetsView(context: ReactiveViewContext(state: .idle))
+        PlanetsView(uiSpin: ReactiveUISpin.makeWith(initialState: .idle))
             .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }
