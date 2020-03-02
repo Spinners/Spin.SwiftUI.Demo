@@ -24,8 +24,9 @@ struct LabelAndToggle: View {
             Spacer()
             if !self.isLoading {
                 Toggle(isOn: $isSelected) {
-                    Text("")
+                    Text(label)
                 }
+                .labelsHidden()
                 .frame(height: 25)
             }
             if self.isLoading {

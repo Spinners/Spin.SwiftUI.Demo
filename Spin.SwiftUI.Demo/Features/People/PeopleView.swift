@@ -15,22 +15,19 @@ struct PeopleView: View {
     var uiSpin: RxUISpin<PeopleFeature.State, PeopleFeature.Event>
 
     var body: some View {
-        VStack {
-            Text(self.uiSpin.state.people.name)
-                .fontWeight(.black)
-            Form {
-                LabelAndText(label: "Name", text: self.uiSpin.state.people.name)
-                LabelAndText(label: "Gender", text: self.uiSpin.state.people.gender)
-                LabelAndText(label: "Eye Color", text: self.uiSpin.state.people.eyeColor)
-                LabelAndText(label: "Skin Color", text: self.uiSpin.state.people.skinColor)
-                LabelAndText(label: "Mass", text: self.uiSpin.state.people.mass)
-                LabelAndText(label: "Height", text: self.uiSpin.state.people.height)
-                LabelAndText(label: "Hair Color", text: self.uiSpin.state.people.hairColor)
-                LabelAndToggle(label: "Favorite",
-                               isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
-                               isLoading: self.uiSpin.state.isEnablingFavorite)
-            }
+        Form {
+            LabelAndText(label: "Name", text: self.uiSpin.state.people.name)
+            LabelAndText(label: "Gender", text: self.uiSpin.state.people.gender)
+            LabelAndText(label: "Eye Color", text: self.uiSpin.state.people.eyeColor)
+            LabelAndText(label: "Skin Color", text: self.uiSpin.state.people.skinColor)
+            LabelAndText(label: "Mass", text: self.uiSpin.state.people.mass)
+            LabelAndText(label: "Height", text: self.uiSpin.state.people.height)
+            LabelAndText(label: "Hair Color", text: self.uiSpin.state.people.hairColor)
+            LabelAndToggle(label: "Favorite",
+                           isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
+                           isLoading: self.uiSpin.state.isEnablingFavorite)
         }
+        .navigationBarTitle("\(self.uiSpin.state.people.name)", displayMode: .inline)
     }
 }
 

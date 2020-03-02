@@ -15,22 +15,19 @@ struct StarshipView: View {
     var uiSpin: CombineUISpin<StarshipFeature.State, StarshipFeature.Event>
 
     var body: some View {
-        VStack {
-            Text(self.uiSpin.state.starship.name)
-                .fontWeight(.black)
-            Form {
-                LabelAndText(label: "Name", text: self.uiSpin.state.starship.name)
-                LabelAndText(label: "Model", text: self.uiSpin.state.starship.model)
-                LabelAndText(label: "Class", text: self.uiSpin.state.starship.starshipClass)
-                LabelAndText(label: "Manufacturer", text: self.uiSpin.state.starship.manufacturer)
-                LabelAndText(label: "Cost in credits", text: self.uiSpin.state.starship.costInCredits)
-                LabelAndText(label: "Length", text: self.uiSpin.state.starship.length)
-                LabelAndText(label: "Crew", text: self.uiSpin.state.starship.crew)
-                LabelAndToggle(label: "Favorite",
-                               isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
-                               isLoading: self.uiSpin.state.isEnablingFavorite)
-            }
+        Form {
+            LabelAndText(label: "Name", text: self.uiSpin.state.starship.name)
+            LabelAndText(label: "Model", text: self.uiSpin.state.starship.model)
+            LabelAndText(label: "Class", text: self.uiSpin.state.starship.starshipClass)
+            LabelAndText(label: "Manufacturer", text: self.uiSpin.state.starship.manufacturer)
+            LabelAndText(label: "Cost in credits", text: self.uiSpin.state.starship.costInCredits)
+            LabelAndText(label: "Length", text: self.uiSpin.state.starship.length)
+            LabelAndText(label: "Crew", text: self.uiSpin.state.starship.crew)
+            LabelAndToggle(label: "Favorite",
+                           isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
+                           isLoading: self.uiSpin.state.isEnablingFavorite)
         }
+        .navigationBarTitle("\(self.uiSpin.state.starship.name)", displayMode: .inline)
     }
 }
 

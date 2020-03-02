@@ -16,21 +16,18 @@ struct PlanetView: View {
     var uiSpin: ReactiveUISpin<PlanetFeature.State, PlanetFeature.Event>
 
     var body: some View {
-        VStack {
-            Text(self.uiSpin.state.planet.name)
-                .fontWeight(.black)
-            Form {
-                LabelAndText(label: "Diameter", text: self.uiSpin.state.planet.diameter)
-                LabelAndText(label: "Population", text: self.uiSpin.state.planet.population)
-                LabelAndText(label: "Gravity", text: self.uiSpin.state.planet.gravity)
-                LabelAndText(label: "Orbital period", text: self.uiSpin.state.planet.orbitalPeriod)
-                LabelAndText(label: "Rotation period", text: self.uiSpin.state.planet.rotationPeriod)
-                LabelAndText(label: "Climate", text: self.uiSpin.state.planet.climate)
-                LabelAndToggle(label: "Favorite",
-                               isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
-                               isLoading: self.uiSpin.state.isEnablingFavorite)
-            }
+        Form {
+            LabelAndText(label: "Diameter", text: self.uiSpin.state.planet.diameter)
+            LabelAndText(label: "Population", text: self.uiSpin.state.planet.population)
+            LabelAndText(label: "Gravity", text: self.uiSpin.state.planet.gravity)
+            LabelAndText(label: "Orbital period", text: self.uiSpin.state.planet.orbitalPeriod)
+            LabelAndText(label: "Rotation period", text: self.uiSpin.state.planet.rotationPeriod)
+            LabelAndText(label: "Climate", text: self.uiSpin.state.planet.climate)
+            LabelAndToggle(label: "Favorite",
+                           isSelected: self.uiSpin.binding(for: \.isFavorite, event: { _ in .toggleFavorite }),
+                           isLoading: self.uiSpin.state.isEnablingFavorite)
         }
+        .navigationBarTitle("\(self.uiSpin.state.planet.name)", displayMode: .inline)
     }
 }
 
