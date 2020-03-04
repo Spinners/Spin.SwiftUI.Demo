@@ -19,13 +19,11 @@
 		743BE59423BD77FD000BE177 /* Spin.RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59323BD77FD000BE177 /* Spin.RxSwift */; };
 		743BE59623BD77FD000BE177 /* Spin.Combine in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59523BD77FD000BE177 /* Spin.Combine */; };
 		743BE59923BD786A000BE177 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59823BD786A000BE177 /* Alamofire */; };
-		743BE59C23BD789F000BE177 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59B23BD789F000BE177 /* Reusable */; };
 		743BE59F23BD78C0000BE177 /* ReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59E23BD78C0000BE177 /* ReactiveSwift */; };
 		743BE5A223BD78E9000BE177 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A123BD78E9000BE177 /* Swinject */; };
 		743BE5A823BD7947000BE177 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A723BD7947000BE177 /* RxRelay */; };
 		743BE5AA23BD7947000BE177 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A923BD7947000BE177 /* RxSwift */; };
 		743BE5AC23BD7947000BE177 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5AB23BD7947000BE177 /* RxCocoa */; };
-		743BE5AF23BD7A0A000BE177 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5AE23BD7A0A000BE177 /* ReactiveCocoa */; };
 		743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B223BD7CC9000BE177 /* ListResponse.swift */; };
 		743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B323BD7CC9000BE177 /* ListRequest.swift */; };
 		743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B523BD7CC9000BE177 /* Specie.swift */; };
@@ -199,12 +197,10 @@
 				743BE59923BD786A000BE177 /* Alamofire in Frameworks */,
 				743BE59F23BD78C0000BE177 /* ReactiveSwift in Frameworks */,
 				743BE59023BD77FD000BE177 /* Spin.ReactiveSwift in Frameworks */,
-				743BE5AF23BD7A0A000BE177 /* ReactiveCocoa in Frameworks */,
 				743BE59623BD77FD000BE177 /* Spin.Combine in Frameworks */,
 				743BE5AC23BD7947000BE177 /* RxCocoa in Frameworks */,
 				743BE59223BD77FD000BE177 /* Spin.Swift in Frameworks */,
 				743BE59423BD77FD000BE177 /* Spin.RxSwift in Frameworks */,
-				743BE59C23BD789F000BE177 /* Reusable in Frameworks */,
 				743BE5A223BD78E9000BE177 /* Swinject in Frameworks */,
 				743BE5AA23BD7947000BE177 /* RxSwift in Frameworks */,
 			);
@@ -517,13 +513,11 @@
 				743BE59323BD77FD000BE177 /* Spin.RxSwift */,
 				743BE59523BD77FD000BE177 /* Spin.Combine */,
 				743BE59823BD786A000BE177 /* Alamofire */,
-				743BE59B23BD789F000BE177 /* Reusable */,
 				743BE59E23BD78C0000BE177 /* ReactiveSwift */,
 				743BE5A123BD78E9000BE177 /* Swinject */,
 				743BE5A723BD7947000BE177 /* RxRelay */,
 				743BE5A923BD7947000BE177 /* RxSwift */,
 				743BE5AB23BD7947000BE177 /* RxCocoa */,
-				743BE5AE23BD7A0A000BE177 /* ReactiveCocoa */,
 			);
 			productName = Spin.SwiftUI.Demo;
 			productReference = 743BE57723BD582D000BE177 /* Spin.SwiftUI.Demo.app */;
@@ -556,11 +550,9 @@
 			packageReferences = (
 				743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */,
 				743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				743BE59A23BD789F000BE177 /* XCRemoteSwiftPackageReference "Reusable" */,
 				743BE59D23BD78C0000BE177 /* XCRemoteSwiftPackageReference "ReactiveSwift" */,
 				743BE5A023BD78E9000BE177 /* XCRemoteSwiftPackageReference "Swinject" */,
 				743BE5A623BD7947000BE177 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				743BE5AD23BD7A0A000BE177 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
 			);
 			productRefGroup = 743BE57823BD582D000BE177 /* Products */;
 			projectDirPath = "";
@@ -868,7 +860,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
+				minimumVersion = 0.10.0;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -877,14 +869,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.9.1;
-			};
-		};
-		743BE59A23BD789F000BE177 /* XCRemoteSwiftPackageReference "Reusable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AliSoftware/Reusable";
-			requirement = {
-				branch = master;
-				kind = branch;
 			};
 		};
 		743BE59D23BD78C0000BE177 /* XCRemoteSwiftPackageReference "ReactiveSwift" */ = {
@@ -909,14 +893,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
-			};
-		};
-		743BE5AD23BD7A0A000BE177 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveCocoa";
-			requirement = {
-				branch = swiftpm;
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -947,11 +923,6 @@
 			package = 743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		743BE59B23BD789F000BE177 /* Reusable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE59A23BD789F000BE177 /* XCRemoteSwiftPackageReference "Reusable" */;
-			productName = Reusable;
-		};
 		743BE59E23BD78C0000BE177 /* ReactiveSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 743BE59D23BD78C0000BE177 /* XCRemoteSwiftPackageReference "ReactiveSwift" */;
@@ -976,11 +947,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 743BE5A623BD7947000BE177 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
-		};
-		743BE5AE23BD7A0A000BE177 /* ReactiveCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE5AD23BD7A0A000BE177 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
-			productName = ReactiveCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

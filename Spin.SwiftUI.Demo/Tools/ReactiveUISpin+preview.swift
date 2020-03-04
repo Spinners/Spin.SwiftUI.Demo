@@ -9,8 +9,8 @@
 import ReactiveSwift
 import Spin_ReactiveSwift
 
-extension ReactiveUISpin {
-    static func makeWith(initialState state: State) -> ReactiveUISpin<State, Event> {
+extension ReactiveSwiftUISpin {
+    static func makeWith(initialState state: State) -> ReactiveSwiftUISpin<State, Event> {
         let feedback = ReactiveFeedback<State, Event>(effect: {(states: SignalProducer<State, Never>) -> SignalProducer<Event, Never> in
             return SignalProducer<Event, Never>.empty
         })
@@ -21,6 +21,6 @@ extension ReactiveUISpin {
             feedback
         }
 
-        return ReactiveUISpin(spin: spin)
+        return ReactiveSwiftUISpin(spin: spin)
     }
 }

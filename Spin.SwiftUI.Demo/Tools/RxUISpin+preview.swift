@@ -9,8 +9,8 @@
 import RxSwift
 import Spin_RxSwift
 
-extension RxUISpin {
-    static func makeWith(initialState state: State) -> RxUISpin<State, Event> {
+extension RxSwiftUISpin {
+    static func makeWith(initialState state: State) -> RxSwiftUISpin<State, Event> {
         let feedback = RxFeedback<State, Event>(effect: {(states: Observable<State>) -> Observable<Event> in
             return Observable<Event>.empty()
         })
@@ -21,6 +21,6 @@ extension RxUISpin {
             feedback
         }
 
-        return RxUISpin(spin: spin)
+        return RxSwiftUISpin(spin: spin)
     }
 }

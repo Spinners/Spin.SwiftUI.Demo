@@ -13,7 +13,7 @@ import SwiftUI
 struct StarshipsView: View {
     
     @ObservedObject
-    var uiSpin: CombineUISpin<StarshipsFeature.State, StarshipsFeature.Event>
+    var uiSpin: CombineSwiftUISpin<StarshipsFeature.State, StarshipsFeature.Event>
 
     @EnvironmentObject
     var viewBuilder: ViewBuilder
@@ -79,7 +79,7 @@ import Swinject
 
 struct StarshipsView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipsView(uiSpin: CombineUISpin.makeWith(initialState: .idle))
+        StarshipsView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .idle))
             .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

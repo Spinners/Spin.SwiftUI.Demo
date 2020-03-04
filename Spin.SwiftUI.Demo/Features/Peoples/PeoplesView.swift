@@ -13,7 +13,7 @@ import SwiftUI
 struct PeoplesView: View {
     
     @ObservedObject
-    var uiSpin: RxUISpin<PeoplesFeature.State, PeoplesFeature.Event>
+    var uiSpin: RxSwiftUISpin<PeoplesFeature.State, PeoplesFeature.Event>
     
     @EnvironmentObject
     var viewBuilder: ViewBuilder
@@ -79,7 +79,7 @@ import Swinject
 
 struct PeoplesView_Previews: PreviewProvider {
     static var previews: some View {
-        PeoplesView(uiSpin: RxUISpin.makeWith(initialState: .idle))
+        PeoplesView(uiSpin: RxSwiftUISpin.makeWith(initialState: .idle))
             .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }

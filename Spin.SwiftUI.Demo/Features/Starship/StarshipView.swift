@@ -12,7 +12,7 @@ import SwiftUI
 
 struct StarshipView: View {
     @ObservedObject
-    var uiSpin: CombineUISpin<StarshipFeature.State, StarshipFeature.Event>
+    var uiSpin: CombineSwiftUISpin<StarshipFeature.State, StarshipFeature.Event>
 
     var body: some View {
         Form {
@@ -33,6 +33,6 @@ struct StarshipView: View {
 
 struct StarshipView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipView(uiSpin: CombineUISpin.makeWith(initialState: .loading(starship: .empty)))
+        StarshipView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .loading(starship: .empty)))
     }
 }

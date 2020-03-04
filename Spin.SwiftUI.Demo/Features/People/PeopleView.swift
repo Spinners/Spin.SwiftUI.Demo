@@ -12,7 +12,7 @@ import SwiftUI
 
 struct PeopleView: View {
     @ObservedObject
-    var uiSpin: RxUISpin<PeopleFeature.State, PeopleFeature.Event>
+    var uiSpin: RxSwiftUISpin<PeopleFeature.State, PeopleFeature.Event>
 
     var body: some View {
         Form {
@@ -33,6 +33,6 @@ struct PeopleView: View {
 
 struct PeopleView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleView(uiSpin: RxUISpin.makeWith(initialState: .loading(people: .empty)))
+        PeopleView(uiSpin: RxSwiftUISpin.makeWith(initialState: .loading(people: .empty)))
     }
 }

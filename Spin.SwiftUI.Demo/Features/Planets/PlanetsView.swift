@@ -13,7 +13,7 @@ import SwiftUI
 struct PlanetsView: View {
 
     @ObservedObject
-    var uiSpin: ReactiveUISpin<PlanetsFeature.State, PlanetsFeature.Event>
+    var uiSpin: ReactiveSwiftUISpin<PlanetsFeature.State, PlanetsFeature.Event>
 
     @EnvironmentObject
     var viewBuilder: ViewBuilder
@@ -79,7 +79,7 @@ import Swinject
 
 struct PlanetsView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetsView(uiSpin: ReactiveUISpin.makeWith(initialState: .idle))
+        PlanetsView(uiSpin: ReactiveSwiftUISpin.makeWith(initialState: .idle))
             .environmentObject(PreviewViewBuilder(resolver: Assembler().resolver))
     }
 }
