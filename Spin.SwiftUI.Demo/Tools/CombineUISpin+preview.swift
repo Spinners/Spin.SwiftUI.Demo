@@ -14,9 +14,9 @@ extension CombineSwiftUISpin {
         let feedback = CombineFeedback<State, Event>(effect: {(states: AnyPublisher<State, Never>) -> AnyPublisher<Event, Never> in
             return Empty().eraseToAnyPublisher()
         })
-        let reducer = CombineReducer<State, Event>(reducer: {(state: State, event: Event) -> State in
+        let reducer = CombineReducer<State, Event> { (state: State, event: Event) -> State in
             return state
-        })
+        }
         let spin = CombineSpin<State, Event>(initialState: state, reducer: reducer) {
             feedback
         }
