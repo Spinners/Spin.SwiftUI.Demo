@@ -860,7 +860,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.0;
+				minimumVersion = 0.15.0;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {

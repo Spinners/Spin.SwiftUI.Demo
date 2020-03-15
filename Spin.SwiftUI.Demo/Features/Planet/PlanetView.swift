@@ -13,7 +13,7 @@ import SwiftUI
 struct PlanetView: View {
 
     @ObservedObject
-    var uiSpin: ReactiveSwiftUISpin<PlanetFeature.State, PlanetFeature.Event>
+    var uiSpin: SwiftUISpin<PlanetFeature.State, PlanetFeature.Event>
 
     var body: some View {
         Form {

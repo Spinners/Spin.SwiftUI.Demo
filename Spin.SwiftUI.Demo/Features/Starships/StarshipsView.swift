@@ -13,7 +13,7 @@ import SwiftUI
 struct StarshipsView: View {
     
     @ObservedObject
-    var uiSpin: CombineSwiftUISpin<StarshipsFeature.State, StarshipsFeature.Event>
+    var uiSpin: SwiftUISpin<StarshipsFeature.State, StarshipsFeature.Event>
 
     @EnvironmentObject
     var viewBuilder: ViewBuilder

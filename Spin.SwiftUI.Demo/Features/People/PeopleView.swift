@@ -12,7 +12,7 @@ import SwiftUI
 
 struct PeopleView: View {
     @ObservedObject
-    var uiSpin: RxSwiftUISpin<PeopleFeature.State, PeopleFeature.Event>
+    var uiSpin: SwiftUISpin<PeopleFeature.State, PeopleFeature.Event>
 
     var body: some View {
         Form {

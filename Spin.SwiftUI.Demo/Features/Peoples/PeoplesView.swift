@@ -13,7 +13,7 @@ import SwiftUI
 struct PeoplesView: View {
     
     @ObservedObject
-    var uiSpin: RxSwiftUISpin<PeoplesFeature.State, PeoplesFeature.Event>
+    var uiSpin: SwiftUISpin<PeoplesFeature.State, PeoplesFeature.Event>
     
     @EnvironmentObject
     var viewBuilder: ViewBuilder

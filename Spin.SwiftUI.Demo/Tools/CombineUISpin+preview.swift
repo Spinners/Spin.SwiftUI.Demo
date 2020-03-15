@@ -10,7 +10,7 @@ import Combine
 import Spin_Combine
 
 extension CombineSwiftUISpin {
-    static func makeWith(initialState state: State) -> CombineSwiftUISpin<State, Event> {
+    static func makeWith(initialState state: State) -> SwiftUISpin<State, Event> {
         let feedback = CombineFeedback<State, Event>(effect: {(states: AnyPublisher<State, Never>) -> AnyPublisher<Event, Never> in
             return Empty().eraseToAnyPublisher()
         })
@@ -21,6 +21,6 @@ extension CombineSwiftUISpin {
             feedback
         }
 
-        return CombineSwiftUISpin(spin: spin)
+        return SwiftUISpin(spin: spin)
     }
 }
