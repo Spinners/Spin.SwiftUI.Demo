@@ -7,7 +7,7 @@
 //
 
 import Combine
-import Spin_Combine
+import SpinCombine
 
 extension CombineSwiftUISpin {
     static func makeWith(initialState state: State) -> SwiftUISpin<State, Event> {

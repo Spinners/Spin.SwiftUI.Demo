@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-import Spin_RxSwift
+import SpinRxSwift
 
 extension RxSwiftUISpin {
     static func makeWith(initialState state: State) -> SwiftUISpin<State, Event> {

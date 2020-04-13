@@ -7,7 +7,7 @@
 //
 
 import ReactiveSwift
-import Spin_ReactiveSwift
+import SpinReactiveSwift
 
 extension ReactiveSwiftUISpin {
     static func makeWith(initialState state: State) -> SwiftUISpin<State, Event> {

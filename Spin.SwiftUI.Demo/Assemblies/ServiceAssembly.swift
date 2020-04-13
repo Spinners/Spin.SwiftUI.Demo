@@ -8,7 +8,7 @@
 
 import Dispatch
 import Foundation
-import Spin_Combine
+import SpinCombine
 import Swinject
 
 final class ServiceAssembly: Assembly {

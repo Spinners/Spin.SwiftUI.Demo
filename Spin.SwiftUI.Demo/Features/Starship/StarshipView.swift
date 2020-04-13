@@ -7,7 +7,7 @@
 //
 
 import Combine
-import Spin_Combine
+import SpinCombine
 import SwiftUI
 
 struct StarshipView: View {

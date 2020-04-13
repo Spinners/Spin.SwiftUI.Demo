@@ -6,9 +6,9 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
-import Spin_Combine
-import Spin_ReactiveSwift
-import Spin_RxSwift
+import SpinCombine
+import SpinReactiveSwift
+import SpinRxSwift
 
 class PreviewViewBuilder: ViewBuilder {
     override func makePlanetsView() -> PlanetsView {

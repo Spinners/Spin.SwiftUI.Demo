@@ -14,10 +14,6 @@
 		743BE58123BD582F000BE177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE58023BD582F000BE177 /* Assets.xcassets */; };
 		743BE58423BD582F000BE177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE58323BD582F000BE177 /* Preview Assets.xcassets */; };
 		743BE58723BD582F000BE177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743BE58523BD582F000BE177 /* LaunchScreen.storyboard */; };
-		743BE59023BD77FD000BE177 /* Spin.ReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE58F23BD77FD000BE177 /* Spin.ReactiveSwift */; };
-		743BE59223BD77FD000BE177 /* Spin.Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59123BD77FD000BE177 /* Spin.Swift */; };
-		743BE59423BD77FD000BE177 /* Spin.RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59323BD77FD000BE177 /* Spin.RxSwift */; };
-		743BE59623BD77FD000BE177 /* Spin.Combine in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59523BD77FD000BE177 /* Spin.Combine */; };
 		743BE59923BD786A000BE177 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59823BD786A000BE177 /* Alamofire */; };
 		743BE59F23BD78C0000BE177 /* ReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE59E23BD78C0000BE177 /* ReactiveSwift */; };
 		743BE5A223BD78E9000BE177 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A123BD78E9000BE177 /* Swinject */; };
@@ -54,6 +50,10 @@
 		743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */; };
 		743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */; };
 		743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */; };
+		744428B924451E8C002A6075 /* SpinCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 744428B824451E8C002A6075 /* SpinCombine */; };
+		744428BB24451E8C002A6075 /* SpinCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BA24451E8C002A6075 /* SpinCommon */; };
+		744428BD24451E8C002A6075 /* SpinReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BC24451E8C002A6075 /* SpinReactiveSwift */; };
+		744428BF24451E8C002A6075 /* SpinRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BE24451E8C002A6075 /* SpinRxSwift */; };
 		745B731D23C421F00064B0E6 /* StarshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B731C23C421F00064B0E6 /* StarshipView.swift */; };
 		745B731F23C422690064B0E6 /* StarshipsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B731E23C422690064B0E6 /* StarshipsRowView.swift */; };
 		7464BA6223BE260800ACA419 /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6123BE260800ACA419 /* PlanetsView.swift */; };
@@ -196,13 +196,13 @@
 				743BE5A823BD7947000BE177 /* RxRelay in Frameworks */,
 				743BE59923BD786A000BE177 /* Alamofire in Frameworks */,
 				743BE59F23BD78C0000BE177 /* ReactiveSwift in Frameworks */,
-				743BE59023BD77FD000BE177 /* Spin.ReactiveSwift in Frameworks */,
-				743BE59623BD77FD000BE177 /* Spin.Combine in Frameworks */,
 				743BE5AC23BD7947000BE177 /* RxCocoa in Frameworks */,
-				743BE59223BD77FD000BE177 /* Spin.Swift in Frameworks */,
-				743BE59423BD77FD000BE177 /* Spin.RxSwift in Frameworks */,
+				744428B924451E8C002A6075 /* SpinCombine in Frameworks */,
+				744428BB24451E8C002A6075 /* SpinCommon in Frameworks */,
 				743BE5A223BD78E9000BE177 /* Swinject in Frameworks */,
 				743BE5AA23BD7947000BE177 /* RxSwift in Frameworks */,
+				744428BF24451E8C002A6075 /* SpinRxSwift in Frameworks */,
+				744428BD24451E8C002A6075 /* SpinReactiveSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +225,7 @@
 			children = (
 				743BE57923BD582D000BE177 /* Spin.SwiftUI.Demo */,
 				743BE57823BD582D000BE177 /* Products */,
+				744428B724451E8C002A6075 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -403,6 +404,13 @@
 			path = Apis;
 			sourceTree = "<group>";
 		};
+		744428B724451E8C002A6075 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7464BA5D23BE249C00ACA419 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,16 +516,16 @@
 			);
 			name = Spin.SwiftUI.Demo;
 			packageProductDependencies = (
-				743BE58F23BD77FD000BE177 /* Spin.ReactiveSwift */,
-				743BE59123BD77FD000BE177 /* Spin.Swift */,
-				743BE59323BD77FD000BE177 /* Spin.RxSwift */,
-				743BE59523BD77FD000BE177 /* Spin.Combine */,
 				743BE59823BD786A000BE177 /* Alamofire */,
 				743BE59E23BD78C0000BE177 /* ReactiveSwift */,
 				743BE5A123BD78E9000BE177 /* Swinject */,
 				743BE5A723BD7947000BE177 /* RxRelay */,
 				743BE5A923BD7947000BE177 /* RxSwift */,
 				743BE5AB23BD7947000BE177 /* RxCocoa */,
+				744428B824451E8C002A6075 /* SpinCombine */,
+				744428BA24451E8C002A6075 /* SpinCommon */,
+				744428BC24451E8C002A6075 /* SpinReactiveSwift */,
+				744428BE24451E8C002A6075 /* SpinRxSwift */,
 			);
 			productName = Spin.SwiftUI.Demo;
 			productReference = 743BE57723BD582D000BE177 /* Spin.SwiftUI.Demo.app */;
@@ -860,7 +868,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.15.0;
+				minimumVersion = 0.16.0;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -898,26 +906,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		743BE58F23BD77FD000BE177 /* Spin.ReactiveSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
-			productName = Spin.ReactiveSwift;
-		};
-		743BE59123BD77FD000BE177 /* Spin.Swift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
-			productName = Spin.Swift;
-		};
-		743BE59323BD77FD000BE177 /* Spin.RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
-			productName = Spin.RxSwift;
-		};
-		743BE59523BD77FD000BE177 /* Spin.Combine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
-			productName = Spin.Combine;
-		};
 		743BE59823BD786A000BE177 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -947,6 +935,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 743BE5A623BD7947000BE177 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		744428B824451E8C002A6075 /* SpinCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
+			productName = SpinCombine;
+		};
+		744428BA24451E8C002A6075 /* SpinCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
+			productName = SpinCommon;
+		};
+		744428BC24451E8C002A6075 /* SpinReactiveSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
+			productName = SpinReactiveSwift;
+		};
+		744428BE24451E8C002A6075 /* SpinRxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 743BE58E23BD77FD000BE177 /* XCRemoteSwiftPackageReference "Spin" */;
+			productName = SpinRxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

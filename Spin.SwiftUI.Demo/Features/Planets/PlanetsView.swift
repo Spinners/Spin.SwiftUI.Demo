@@ -7,7 +7,7 @@
 //
 
 import ReactiveSwift
-import Spin_ReactiveSwift
+import SpinReactiveSwift
 import SwiftUI
 
 struct PlanetsView: View {

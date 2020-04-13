@@ -9,10 +9,10 @@
 import Combine
 import ReactiveSwift
 import RxSwift
-import Spin_Combine
-import Spin_ReactiveSwift
-import Spin_RxSwift
-import Spin_Swift
+import SpinCombine
+import SpinReactiveSwift
+import SpinRxSwift
+import SpinCommon
 import SwiftUI
 import Swinject
 
