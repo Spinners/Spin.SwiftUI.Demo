@@ -11,29 +11,57 @@ import ReactiveSwift
 import RxSwift
 import Swinject
 
-typealias PlanetsEntityFunction = (Int?) -> SignalProducer<([(Planet, Bool)], Int?, Int?), NetworkError>
-typealias PeoplesEntityFunction = (Int?) -> Single<([(People, Bool)], Int?, Int?)>
-typealias StarshipsEntityFunction = (Int?) -> AnyPublisher<([(Starship, Bool)], Int?, Int?), NetworkError>
+typealias TrendingReactiveSwiftEntity = (Int) -> SignalProducer<([(GifOverview, Bool)], Int, Int, Int), NetworkError>
+typealias TrendingCombineEntity = (Int) -> AnyPublisher<([(GifOverview, Bool)], Int, Int, Int), NetworkError>
+typealias TrendingRxSwiftEntity = (Int) -> Observable<([(GifOverview, Bool)], Int, Int, Int)>
+
+typealias GifReactiveSwiftEntity = (String) -> SignalProducer<(GifDetail, Bool), NetworkError>
+typealias GifCombineEntity = (String) -> AnyPublisher<(GifDetail, Bool), NetworkError>
+typealias GifRxSwiftEntity = (String) -> Observable<(GifDetail, Bool)>
 
 final class EntityAssembly: Assembly {
 
     func assemble(container: Container) {
-        container.register(PlanetsEntityFunction.self) { resolver in
-            let planetsApiFunction = resolver.resolve(PlanetsApiFunction.self)!
+        // (ReactiveSwift implementation)
+        container.register(TrendingReactiveSwiftEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(TrendingReactiveApi.self)!
             let favoriteService = resolver.resolve(FavoriteService.self)!
-            return partial(Planets.Entity.load, arg1: planetsApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+            return partial(Trending.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
         }
 
-        container.register(PeoplesEntityFunction.self) { resolver in
-            let peoplesApiFunction = resolver.resolve(PeoplesApiFunction.self)!
+        // (Combine implementation)
+        container.register(TrendingCombineEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(TrendingCombineApi.self)!
             let favoriteService = resolver.resolve(FavoriteService.self)!
-            return partial(Peoples.Entity.load, arg1: peoplesApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+            return partial(Trending.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
         }
 
-        container.register(StarshipsEntityFunction.self) { resolver in
-            let starshipsApiFunction = resolver.resolve(StarshipsApiFunction.self)!
+        // (RxSwift implementation)
+        container.register(TrendingRxSwiftEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(TrendingRxApi.self)!
             let favoriteService = resolver.resolve(FavoriteService.self)!
-            return partial(Starships.Entity.load, arg1: starshipsApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+            return partial(Trending.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+        }
+
+        // (ReactiveSwift implementation)
+        container.register(GifReactiveSwiftEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(GifReactiveApi.self)!
+            let favoriteService = resolver.resolve(FavoriteService.self)!
+            return partial(Gif.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+        }
+
+        // (Combine implementation)
+        container.register(GifCombineEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(GifCombineApi.self)!
+            let favoriteService = resolver.resolve(FavoriteService.self)!
+            return partial(Gif.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
+        }
+
+        // (RxSwift implementation)
+        container.register(GifRxSwiftEntity.self) { resolver in
+            let trendingApiFunction = resolver.resolve(GifRxApi.self)!
+            let favoriteService = resolver.resolve(FavoriteService.self)!
+            return partial(Gif.Entity.load, arg1: trendingApiFunction, arg2: favoriteService.isFavorite(for:), arg3: .partial)
         }
     }
 }

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7404A04923DD0B83000B75DD /* Partial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7404A04823DD0B83000B75DD /* Partial.swift */; };
+		742B0379244E73F40079ACC7 /* GetByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0375244E73F40079ACC7 /* GetByIdRequest.swift */; };
+		742B037A244E73F40079ACC7 /* GetByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0376244E73F40079ACC7 /* GetByIdResponse.swift */; };
+		742B037B244E73F40079ACC7 /* TrendingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0377244E73F40079ACC7 /* TrendingRequest.swift */; };
+		742B037C244E73F40079ACC7 /* TrendingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0378244E73F40079ACC7 /* TrendingResponse.swift */; };
+		742B0382244E74070079ACC7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B037D244E74070079ACC7 /* Images.swift */; };
+		742B0383244E74070079ACC7 /* GifOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B037E244E74070079ACC7 /* GifOverview.swift */; };
+		742B0384244E74070079ACC7 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B037F244E74070079ACC7 /* Meta.swift */; };
+		742B0385244E74070079ACC7 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0380244E74070079ACC7 /* Pagination.swift */; };
+		742B0386244E74070079ACC7 /* GifDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B0381244E74070079ACC7 /* GifDetail.swift */; };
 		743BE57B23BD582D000BE177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE57A23BD582D000BE177 /* AppDelegate.swift */; };
 		743BE57D23BD582D000BE177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE57C23BD582D000BE177 /* SceneDelegate.swift */; };
 		743BE57F23BD582D000BE177 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE57E23BD582D000BE177 /* AppView.swift */; };
@@ -20,14 +29,6 @@
 		743BE5A823BD7947000BE177 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A723BD7947000BE177 /* RxRelay */; };
 		743BE5AA23BD7947000BE177 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5A923BD7947000BE177 /* RxSwift */; };
 		743BE5AC23BD7947000BE177 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 743BE5AB23BD7947000BE177 /* RxCocoa */; };
-		743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B223BD7CC9000BE177 /* ListResponse.swift */; };
-		743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B323BD7CC9000BE177 /* ListRequest.swift */; };
-		743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B523BD7CC9000BE177 /* Specie.swift */; };
-		743BE5E823BD7CCA000BE177 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B623BD7CC9000BE177 /* Vehicle.swift */; };
-		743BE5E923BD7CCA000BE177 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B723BD7CC9000BE177 /* Film.swift */; };
-		743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B823BD7CC9000BE177 /* Planet.swift */; };
-		743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5B923BD7CC9000BE177 /* Starship.swift */; };
-		743BE5EC23BD7CCA000BE177 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BA23BD7CC9000BE177 /* People.swift */; };
 		743BE5ED23BD7CCA000BE177 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BD23BD7CC9000BE177 /* NetworkService.swift */; };
 		743BE5EE23BD7CCA000BE177 /* ReactiveNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5BF23BD7CC9000BE177 /* ReactiveNetworkService.swift */; };
 		743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5C023BD7CC9000BE177 /* Encodable+Dictionary.swift */; };
@@ -44,56 +45,40 @@
 		743BE60123BD7CCA000BE177 /* AppPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D723BD7CCA000BE177 /* AppPolicies.swift */; };
 		743BE60223BD7CCA000BE177 /* AppPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D823BD7CCA000BE177 /* AppPaths.swift */; };
 		743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5D923BD7CCA000BE177 /* AppEndpoints.swift */; };
-		743BE60523BD7CCA000BE177 /* PlanetsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DC23BD7CCA000BE177 /* PlanetsEntity.swift */; };
-		743BE60823BD7CCA000BE177 /* PeoplesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5DF23BD7CCA000BE177 /* PeoplesEntity.swift */; };
-		743BE60923BD7CCA000BE177 /* StarshipsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E023BD7CCA000BE177 /* StarshipsEntity.swift */; };
-		743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */; };
-		743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */; };
-		743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */; };
 		744428B924451E8C002A6075 /* SpinCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 744428B824451E8C002A6075 /* SpinCombine */; };
 		744428BB24451E8C002A6075 /* SpinCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BA24451E8C002A6075 /* SpinCommon */; };
 		744428BD24451E8C002A6075 /* SpinReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BC24451E8C002A6075 /* SpinReactiveSwift */; };
 		744428BF24451E8C002A6075 /* SpinRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 744428BE24451E8C002A6075 /* SpinRxSwift */; };
-		745B731D23C421F00064B0E6 /* StarshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B731C23C421F00064B0E6 /* StarshipView.swift */; };
-		745B731F23C422690064B0E6 /* StarshipsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B731E23C422690064B0E6 /* StarshipsRowView.swift */; };
-		7464BA6223BE260800ACA419 /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6123BE260800ACA419 /* PlanetsView.swift */; };
-		7464BA6423BE261500ACA419 /* PeoplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6323BE261500ACA419 /* PeoplesView.swift */; };
-		7464BA6623BE262B00ACA419 /* StarshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6523BE262B00ACA419 /* StarshipsView.swift */; };
-		7464BA6B23BE27D300ACA419 /* PlanetsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */; };
-		7464BA6C23BE27D300ACA419 /* PlanetsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */; };
-		7464BA6D23BE27D300ACA419 /* PlanetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6923BE27D300ACA419 /* PlanetsState.swift */; };
-		7464BA6E23BE27D300ACA419 /* PlanetsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6A23BE27D300ACA419 /* PlanetsEvent.swift */; };
-		7464BA7523BE2F9900ACA419 /* PeoplesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */; };
-		7464BA7623BE2F9900ACA419 /* PeoplesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7223BE2F9900ACA419 /* PeoplesState.swift */; };
-		7464BA7723BE2F9900ACA419 /* PeoplesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7323BE2F9900ACA419 /* PeoplesEvent.swift */; };
-		7464BA7823BE2F9900ACA419 /* PeoplesFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */; };
-		7464BA7D23BE2FA400ACA419 /* StarshipsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */; };
-		7464BA7E23BE2FA400ACA419 /* StarshipsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */; };
-		7464BA7F23BE2FA400ACA419 /* StarshipsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */; };
-		7464BA8023BE2FA400ACA419 /* StarshipsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA7C23BE2FA400ACA419 /* StarshipsEvent.swift */; };
+		745B731D23C421F00064B0E6 /* CombineGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B731C23C421F00064B0E6 /* CombineGifView.swift */; };
+		746204242456528B00BBB9C4 /* TrendingFeedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746204202456528B00BBB9C4 /* TrendingFeedbacks.swift */; };
+		746204252456528B00BBB9C4 /* TrendingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746204212456528B00BBB9C4 /* TrendingReducer.swift */; };
+		746204262456528B00BBB9C4 /* TrendingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746204222456528B00BBB9C4 /* TrendingState.swift */; };
+		746204272456528B00BBB9C4 /* TrendingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746204232456528B00BBB9C4 /* TrendingEvent.swift */; };
+		746204292456529400BBB9C4 /* TrendingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746204282456529400BBB9C4 /* TrendingEntity.swift */; };
+		7462042B2456529A00BBB9C4 /* TrendingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462042A2456529A00BBB9C4 /* TrendingApi.swift */; };
+		7462042D245652AF00BBB9C4 /* GifApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462042C245652AF00BBB9C4 /* GifApi.swift */; };
+		7462042F245652B600BBB9C4 /* GifEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462042E245652B600BBB9C4 /* GifEntity.swift */; };
+		74620434245652BF00BBB9C4 /* GifEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74620430245652BF00BBB9C4 /* GifEvent.swift */; };
+		74620435245652BF00BBB9C4 /* GifFeedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74620431245652BF00BBB9C4 /* GifFeedbacks.swift */; };
+		74620436245652BF00BBB9C4 /* GifReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74620432245652BF00BBB9C4 /* GifReducer.swift */; };
+		74620437245652BF00BBB9C4 /* GifState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74620433245652BF00BBB9C4 /* GifState.swift */; };
+		7462043A24566EB900BBB9C4 /* CombineTrendingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043824566EB900BBB9C4 /* CombineTrendingRowView.swift */; };
+		7462043B24566EB900BBB9C4 /* CombineTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043924566EB900BBB9C4 /* CombineTrendingView.swift */; };
+		7462043E24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043C24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift */; };
+		7462043F24566F4700BBB9C4 /* RxSwiftTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043D24566F4700BBB9C4 /* RxSwiftTrendingView.swift */; };
+		7464BA6223BE260800ACA419 /* ReactiveSwiftTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6123BE260800ACA419 /* ReactiveSwiftTrendingView.swift */; };
 		7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */; };
-		7464BA8923BE2FD200ACA419 /* PlanetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8423BE2FD200ACA419 /* PlanetEvent.swift */; };
-		7464BA8A23BE2FD200ACA419 /* PlanetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8523BE2FD200ACA419 /* PlanetState.swift */; };
-		7464BA8C23BE2FD200ACA419 /* PlanetFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */; };
-		7464BA8D23BE2FD200ACA419 /* PlanetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */; };
-		7464BA9423BE2FEE00ACA419 /* PeopleFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */; };
-		7464BA9523BE2FEE00ACA419 /* PeopleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */; };
-		7464BA9723BE2FEE00ACA419 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9223BE2FEE00ACA419 /* PeopleState.swift */; };
-		7464BA9823BE2FEE00ACA419 /* PeopleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9323BE2FEE00ACA419 /* PeopleEvent.swift */; };
-		7464BA9F23BE302000ACA419 /* StarshipEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9A23BE302000ACA419 /* StarshipEvent.swift */; };
-		7464BAA023BE302000ACA419 /* StarshipState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9B23BE302000ACA419 /* StarshipState.swift */; };
-		7464BAA223BE302000ACA419 /* StarshipFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */; };
-		7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA9E23BE302000ACA419 /* StarshipReducer.swift */; };
 		7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */; };
+		7472AE8C2458E8070094FC1B /* PlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472AE8B2458E8070094FC1B /* PlayerUIView.swift */; };
+		7472AE8E2458E9450094FC1B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472AE8D2458E9450094FC1B /* PlayerView.swift */; };
 		74B45A9B23CD17C3009191DD /* LabelAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B45A9A23CD17C3009191DD /* LabelAndText.swift */; };
 		74B45A9D23CD1BDE009191DD /* LabelAndToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B45A9C23CD1BDE009191DD /* LabelAndToggle.swift */; };
 		74B45A9F23CE7AF8009191DD /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B45A9E23CE7AF8009191DD /* ViewBuilder.swift */; };
 		74B45AA323CE7F65009191DD /* PreviewViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B45AA223CE7F65009191DD /* PreviewViewBuilder.swift */; };
-		74BB458A23C198AA002FC67A /* PlanetsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458923C198AA002FC67A /* PlanetsRowView.swift */; };
-		74BB458C23C2AA86002FC67A /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458B23C2AA86002FC67A /* PlanetView.swift */; };
+		74BB458A23C198AA002FC67A /* ReactiveSwiftTrendingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458923C198AA002FC67A /* ReactiveSwiftTrendingRowView.swift */; };
+		74BB458C23C2AA86002FC67A /* ReactiveSwiftGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458B23C2AA86002FC67A /* ReactiveSwiftGifView.swift */; };
 		74BB458E23C2BA43002FC67A /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458D23C2BA43002FC67A /* ActivityIndicatorView.swift */; };
-		74BB459023C2C0FD002FC67A /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458F23C2C0FD002FC67A /* PeopleView.swift */; };
-		74BB459223C2C119002FC67A /* PeoplesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB459123C2C119002FC67A /* PeoplesRowView.swift */; };
+		74BB459023C2C0FD002FC67A /* RxSwiftGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB458F23C2C0FD002FC67A /* RxSwiftGifView.swift */; };
 		74C7C65323D14CAF00422FCE /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7C65223D14CAF00422FCE /* LazyView.swift */; };
 		74EDF15323F0BB760036EC4E /* SpinAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15223F0BB760036EC4E /* SpinAssembly.swift */; };
 		74EDF15523F0BD2C0036EC4E /* ReactiveUISpin+preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EDF15423F0BD2C0036EC4E /* ReactiveUISpin+preview.swift */; };
@@ -103,6 +88,15 @@
 
 /* Begin PBXFileReference section */
 		7404A04823DD0B83000B75DD /* Partial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partial.swift; sourceTree = "<group>"; };
+		742B0375244E73F40079ACC7 /* GetByIdRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetByIdRequest.swift; sourceTree = "<group>"; };
+		742B0376244E73F40079ACC7 /* GetByIdResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetByIdResponse.swift; sourceTree = "<group>"; };
+		742B0377244E73F40079ACC7 /* TrendingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingRequest.swift; sourceTree = "<group>"; };
+		742B0378244E73F40079ACC7 /* TrendingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingResponse.swift; sourceTree = "<group>"; };
+		742B037D244E74070079ACC7 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		742B037E244E74070079ACC7 /* GifOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifOverview.swift; sourceTree = "<group>"; };
+		742B037F244E74070079ACC7 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		742B0380244E74070079ACC7 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		742B0381244E74070079ACC7 /* GifDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetail.swift; sourceTree = "<group>"; };
 		743BE57723BD582D000BE177 /* Spin.SwiftUI.Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spin.SwiftUI.Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		743BE57A23BD582D000BE177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		743BE57C23BD582D000BE177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,14 +105,6 @@
 		743BE58323BD582F000BE177 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		743BE58623BD582F000BE177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		743BE58823BD582F000BE177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		743BE5B223BD7CC9000BE177 /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
-		743BE5B323BD7CC9000BE177 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
-		743BE5B523BD7CC9000BE177 /* Specie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
-		743BE5B623BD7CC9000BE177 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		743BE5B723BD7CC9000BE177 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
-		743BE5B823BD7CC9000BE177 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		743BE5B923BD7CC9000BE177 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
-		743BE5BA23BD7CC9000BE177 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		743BE5BD23BD7CC9000BE177 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		743BE5BF23BD7CC9000BE177 /* ReactiveNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveNetworkService.swift; sourceTree = "<group>"; };
 		743BE5C023BD7CC9000BE177 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
@@ -135,52 +121,36 @@
 		743BE5D723BD7CCA000BE177 /* AppPolicies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPolicies.swift; sourceTree = "<group>"; };
 		743BE5D823BD7CCA000BE177 /* AppPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPaths.swift; sourceTree = "<group>"; };
 		743BE5D923BD7CCA000BE177 /* AppEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEndpoints.swift; sourceTree = "<group>"; };
-		743BE5DC23BD7CCA000BE177 /* PlanetsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsEntity.swift; sourceTree = "<group>"; };
-		743BE5DF23BD7CCA000BE177 /* PeoplesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesEntity.swift; sourceTree = "<group>"; };
-		743BE5E023BD7CCA000BE177 /* StarshipsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsEntity.swift; sourceTree = "<group>"; };
-		743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsApi.swift; sourceTree = "<group>"; };
-		743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsApi.swift; sourceTree = "<group>"; };
-		743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesApi.swift; sourceTree = "<group>"; };
-		745B731C23C421F00064B0E6 /* StarshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipView.swift; sourceTree = "<group>"; };
-		745B731E23C422690064B0E6 /* StarshipsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsRowView.swift; sourceTree = "<group>"; };
-		7464BA6123BE260800ACA419 /* PlanetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsView.swift; sourceTree = "<group>"; };
-		7464BA6323BE261500ACA419 /* PeoplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesView.swift; sourceTree = "<group>"; };
-		7464BA6523BE262B00ACA419 /* StarshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsView.swift; sourceTree = "<group>"; };
-		7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsReducer.swift; sourceTree = "<group>"; };
-		7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsFeedback.swift; sourceTree = "<group>"; };
-		7464BA6923BE27D300ACA419 /* PlanetsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsState.swift; sourceTree = "<group>"; };
-		7464BA6A23BE27D300ACA419 /* PlanetsEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsEvent.swift; sourceTree = "<group>"; };
-		7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesReducer.swift; sourceTree = "<group>"; };
-		7464BA7223BE2F9900ACA419 /* PeoplesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesState.swift; sourceTree = "<group>"; };
-		7464BA7323BE2F9900ACA419 /* PeoplesEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesEvent.swift; sourceTree = "<group>"; };
-		7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplesFeedback.swift; sourceTree = "<group>"; };
-		7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsFeedback.swift; sourceTree = "<group>"; };
-		7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsState.swift; sourceTree = "<group>"; };
-		7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsReducer.swift; sourceTree = "<group>"; };
-		7464BA7C23BE2FA400ACA419 /* StarshipsEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsEvent.swift; sourceTree = "<group>"; };
+		745B731C23C421F00064B0E6 /* CombineGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineGifView.swift; sourceTree = "<group>"; };
+		746204202456528B00BBB9C4 /* TrendingFeedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingFeedbacks.swift; sourceTree = "<group>"; };
+		746204212456528B00BBB9C4 /* TrendingReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingReducer.swift; sourceTree = "<group>"; };
+		746204222456528B00BBB9C4 /* TrendingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingState.swift; sourceTree = "<group>"; };
+		746204232456528B00BBB9C4 /* TrendingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingEvent.swift; sourceTree = "<group>"; };
+		746204282456529400BBB9C4 /* TrendingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingEntity.swift; sourceTree = "<group>"; };
+		7462042A2456529A00BBB9C4 /* TrendingApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingApi.swift; sourceTree = "<group>"; };
+		7462042C245652AF00BBB9C4 /* GifApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifApi.swift; sourceTree = "<group>"; };
+		7462042E245652B600BBB9C4 /* GifEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifEntity.swift; sourceTree = "<group>"; };
+		74620430245652BF00BBB9C4 /* GifEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifEvent.swift; sourceTree = "<group>"; };
+		74620431245652BF00BBB9C4 /* GifFeedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifFeedbacks.swift; sourceTree = "<group>"; };
+		74620432245652BF00BBB9C4 /* GifReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifReducer.swift; sourceTree = "<group>"; };
+		74620433245652BF00BBB9C4 /* GifState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifState.swift; sourceTree = "<group>"; };
+		7462043824566EB900BBB9C4 /* CombineTrendingRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineTrendingRowView.swift; sourceTree = "<group>"; };
+		7462043924566EB900BBB9C4 /* CombineTrendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineTrendingView.swift; sourceTree = "<group>"; };
+		7462043C24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftTrendingRowView.swift; sourceTree = "<group>"; };
+		7462043D24566F4700BBB9C4 /* RxSwiftTrendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftTrendingView.swift; sourceTree = "<group>"; };
+		7464BA6123BE260800ACA419 /* ReactiveSwiftTrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSwiftTrendingView.swift; sourceTree = "<group>"; };
 		7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAssembly.swift; sourceTree = "<group>"; };
-		7464BA8423BE2FD200ACA419 /* PlanetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetEvent.swift; sourceTree = "<group>"; };
-		7464BA8523BE2FD200ACA419 /* PlanetState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetState.swift; sourceTree = "<group>"; };
-		7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetFeedback.swift; sourceTree = "<group>"; };
-		7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetReducer.swift; sourceTree = "<group>"; };
-		7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleFeedback.swift; sourceTree = "<group>"; };
-		7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleReducer.swift; sourceTree = "<group>"; };
-		7464BA9223BE2FEE00ACA419 /* PeopleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
-		7464BA9323BE2FEE00ACA419 /* PeopleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleEvent.swift; sourceTree = "<group>"; };
-		7464BA9A23BE302000ACA419 /* StarshipEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipEvent.swift; sourceTree = "<group>"; };
-		7464BA9B23BE302000ACA419 /* StarshipState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipState.swift; sourceTree = "<group>"; };
-		7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipFeedback.swift; sourceTree = "<group>"; };
-		7464BA9E23BE302000ACA419 /* StarshipReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipReducer.swift; sourceTree = "<group>"; };
 		7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
+		7472AE8B2458E8070094FC1B /* PlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIView.swift; sourceTree = "<group>"; };
+		7472AE8D2458E9450094FC1B /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		74B45A9A23CD17C3009191DD /* LabelAndText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndText.swift; sourceTree = "<group>"; };
 		74B45A9C23CD1BDE009191DD /* LabelAndToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndToggle.swift; sourceTree = "<group>"; };
 		74B45A9E23CE7AF8009191DD /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		74B45AA223CE7F65009191DD /* PreviewViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewBuilder.swift; sourceTree = "<group>"; };
-		74BB458923C198AA002FC67A /* PlanetsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsRowView.swift; sourceTree = "<group>"; };
-		74BB458B23C2AA86002FC67A /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
+		74BB458923C198AA002FC67A /* ReactiveSwiftTrendingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSwiftTrendingRowView.swift; sourceTree = "<group>"; };
+		74BB458B23C2AA86002FC67A /* ReactiveSwiftGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSwiftGifView.swift; sourceTree = "<group>"; };
 		74BB458D23C2BA43002FC67A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		74BB458F23C2C0FD002FC67A /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
-		74BB459123C2C119002FC67A /* PeoplesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesRowView.swift; sourceTree = "<group>"; };
+		74BB458F23C2C0FD002FC67A /* RxSwiftGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftGifView.swift; sourceTree = "<group>"; };
 		74C7C65223D14CAF00422FCE /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		74EDF15223F0BB760036EC4E /* SpinAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinAssembly.swift; sourceTree = "<group>"; };
 		74EDF15423F0BD2C0036EC4E /* ReactiveUISpin+preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveUISpin+preview.swift"; sourceTree = "<group>"; };
@@ -216,6 +186,8 @@
 				74BB458D23C2BA43002FC67A /* ActivityIndicatorView.swift */,
 				74B45A9A23CD17C3009191DD /* LabelAndText.swift */,
 				74B45A9C23CD1BDE009191DD /* LabelAndToggle.swift */,
+				7472AE8B2458E8070094FC1B /* PlayerUIView.swift */,
+				7472AE8D2458E9450094FC1B /* PlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,8 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				743BE5C923BD7CC9000BE177 /* Assemblies */,
-				743BE5E123BD7CCA000BE177 /* Apis */,
-				743BE5DA23BD7CCA000BE177 /* Entity */,
 				7464BA5D23BE249C00ACA419 /* Features */,
 				743BE5B023BD7CC9000BE177 /* Models */,
 				743BE5D623BD7CCA000BE177 /* Routes */,
@@ -271,29 +241,30 @@
 			isa = PBXGroup;
 			children = (
 				743BE5B423BD7CC9000BE177 /* Domain */,
-				743BE5B123BD7CC9000BE177 /* Request */,
+				743BE5B123BD7CC9000BE177 /* Network */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		743BE5B123BD7CC9000BE177 /* Request */ = {
+		743BE5B123BD7CC9000BE177 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				743BE5B223BD7CC9000BE177 /* ListResponse.swift */,
-				743BE5B323BD7CC9000BE177 /* ListRequest.swift */,
+				742B0375244E73F40079ACC7 /* GetByIdRequest.swift */,
+				742B0376244E73F40079ACC7 /* GetByIdResponse.swift */,
+				742B0377244E73F40079ACC7 /* TrendingRequest.swift */,
+				742B0378244E73F40079ACC7 /* TrendingResponse.swift */,
 			);
-			path = Request;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		743BE5B423BD7CC9000BE177 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				743BE5B823BD7CC9000BE177 /* Planet.swift */,
-				743BE5BA23BD7CC9000BE177 /* People.swift */,
-				743BE5B923BD7CC9000BE177 /* Starship.swift */,
-				743BE5B523BD7CC9000BE177 /* Specie.swift */,
-				743BE5B623BD7CC9000BE177 /* Vehicle.swift */,
-				743BE5B723BD7CC9000BE177 /* Film.swift */,
+				742B0381244E74070079ACC7 /* GifDetail.swift */,
+				742B037E244E74070079ACC7 /* GifOverview.swift */,
+				742B037D244E74070079ACC7 /* Images.swift */,
+				742B037F244E74070079ACC7 /* Meta.swift */,
+				742B0380244E74070079ACC7 /* Pagination.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -384,26 +355,6 @@
 			path = Routes;
 			sourceTree = "<group>";
 		};
-		743BE5DA23BD7CCA000BE177 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				743BE5DC23BD7CCA000BE177 /* PlanetsEntity.swift */,
-				743BE5DF23BD7CCA000BE177 /* PeoplesEntity.swift */,
-				743BE5E023BD7CCA000BE177 /* StarshipsEntity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		743BE5E123BD7CCA000BE177 /* Apis */ = {
-			isa = PBXGroup;
-			children = (
-				743BE5E323BD7CCA000BE177 /* PlanetsApi.swift */,
-				743BE5E423BD7CCA000BE177 /* PeoplesApi.swift */,
-				743BE5E223BD7CCA000BE177 /* StarshipsApi.swift */,
-			);
-			path = Apis;
-			sourceTree = "<group>";
-		};
 		744428B724451E8C002A6075 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,92 +362,160 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		74620410245651DA00BBB9C4 /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				74620412245651F500BBB9C4 /* View */,
+				74620413245651FB00BBB9C4 /* Spin */,
+				746204142456520000BBB9C4 /* Entity */,
+				746204152456520800BBB9C4 /* Api */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		74620411245651E000BBB9C4 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				746204192456522000BBB9C4 /* View */,
+				746204182456521D00BBB9C4 /* Spin */,
+				746204172456521800BBB9C4 /* Entity */,
+				746204162456521200BBB9C4 /* Api */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		74620412245651F500BBB9C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7462041C2456523200BBB9C4 /* ReactiveSwift */,
+				7462041B2456522E00BBB9C4 /* Combine */,
+				7462041A2456522A00BBB9C4 /* RxSwift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74620413245651FB00BBB9C4 /* Spin */ = {
+			isa = PBXGroup;
+			children = (
+				746204232456528B00BBB9C4 /* TrendingEvent.swift */,
+				746204202456528B00BBB9C4 /* TrendingFeedbacks.swift */,
+				746204212456528B00BBB9C4 /* TrendingReducer.swift */,
+				746204222456528B00BBB9C4 /* TrendingState.swift */,
+			);
+			path = Spin;
+			sourceTree = "<group>";
+		};
+		746204142456520000BBB9C4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				746204282456529400BBB9C4 /* TrendingEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		746204152456520800BBB9C4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7462042A2456529A00BBB9C4 /* TrendingApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		746204162456521200BBB9C4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7462042C245652AF00BBB9C4 /* GifApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		746204172456521800BBB9C4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7462042E245652B600BBB9C4 /* GifEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		746204182456521D00BBB9C4 /* Spin */ = {
+			isa = PBXGroup;
+			children = (
+				74620430245652BF00BBB9C4 /* GifEvent.swift */,
+				74620431245652BF00BBB9C4 /* GifFeedbacks.swift */,
+				74620432245652BF00BBB9C4 /* GifReducer.swift */,
+				74620433245652BF00BBB9C4 /* GifState.swift */,
+			);
+			path = Spin;
+			sourceTree = "<group>";
+		};
+		746204192456522000BBB9C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7462041E2456524000BBB9C4 /* ReactiveSwift */,
+				7462041F2456526100BBB9C4 /* Combine */,
+				7462041D2456523C00BBB9C4 /* RxSwift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7462041A2456522A00BBB9C4 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7462043D24566F4700BBB9C4 /* RxSwiftTrendingView.swift */,
+				7462043C24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		7462041B2456522E00BBB9C4 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				7462043924566EB900BBB9C4 /* CombineTrendingView.swift */,
+				7462043824566EB900BBB9C4 /* CombineTrendingRowView.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		7462041C2456523200BBB9C4 /* ReactiveSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7464BA6123BE260800ACA419 /* ReactiveSwiftTrendingView.swift */,
+				74BB458923C198AA002FC67A /* ReactiveSwiftTrendingRowView.swift */,
+			);
+			path = ReactiveSwift;
+			sourceTree = "<group>";
+		};
+		7462041D2456523C00BBB9C4 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				74BB458F23C2C0FD002FC67A /* RxSwiftGifView.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		7462041E2456524000BBB9C4 /* ReactiveSwift */ = {
+			isa = PBXGroup;
+			children = (
+				74BB458B23C2AA86002FC67A /* ReactiveSwiftGifView.swift */,
+			);
+			path = ReactiveSwift;
+			sourceTree = "<group>";
+		};
+		7462041F2456526100BBB9C4 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				745B731C23C421F00064B0E6 /* CombineGifView.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		7464BA5D23BE249C00ACA419 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				7464BA5E23BE25D400ACA419 /* Planets */,
-				7464BA8323BE2FBD00ACA419 /* Planet */,
-				7464BA5F23BE25DF00ACA419 /* Peoples */,
-				7464BA8E23BE2FDD00ACA419 /* People */,
-				7464BA6023BE25E600ACA419 /* Starships */,
-				7464BA9923BE300100ACA419 /* Starship */,
+				74620410245651DA00BBB9C4 /* Trending */,
+				74620411245651E000BBB9C4 /* Gif */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		7464BA5E23BE25D400ACA419 /* Planets */ = {
-			isa = PBXGroup;
-			children = (
-				7464BA6123BE260800ACA419 /* PlanetsView.swift */,
-				74BB458923C198AA002FC67A /* PlanetsRowView.swift */,
-				7464BA6823BE27D300ACA419 /* PlanetsFeedback.swift */,
-				7464BA6A23BE27D300ACA419 /* PlanetsEvent.swift */,
-				7464BA6723BE27D300ACA419 /* PlanetsReducer.swift */,
-				7464BA6923BE27D300ACA419 /* PlanetsState.swift */,
-			);
-			path = Planets;
-			sourceTree = "<group>";
-		};
-		7464BA5F23BE25DF00ACA419 /* Peoples */ = {
-			isa = PBXGroup;
-			children = (
-				7464BA6323BE261500ACA419 /* PeoplesView.swift */,
-				74BB459123C2C119002FC67A /* PeoplesRowView.swift */,
-				7464BA7423BE2F9900ACA419 /* PeoplesFeedback.swift */,
-				7464BA7323BE2F9900ACA419 /* PeoplesEvent.swift */,
-				7464BA7123BE2F9900ACA419 /* PeoplesReducer.swift */,
-				7464BA7223BE2F9900ACA419 /* PeoplesState.swift */,
-			);
-			path = Peoples;
-			sourceTree = "<group>";
-		};
-		7464BA6023BE25E600ACA419 /* Starships */ = {
-			isa = PBXGroup;
-			children = (
-				7464BA6523BE262B00ACA419 /* StarshipsView.swift */,
-				745B731E23C422690064B0E6 /* StarshipsRowView.swift */,
-				7464BA7923BE2FA400ACA419 /* StarshipsFeedback.swift */,
-				7464BA7C23BE2FA400ACA419 /* StarshipsEvent.swift */,
-				7464BA7B23BE2FA400ACA419 /* StarshipsReducer.swift */,
-				7464BA7A23BE2FA400ACA419 /* StarshipsState.swift */,
-			);
-			path = Starships;
-			sourceTree = "<group>";
-		};
-		7464BA8323BE2FBD00ACA419 /* Planet */ = {
-			isa = PBXGroup;
-			children = (
-				74BB458B23C2AA86002FC67A /* PlanetView.swift */,
-				7464BA8723BE2FD200ACA419 /* PlanetFeedback.swift */,
-				7464BA8423BE2FD200ACA419 /* PlanetEvent.swift */,
-				7464BA8823BE2FD200ACA419 /* PlanetReducer.swift */,
-				7464BA8523BE2FD200ACA419 /* PlanetState.swift */,
-			);
-			path = Planet;
-			sourceTree = "<group>";
-		};
-		7464BA8E23BE2FDD00ACA419 /* People */ = {
-			isa = PBXGroup;
-			children = (
-				74BB458F23C2C0FD002FC67A /* PeopleView.swift */,
-				7464BA8F23BE2FEE00ACA419 /* PeopleFeedback.swift */,
-				7464BA9323BE2FEE00ACA419 /* PeopleEvent.swift */,
-				7464BA9023BE2FEE00ACA419 /* PeopleReducer.swift */,
-				7464BA9223BE2FEE00ACA419 /* PeopleState.swift */,
-			);
-			path = People;
-			sourceTree = "<group>";
-		};
-		7464BA9923BE300100ACA419 /* Starship */ = {
-			isa = PBXGroup;
-			children = (
-				745B731C23C421F00064B0E6 /* StarshipView.swift */,
-				7464BA9D23BE302000ACA419 /* StarshipFeedback.swift */,
-				7464BA9A23BE302000ACA419 /* StarshipEvent.swift */,
-				7464BA9E23BE302000ACA419 /* StarshipReducer.swift */,
-				7464BA9B23BE302000ACA419 /* StarshipState.swift */,
-			);
-			path = Starship;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,84 +608,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7464BA6623BE262B00ACA419 /* StarshipsView.swift in Sources */,
-				74BB458A23C198AA002FC67A /* PlanetsRowView.swift in Sources */,
+				7462042B2456529A00BBB9C4 /* TrendingApi.swift in Sources */,
+				74BB458A23C198AA002FC67A /* ReactiveSwiftTrendingRowView.swift in Sources */,
+				7462043A24566EB900BBB9C4 /* CombineTrendingRowView.swift in Sources */,
 				743BE5F223BD7CCA000BE177 /* Path.swift in Sources */,
-				7464BA8C23BE2FD200ACA419 /* PlanetFeedback.swift in Sources */,
-				743BE5E523BD7CCA000BE177 /* ListResponse.swift in Sources */,
-				743BE5EB23BD7CCA000BE177 /* Starship.swift in Sources */,
+				742B0386244E74070079ACC7 /* GifDetail.swift in Sources */,
 				743BE5F623BD7CCA000BE177 /* ServiceAssembly.swift in Sources */,
-				74BB459023C2C0FD002FC67A /* PeopleView.swift in Sources */,
+				74BB459023C2C0FD002FC67A /* RxSwiftGifView.swift in Sources */,
 				743BE60123BD7CCA000BE177 /* AppPolicies.swift in Sources */,
 				743BE57B23BD582D000BE177 /* AppDelegate.swift in Sources */,
-				7464BA7723BE2F9900ACA419 /* PeoplesEvent.swift in Sources */,
 				743BE57D23BD582D000BE177 /* SceneDelegate.swift in Sources */,
-				7464BA6423BE261500ACA419 /* PeoplesView.swift in Sources */,
 				74EDF15523F0BD2C0036EC4E /* ReactiveUISpin+preview.swift in Sources */,
-				7464BA9823BE2FEE00ACA419 /* PeopleEvent.swift in Sources */,
 				7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */,
-				7464BA8A23BE2FD200ACA419 /* PlanetState.swift in Sources */,
-				7464BA7F23BE2FA400ACA419 /* StarshipsReducer.swift in Sources */,
-				7464BA9423BE2FEE00ACA419 /* PeopleFeedback.swift in Sources */,
-				74BB459223C2C119002FC67A /* PeoplesRowView.swift in Sources */,
-				745B731F23C422690064B0E6 /* StarshipsRowView.swift in Sources */,
-				743BE60B23BD7CCA000BE177 /* PlanetsApi.swift in Sources */,
+				7462043E24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift in Sources */,
 				74EDF15723F0BF000036EC4E /* RxUISpin+preview.swift in Sources */,
-				743BE5EA23BD7CCA000BE177 /* Planet.swift in Sources */,
+				7462043B24566EB900BBB9C4 /* CombineTrendingView.swift in Sources */,
 				743BE5EF23BD7CCA000BE177 /* Encodable+Dictionary.swift in Sources */,
 				743BE57F23BD582D000BE177 /* AppView.swift in Sources */,
 				743BE5F123BD7CCA000BE177 /* Policy.swift in Sources */,
 				74B45A9D23CD1BDE009191DD /* LabelAndToggle.swift in Sources */,
 				7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */,
-				7464BA6223BE260800ACA419 /* PlanetsView.swift in Sources */,
+				7464BA6223BE260800ACA419 /* ReactiveSwiftTrendingView.swift in Sources */,
 				74B45A9F23CE7AF8009191DD /* ViewBuilder.swift in Sources */,
-				7464BA7D23BE2FA400ACA419 /* StarshipsFeedback.swift in Sources */,
-				7464BAA023BE302000ACA419 /* StarshipState.swift in Sources */,
-				74BB458C23C2AA86002FC67A /* PlanetView.swift in Sources */,
+				74620436245652BF00BBB9C4 /* GifReducer.swift in Sources */,
+				746204292456529400BBB9C4 /* TrendingEntity.swift in Sources */,
+				74BB458C23C2AA86002FC67A /* ReactiveSwiftGifView.swift in Sources */,
 				743BE5F523BD7CCA000BE177 /* FavoriteService.swift in Sources */,
-				7464BA8023BE2FA400ACA419 /* StarshipsEvent.swift in Sources */,
-				7464BAA323BE302000ACA419 /* StarshipReducer.swift in Sources */,
-				7464BA9523BE2FEE00ACA419 /* PeopleReducer.swift in Sources */,
-				7464BA9723BE2FEE00ACA419 /* PeopleState.swift in Sources */,
-				7464BA6B23BE27D300ACA419 /* PlanetsReducer.swift in Sources */,
-				743BE60C23BD7CCA000BE177 /* PeoplesApi.swift in Sources */,
+				7462042D245652AF00BBB9C4 /* GifApi.swift in Sources */,
+				7462043F24566F4700BBB9C4 /* RxSwiftTrendingView.swift in Sources */,
 				743BE5F323BD7CCA000BE177 /* Route.swift in Sources */,
-				7464BA7823BE2F9900ACA419 /* PeoplesFeedback.swift in Sources */,
 				74BB458E23C2BA43002FC67A /* ActivityIndicatorView.swift in Sources */,
-				743BE60A23BD7CCA000BE177 /* StarshipsApi.swift in Sources */,
-				7464BA9F23BE302000ACA419 /* StarshipEvent.swift in Sources */,
+				74620437245652BF00BBB9C4 /* GifState.swift in Sources */,
+				742B037A244E73F40079ACC7 /* GetByIdResponse.swift in Sources */,
 				743BE60023BD7CCA000BE177 /* String+URLComponents.swift in Sources */,
+				746204242456528B00BBB9C4 /* TrendingFeedbacks.swift in Sources */,
+				742B0385244E74070079ACC7 /* Pagination.swift in Sources */,
+				7472AE8C2458E8070094FC1B /* PlayerUIView.swift in Sources */,
 				74C7C65323D14CAF00422FCE /* LazyView.swift in Sources */,
-				7464BA6E23BE27D300ACA419 /* PlanetsEvent.swift in Sources */,
-				7464BA6C23BE27D300ACA419 /* PlanetsFeedback.swift in Sources */,
 				743BE5FB23BD7CCA000BE177 /* EntityAssembly.swift in Sources */,
-				743BE5E823BD7CCA000BE177 /* Vehicle.swift in Sources */,
+				742B0382244E74070079ACC7 /* Images.swift in Sources */,
+				742B037B244E73F40079ACC7 /* TrendingRequest.swift in Sources */,
 				74B45A9B23CD17C3009191DD /* LabelAndText.swift in Sources */,
-				743BE60823BD7CCA000BE177 /* PeoplesEntity.swift in Sources */,
-				7464BA8D23BE2FD200ACA419 /* PlanetReducer.swift in Sources */,
-				7464BA7E23BE2FA400ACA419 /* StarshipsState.swift in Sources */,
-				743BE5EC23BD7CCA000BE177 /* People.swift in Sources */,
 				74EDF15323F0BB760036EC4E /* SpinAssembly.swift in Sources */,
 				7404A04923DD0B83000B75DD /* Partial.swift in Sources */,
 				743BE60323BD7CCA000BE177 /* AppEndpoints.swift in Sources */,
 				743BE5F423BD7CCA000BE177 /* Endpoint.swift in Sources */,
-				7464BA7523BE2F9900ACA419 /* PeoplesReducer.swift in Sources */,
-				743BE60923BD7CCA000BE177 /* StarshipsEntity.swift in Sources */,
-				7464BAA223BE302000ACA419 /* StarshipFeedback.swift in Sources */,
-				743BE5E923BD7CCA000BE177 /* Film.swift in Sources */,
-				743BE5E723BD7CCA000BE177 /* Specie.swift in Sources */,
+				742B0379244E73F40079ACC7 /* GetByIdRequest.swift in Sources */,
+				742B0384244E74070079ACC7 /* Meta.swift in Sources */,
+				746204252456528B00BBB9C4 /* TrendingReducer.swift in Sources */,
+				74620434245652BF00BBB9C4 /* GifEvent.swift in Sources */,
+				746204262456528B00BBB9C4 /* TrendingState.swift in Sources */,
 				743BE5F823BD7CCA000BE177 /* ApisAssembly.swift in Sources */,
-				7464BA6D23BE27D300ACA419 /* PlanetsState.swift in Sources */,
+				7472AE8E2458E9450094FC1B /* PlayerView.swift in Sources */,
+				7462042F245652B600BBB9C4 /* GifEntity.swift in Sources */,
 				743BE5F023BD7CCA000BE177 /* Route+URLRequestConvertible.swift in Sources */,
 				743BE5ED23BD7CCA000BE177 /* NetworkService.swift in Sources */,
-				745B731D23C421F00064B0E6 /* StarshipView.swift in Sources */,
+				745B731D23C421F00064B0E6 /* CombineGifView.swift in Sources */,
 				743BE5EE23BD7CCA000BE177 /* ReactiveNetworkService.swift in Sources */,
-				7464BA8923BE2FD200ACA419 /* PlanetEvent.swift in Sources */,
-				7464BA7623BE2F9900ACA419 /* PeoplesState.swift in Sources */,
+				74620435245652BF00BBB9C4 /* GifFeedbacks.swift in Sources */,
+				742B0383244E74070079ACC7 /* GifOverview.swift in Sources */,
 				743BE60223BD7CCA000BE177 /* AppPaths.swift in Sources */,
 				74B45AA323CE7F65009191DD /* PreviewViewBuilder.swift in Sources */,
-				743BE5E623BD7CCA000BE177 /* ListRequest.swift in Sources */,
-				743BE60523BD7CCA000BE177 /* PlanetsEntity.swift in Sources */,
+				746204272456528B00BBB9C4 /* TrendingEvent.swift in Sources */,
+				742B037C244E73F40079ACC7 /* TrendingResponse.swift in Sources */,
 				74EDF15923F0BF370036EC4E /* CombineUISpin+preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,7 +872,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.16.0;
+				minimumVersion = 0.16.1;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {

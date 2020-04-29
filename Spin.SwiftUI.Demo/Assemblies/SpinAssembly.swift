@@ -7,6 +7,7 @@
 //
 
 import Dispatch
+import Foundation
 import ReactiveSwift
 import RxSwift
 import SpinCommon
@@ -17,102 +18,93 @@ import Swinject
 
 class SpinAssembly: Assembly {
     func assemble(container: Container) {
-        ////////////////////////////////////
-        // PLANETS LIST SPIN
-        ////////////////////////////////////
-        container.register(ReactiveSpin<PlanetsFeature.State, PlanetsFeature.Event>.self) { resolver
-            -> ReactiveSpin<PlanetsFeature.State, PlanetsFeature.Event> in
-            let loadFeedback = resolver.resolve(PlanetsFeedbackFunction.self)!
-            
+        // Trending Spin
+        // (ReactiveSwift implementation)
+        container.register(ReactiveSpin<Trending.State, Trending.Event>.self) { resolver -> ReactiveSpin<Trending.State, Trending.Event> in
+            let loadFeedback = resolver.resolve(TrendingReactiveSwiftFeedback.self)!
+
             // build Spin with a Builder pattern
             return
                 Spinner
                     .initialState(.idle)
                     .feedback(ReactiveFeedback(effect: loadFeedback, on: QueueScheduler()))
-                    .reducer(ReactiveReducer(PlanetsFeature.reducer))
+                    .reducer(ReactiveReducer(Trending.reducer))
         }
-        
-        ////////////////////////////////////
-        // PEOPLES LIST SPIN
-        ////////////////////////////////////
-        container.register(RxSpin<PeoplesFeature.State, PeoplesFeature.Event>.self) { resolver
-            -> RxSpin<PeoplesFeature.State, PeoplesFeature.Event> in
-            let loadFeedback = resolver.resolve(PeoplesFeedbackFunction.self)!
-            
-            // build Spin with a Builder pattern
-            return
-                Spinner
-                    .initialState(.idle)
-                    .feedback(RxFeedback(effect: loadFeedback, on: SerialDispatchQueueScheduler(qos: .userInitiated)))
-                    .reducer(RxReducer(PeoplesFeature.reducer))
-        }
-        
-        ////////////////////////////////////
-        // STARSHIPS LIST SPIN
-        ////////////////////////////////////
-        container.register(CombineSpin<StarshipsFeature.State, StarshipsFeature.Event>.self) { resolver
-            -> CombineSpin<StarshipsFeature.State, StarshipsFeature.Event> in
-            let loadFeedback = resolver.resolve(StarshipsFeedbackFunction.self)!
-            
+
+        // Trending Spin
+        // (Combine implementation)
+        container.register(CombineSpin<Trending.State, Trending.Event>.self) { resolver -> CombineSpin<Trending.State, Trending.Event> in
+            let loadFeedback = resolver.resolve(TrendingCombineFeedback.self)!
+
             // build Spin with a Builder pattern
             return
                 Spinner
                     .initialState(.idle)
                     .feedback(CombineFeedback(effect: loadFeedback, on: DispatchQueue(label: "background").eraseToAnyScheduler()))
-                    .reducer(CombineReducer(StarshipsFeature.reducer))
+                    .reducer(CombineReducer(Trending.reducer))
         }
-        
-        ////////////////////////////////////
-        // PLANET DETAIL SPIN
-        ////////////////////////////////////
-        container.register(ReactiveSpin<PlanetFeature.State, PlanetFeature.Event>.self) { (resolver, planet: Planet)
-            -> ReactiveSpin<PlanetFeature.State, PlanetFeature.Event> in
-            let loadFavoriteFeedback = resolver.resolve(PlanetLoadFavoriteFeedbackFunction.self, name: "PlanetLoadFavoriteFeedbackFunction")!
-            let persistFavoriteFeedback = resolver.resolve(PlanetPersistFavoriteFeedbackFunction.self, name: "PlanetPersistFavoriteFeedbackFunction")!
-            
+
+        // Trending Spin
+        // (RxSwift implementation)
+        container.register(RxSpin<Trending.State, Trending.Event>.self) { resolver -> RxSpin<Trending.State, Trending.Event> in
+            let loadFeedback = resolver.resolve(TrendingRxSwiftFeedback.self)!
+
+            // build Spin with a Builder pattern
+            return
+                Spinner
+                    .initialState(.idle)
+                    .feedback(RxFeedback(effect: loadFeedback, on: SerialDispatchQueueScheduler(qos: .userInitiated)))
+                    .reducer(RxReducer(Trending.reducer))
+        }
+
+        // Gif Spin
+        // (ReactiveSwift implementation)
+        container.register(ReactiveSpin<Gif.State, Gif.Event>.self) { (resolver, gifId: String)
+            -> ReactiveSpin<Gif.State, Gif.Event> in
+            let loadGifFeedback = resolver.resolve(LoadGifReactiveSwiftFeedback.self, name: "ReactiveSwiftLoadFeedback")!
+            let persistFavoriteFeedback = resolver.resolve(SetFavoriteReactiveSwiftFeedback.self, name: "ReactiveSwiftPersistFeedback")!
+
             // build Spin with a declarative "SwiftUI" pattern
             return
-                ReactiveSpin(initialState: .loading(planet: planet), reducer: ReactiveReducer(PlanetFeature.reducer)) {
-                    ReactiveFeedback(effect: loadFavoriteFeedback)
+                ReactiveSpin(initialState: .loading(id: gifId), reducer: ReactiveReducer(Gif.reducer)) {
+                    ReactiveFeedback(effect: loadGifFeedback)
                         .execute(on: QueueScheduler())
                     ReactiveFeedback(effect: persistFavoriteFeedback)
                         .execute(on: QueueScheduler())
             }
         }
-        
-        ////////////////////////////////////
-        // PEOPLE DETAIL SPIN
-        ////////////////////////////////////
-        container.register(RxSpin<PeopleFeature.State, PeopleFeature.Event>.self) { (resolver, people: People)
-            -> RxSpin<PeopleFeature.State, PeopleFeature.Event> in
-            let loadFavoriteFeedback = resolver.resolve(PeopleLoadFavoriteFeedbackFunction.self, name: "PeopleLoadFavoriteFeedbackFunction")!
-            let persistFavoriteFeedback = resolver.resolve(PeoplePersistFavoriteFeedbackFunction.self, name: "PeoplePersistFavoriteFeedbackFunction")!
-            
+
+        // Gif Spin
+        // (Combine implementation)
+        container.register(CombineSpin<Gif.State, Gif.Event>.self) { (resolver, gifId: String)
+            -> CombineSpin<Gif.State, Gif.Event> in
+            let loadGifFeedback = resolver.resolve(LoadGifCombineFeedback.self, name: "CombineLoadFeedback")!
+            let persistFavoriteFeedback = resolver.resolve(SetFavoriteCombineFeedback.self, name: "CombinePersistFeedback")!
+
             // build Spin with a declarative "SwiftUI" pattern
             return
-                RxSpin(initialState: .loading(people: people), reducer: RxReducer(PeopleFeature.reducer)) {
-                    RxFeedback(effect: loadFavoriteFeedback)
+                CombineSpin(initialState: .loading(id: gifId), reducer: CombineReducer(Gif.reducer)) {
+                    CombineFeedback(effect: loadGifFeedback)
+                        .execute(on: DispatchQueue(label: "\(UUID())", qos: .userInitiated).eraseToAnyScheduler())
+                    CombineFeedback(effect: persistFavoriteFeedback)
+                        .execute(on: DispatchQueue(label: "\(UUID())", qos: .userInitiated).eraseToAnyScheduler())
+            }
+        }
+
+        // Gif Spin
+        // (RxSwift implementation)
+        container.register(RxSpin<Gif.State, Gif.Event>.self) { (resolver, gifId: String)
+            -> RxSpin<Gif.State, Gif.Event> in
+            let loadGifFeedback = resolver.resolve(LoadGifRxSwiftFeedback.self, name: "RxSwiftLoadFeedback")!
+            let persistFavoriteFeedback = resolver.resolve(SetFavoriteRxSwiftFeedback.self, name: "RxSwiftPersistFeedback")!
+
+            // build Spin with a declarative "SwiftUI" pattern
+            return
+                RxSpin(initialState: .loading(id: gifId), reducer: RxReducer(Gif.reducer)) {
+                    RxFeedback(effect: loadGifFeedback)
                         .execute(on: SerialDispatchQueueScheduler(qos: .userInitiated))
                     RxFeedback(effect: persistFavoriteFeedback)
                         .execute(on: SerialDispatchQueueScheduler(qos: .userInitiated))
-            }
-        }
-        
-        ////////////////////////////////////
-        // STARSHIP DETAIL SPIN
-        ////////////////////////////////////
-        container.register(CombineSpin<StarshipFeature.State, StarshipFeature.Event>.self) { (resolver, starship: Starship)
-            -> CombineSpin<StarshipFeature.State, StarshipFeature.Event> in
-            let loadFavoriteFeedback = resolver.resolve(StarshipLoadFavoriteFeedbackFunction.self, name: "StarshipLoadFavoriteFeedbackFunction")!
-            let persistFavoriteFeedback = resolver.resolve(StarshipPersistFavoriteFeedbackFunction.self, name: "StarshipPersistFavoriteFeedbackFunction")!
-            
-            // build Spin with a declarative "SwiftUI" pattern
-            return
-                CombineSpin(initialState: .loading(starship: starship), reducer: CombineReducer(StarshipFeature.reducer)) {
-                    CombineFeedback(effect: loadFavoriteFeedback)
-                        .execute(on: DispatchQueue(label: "background").eraseToAnyScheduler())
-                    CombineFeedback(effect: persistFavoriteFeedback)
-                        .execute(on: DispatchQueue(label: "background").eraseToAnyScheduler())
             }
         }
     }

@@ -19,24 +19,24 @@ struct AppView: View {
     var body: some View {
         TabView {
             viewBuilder
-                .makePlanetsView()
+                .makeReactiveSwiftTrendingView()
                 .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Planets (Reactive)")
+                    Image(systemName: "speedometer")
+                    Text("Trending (ReactiveSwift)")
             }
 
             viewBuilder
-                .makePeoplesView()
+                .makeCombineTrendingView()
                 .tabItem {
-                    Image(systemName: "person")
-                    Text("Peoples (Rx)")
+                    Image(systemName: "speedometer")
+                    Text("Trending (Combine)")
             }
 
             viewBuilder
-                .makeStarshipsView()
+                .makeReactiveSwiftTrendingView()
                 .tabItem {
-                    Image(systemName: "airplane")
-                    Text("Starships (Combine)")
+                    Image(systemName: "speedometer")
+                    Text("Trending (RxSwift)")
             }
         }
     }

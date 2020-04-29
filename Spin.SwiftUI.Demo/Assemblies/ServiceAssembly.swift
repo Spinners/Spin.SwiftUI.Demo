@@ -14,19 +14,19 @@ import Swinject
 final class ServiceAssembly: Assembly {
     func assemble(container: Container) {
         container.register(FavoriteService.self, factory: { _ in
-            FavoriteService()
-        }).inObjectScope(.container)
+            return FavoriteService()
+        }).inObjectScope(.transient)
 
         container.register(NetworkService.self) { _ in
-            ReactiveNetworkService()
+            return ReactiveNetworkService()
         }
 
         container.register(String.self, name: "baseURL") { _  in
-            "swapi.co"
+            return "api.giphy.com"
         }
 
-        container.register(AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions>.self) { _ -> AnyScheduler<DispatchQueue.SchedulerTimeType, DispatchQueue.SchedulerOptions> in
-            return DispatchQueue(label: "feedback_queue_\(UUID().uuidString)", qos: .userInteractive).eraseToAnyScheduler()
+        container.register(String.self, name: "apiKey") { _  in
+            return "f4HXQOslkXuDXgFlZQATpWXc8FtjhuUR"
         }
     }
 }

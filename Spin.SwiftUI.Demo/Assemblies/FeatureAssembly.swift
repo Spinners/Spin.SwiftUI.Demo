@@ -7,71 +7,74 @@
 //
 
 import Combine
+import Dispatch
 import ReactiveSwift
 import RxSwift
 import SpinCombine
 import SpinReactiveSwift
 import SpinRxSwift
-import SpinCommon
 import SwiftUI
 import Swinject
 
 final class FeatureAssembly: Assembly {
     func assemble(container: Container) {
-        ////////////////////////////////////
-        // PLANETS LIST SPIN
-        ////////////////////////////////////
-        container.register(PlanetsView.self) { resolver -> PlanetsView in
-            let planetsSpin = resolver.resolve(ReactiveSpin<PlanetsFeature.State, PlanetsFeature.Event>.self)!
-            let planetsUISpin = ReactiveSwiftUISpin(spin: planetsSpin)
-            let view = PlanetsView(uiSpin: planetsUISpin)
-            planetsUISpin.start()
+        // Trending Scene
+        // (ReactiveSwift impolementation)
+        container.register(ReactiveSwiftTrendingView.self) { resolver in
+            let trendingSpin = resolver.resolve(ReactiveSpin<Trending.State, Trending.Event>.self)!
+            let trendingUISpin = ReactiveSwiftUISpin(spin: trendingSpin)
+            let view = ReactiveSwiftTrendingView(uiSpin: trendingUISpin)
+            trendingUISpin.start()
             return view
         }
 
-        ////////////////////////////////////
-        // PEOPLES LIST SPIN
-        ////////////////////////////////////
-        container.register(PeoplesView.self) { resolver -> PeoplesView in
-            let peoplesSpin = resolver.resolve(RxSpin<PeoplesFeature.State, PeoplesFeature.Event>.self)!
-            let peoplesUISpin = RxSwiftUISpin(spin: peoplesSpin)
-            let view = PeoplesView(uiSpin: peoplesUISpin)
-            peoplesUISpin.start()
+        // Trending Scene
+        // (Combine impolementation)
+        container.register(CombineTrendingView.self) { resolver in
+            let trendingSpin = resolver.resolve(CombineSpin<Trending.State, Trending.Event>.self)!
+            let trendingUISpin = CombineSwiftUISpin(spin: trendingSpin)
+            let view = CombineTrendingView(uiSpin: trendingUISpin)
+            trendingUISpin.start()
             return view
         }
 
-        ////////////////////////////////////
-        // STARSHIPS LIST SPIN
-        ////////////////////////////////////
-        container.register(StarshipsView.self) { resolver -> StarshipsView in
-            let starshipsSpin = resolver.resolve(CombineSpin<StarshipsFeature.State, StarshipsFeature.Event>.self)!
-            let starshipsUISpin = CombineSwiftUISpin(spin: starshipsSpin)
-            let view = StarshipsView(uiSpin: starshipsUISpin)
-            starshipsUISpin.start()
+        // Trending Scene
+        // (RxSwift impolementation)
+        container.register(RxSwiftTrendingView.self) { resolver in
+            let trendingSpin = resolver.resolve(RxSpin<Trending.State, Trending.Event>.self)!
+            let trendingUISpin = RxSwiftUISpin(spin: trendingSpin)
+            let view = RxSwiftTrendingView(uiSpin: trendingUISpin)
+            trendingUISpin.start()
             return view
         }
 
-        container.register(PlanetView.self) { (resolver, planet: Planet) -> PlanetView in
-            let planetSpin = resolver.resolve(ReactiveSpin<PlanetFeature.State, PlanetFeature.Event>.self, argument: planet)!
-            let planetUISpin = ReactiveSwiftUISpin(spin: planetSpin)
-            let view = PlanetView(uiSpin: planetUISpin)
-            planetUISpin.start()
+        // Gif Scene
+        // (ReactiveSwift implementation)
+        container.register(ReactiveSwiftGifView.self) { (resolver, gifId: String) in
+            let gifSpin = resolver.resolve(ReactiveSpin<Gif.State, Gif.Event>.self, argument: gifId)!
+            let gifSpinUISpin = ReactiveSwiftUISpin(spin: gifSpin)
+            let view = ReactiveSwiftGifView(uiSpin: gifSpinUISpin)
+            gifSpinUISpin.start()
             return view
         }
 
-        container.register(PeopleView.self) { (resolver, people: People) -> PeopleView in
-            let peopleSpin = resolver.resolve(RxSpin<PeopleFeature.State, PeopleFeature.Event>.self, argument: people)!
-            let peopleUISpin = RxSwiftUISpin(spin: peopleSpin)
-            let view = PeopleView(uiSpin: peopleUISpin)
-            peopleUISpin.start()
+        // Gif Scene
+        // (Combine implementation)
+        container.register(CombineGifView.self) { (resolver, gifId: String) in
+            let gifSpin = resolver.resolve(CombineSpin<Gif.State, Gif.Event>.self, argument: gifId)!
+            let gifSpinUISpin = CombineSwiftUISpin(spin: gifSpin)
+            let view = CombineGifView(uiSpin: gifSpinUISpin)
+            gifSpinUISpin.start()
             return view
         }
 
-        container.register(StarshipView.self) { (resolver, starship: Starship) -> StarshipView in
-            let starshipSpin = resolver.resolve(CombineSpin<StarshipFeature.State, StarshipFeature.Event>.self, argument: starship)!
-            let starshipUISpin = CombineSwiftUISpin(spin: starshipSpin)
-            let view = StarshipView(uiSpin: starshipUISpin)
-            starshipUISpin.start()
+        // Gif Scene
+        // (RxSwift implementation)
+        container.register(RxSwiftGifView.self) { (resolver, gifId: String) in
+            let gifSpin = resolver.resolve(RxSpin<Gif.State, Gif.Event>.self, argument: gifId)!
+            let gifSpinUISpin = RxSwiftUISpin(spin: gifSpin)
+            let view = RxSwiftGifView(uiSpin: gifSpinUISpin)
+            gifSpinUISpin.start()
             return view
         }
     }
