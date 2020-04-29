@@ -17,33 +17,33 @@ class ViewBuilder: ObservableObject {
         self.resolver = resolver
     }
 
-    func makePlanetsView() -> PlanetsView {
-        let planetsView = self.resolver.resolve(PlanetsView.self)!
-        return planetsView
+    func makeReactiveSwiftTrendingView() -> ReactiveSwiftTrendingView {
+        let view = self.resolver.resolve(ReactiveSwiftTrendingView.self)!
+        return view
     }
 
-    func makePeoplesView() -> PeoplesView {
-        let peoplesView = self.resolver.resolve(PeoplesView.self)!
-        return peoplesView
+    func makeCombineTrendingView() -> CombineTrendingView {
+        let view = self.resolver.resolve(CombineTrendingView.self)!
+        return view
     }
 
-    func makeStarshipsView() -> StarshipsView {
-        let starshipsView = self.resolver.resolve(StarshipsView.self)!
-        return starshipsView
+    func makeRxSwiftTrendingView() -> RxSwiftTrendingView {
+        let view = self.resolver.resolve(RxSwiftTrendingView.self)!
+        return view
     }
 
-    func makePlanetView(with planet: Planet) -> LazyView<PlanetView> {
-        let planetView = LazyView(self.resolver.resolve(PlanetView.self, argument: planet)!)
-        return planetView
+    func makeReactiveSwiftGifView(with gifId: String) -> LazyView<ReactiveSwiftGifView> {
+        let view = LazyView(self.resolver.resolve(ReactiveSwiftGifView.self, argument: gifId)!)
+        return view
     }
 
-    func makePeopleView(with people: People) -> LazyView<PeopleView> {
-        let peopleView = LazyView(self.resolver.resolve(PeopleView.self, argument: people)!)
-        return peopleView
+    func makeCombineGifView(with gifId: String) -> LazyView<CombineGifView> {
+        let view = LazyView(self.resolver.resolve(CombineGifView.self, argument: gifId)!)
+        return view
     }
 
-    func makeStarshipView(with starship: Starship) -> LazyView<StarshipView> {
-        let starshipView = LazyView(self.resolver.resolve(StarshipView.self, argument: starship)!)
-        return starshipView
+    func makeRxSwiftGifView(with gifId: String) -> LazyView<RxSwiftGifView> {
+        let view = LazyView(self.resolver.resolve(RxSwiftGifView.self, argument: gifId)!)
+        return view
     }
 }

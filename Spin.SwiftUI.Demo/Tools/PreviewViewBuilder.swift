@@ -11,30 +11,31 @@ import SpinReactiveSwift
 import SpinRxSwift
 
 class PreviewViewBuilder: ViewBuilder {
-    override func makePlanetsView() -> PlanetsView {
-        return PlanetsView(uiSpin: ReactiveSwiftUISpin.makeWith(initialState: .idle))
+
+    override func makeReactiveSwiftTrendingView() -> ReactiveSwiftTrendingView {
+        return ReactiveSwiftTrendingView(uiSpin: ReactiveSwiftUISpin.makeWith(initialState: .idle))
     }
 
-    override func makePeoplesView() -> PeoplesView {
-        return PeoplesView(uiSpin: RxSwiftUISpin.makeWith(initialState: .idle))
+    override func makeCombineTrendingView() -> CombineTrendingView {
+        return CombineTrendingView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .idle))
     }
 
-    override func makeStarshipsView() -> StarshipsView {
-        return StarshipsView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .idle))
+    override func makeRxSwiftTrendingView() -> RxSwiftTrendingView {
+        return RxSwiftTrendingView(uiSpin: RxSwiftUISpin.makeWith(initialState: .idle))
     }
 
-    override func makePlanetView(with planet: Planet) -> LazyView<PlanetView> {
-        let content = PlanetView(uiSpin: ReactiveSwiftUISpin.makeWith(initialState: .loading(planet: planet)))
+    override func makeReactiveSwiftGifView(with gifId: String) -> LazyView<ReactiveSwiftGifView> {
+        let content = ReactiveSwiftGifView(uiSpin: ReactiveSwiftUISpin.makeWith(initialState: .loading(id: gifId)))
         return LazyView(content)
     }
 
-    override func makePeopleView(with people: People) -> LazyView<PeopleView> {
-        let content = PeopleView(uiSpin: RxSwiftUISpin.makeWith(initialState: .loading(people: people)))
+    override func makeCombineGifView(with gifId: String) -> LazyView<CombineGifView> {
+        let content = CombineGifView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .loading(id: gifId)))
         return LazyView(content)
     }
 
-    override func makeStarshipView(with starship: Starship) -> LazyView<StarshipView> {
-        let content = StarshipView(uiSpin: CombineSwiftUISpin.makeWith(initialState: .loading(starship: starship)))
+        override func makeRxSwiftGifView(with gifId: String) -> LazyView<RxSwiftGifView> {
+        let content = RxSwiftGifView(uiSpin: RxSwiftUISpin.makeWith(initialState: .loading(id: gifId)))
         return LazyView(content)
     }
 }
