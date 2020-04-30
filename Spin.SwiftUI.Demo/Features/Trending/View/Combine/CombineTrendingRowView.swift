@@ -9,14 +9,15 @@
 import SwiftUI
 
 struct CombineTrendingRowView: View {
-
+    
     let title: String
     let isFavorite: Bool
-
+    
     var body: some View {
         HStack {
             if isFavorite {
                 Image(systemName: "star.fill")
+                    .foregroundColor(.blue)
             }
             Text(title)
             Spacer()

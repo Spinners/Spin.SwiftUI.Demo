@@ -21,7 +21,8 @@ class PlayerUIView: UIView {
     }
 
     func playFromBeginning() {
-        avPlayerLayer.player = nil
+
+        guard self.avPlayerLayer.player == nil else { return }
 
         if let urlString = self.url, let url = URL(string: urlString) {
             // Create the video player using the URL passed in.
@@ -43,18 +44,10 @@ class PlayerUIView: UIView {
         }
     }
 
-    func play() {
-        self.avPlayerLayer.player?.play()
-    }
-
-    func stop() {
-        self.avPlayerLayer.player?.pause()
-    }
-
     @objc func playerDidEnd(notification: Notification) {
         if let avPlayerItem = notification.object as? AVPlayerItem {
             avPlayerItem.seek(to: startTime, completionHandler: { [weak self] _ in
-                self?.play()
+                self?.avPlayerLayer.player?.play()
             })
         }
     }

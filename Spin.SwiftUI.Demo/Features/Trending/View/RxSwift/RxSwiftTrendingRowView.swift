@@ -17,6 +17,7 @@ struct RxSwiftTrendingRowView: View {
         HStack {
             if isFavorite {
                 Image(systemName: "star.fill")
+                    .foregroundColor(.blue)
             }
             Text(title)
             Spacer()

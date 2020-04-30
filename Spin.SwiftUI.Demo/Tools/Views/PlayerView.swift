@@ -17,8 +17,6 @@ struct PlayerView: UIViewRepresentable {
         uiView.url = self.url
         if self.isPlaying {
             uiView.playFromBeginning()
-        } else {
-            uiView.stop()
         }
     }
 
