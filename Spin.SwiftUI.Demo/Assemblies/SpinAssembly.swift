@@ -66,11 +66,12 @@ class SpinAssembly: Assembly {
 
             // build Spin with a declarative "SwiftUI" pattern
             return
-                ReactiveSpin(initialState: .loading(id: gifId), reducer: ReactiveReducer(Gif.reducer)) {
+                ReactiveSpin(initialState: .loading(id: gifId)) {
                     ReactiveFeedback(effect: loadGifFeedback)
                         .execute(on: QueueScheduler())
                     ReactiveFeedback(effect: persistFavoriteFeedback)
                         .execute(on: QueueScheduler())
+                    ReactiveReducer(Gif.reducer)
             }
         }
 
@@ -83,11 +84,12 @@ class SpinAssembly: Assembly {
 
             // build Spin with a declarative "SwiftUI" pattern
             return
-                CombineSpin(initialState: .loading(id: gifId), reducer: CombineReducer(Gif.reducer)) {
+                CombineSpin(initialState: .loading(id: gifId)) {
                     CombineFeedback(effect: loadGifFeedback)
                         .execute(on: DispatchQueue(label: "\(UUID())", qos: .userInitiated).eraseToAnyScheduler())
                     CombineFeedback(effect: persistFavoriteFeedback)
                         .execute(on: DispatchQueue(label: "\(UUID())", qos: .userInitiated).eraseToAnyScheduler())
+                    CombineReducer(Gif.reducer)
             }
         }
 
@@ -100,11 +102,12 @@ class SpinAssembly: Assembly {
 
             // build Spin with a declarative "SwiftUI" pattern
             return
-                RxSpin(initialState: .loading(id: gifId), reducer: RxReducer(Gif.reducer)) {
+                RxSpin(initialState: .loading(id: gifId)) {
                     RxFeedback(effect: loadGifFeedback)
                         .execute(on: SerialDispatchQueueScheduler(qos: .userInitiated))
                     RxFeedback(effect: persistFavoriteFeedback)
                         .execute(on: SerialDispatchQueueScheduler(qos: .userInitiated))
+                    RxReducer(Gif.reducer)
             }
         }
     }

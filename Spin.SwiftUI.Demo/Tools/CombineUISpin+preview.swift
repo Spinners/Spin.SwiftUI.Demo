@@ -17,8 +17,9 @@ extension CombineSwiftUISpin {
         let reducer = CombineReducer<State, Event> { (state: State, event: Event) -> State in
             return state
         }
-        let spin = CombineSpin<State, Event>(initialState: state, reducer: reducer) {
+        let spin = CombineSpin<State, Event>(initialState: state) {
             feedback
+            reducer
         }
 
         return SwiftUISpin(spin: spin)

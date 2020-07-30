@@ -17,8 +17,9 @@ extension ReactiveSwiftUISpin {
         let reducer = ReactiveReducer<State, Event> ({ (state: State, event: Event) -> State in
             state
         })
-        let spin = ReactiveSpin<State, Event>(initialState: state, reducer: reducer) {
+        let spin = ReactiveSpin<State, Event>(initialState: state) {
             feedback
+            reducer
         }
 
         return SwiftUISpin(spin: spin)

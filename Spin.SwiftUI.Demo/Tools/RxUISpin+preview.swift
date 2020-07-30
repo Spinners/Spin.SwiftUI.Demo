@@ -17,8 +17,9 @@ extension RxSwiftUISpin {
         let reducer = RxReducer<State, Event> ({ (state: State, event: Event) -> State in
             return state
         })
-        let spin = RxSpin<State, Event>(initialState: state, reducer: reducer) {
+        let spin = RxSpin<State, Event>(initialState: state) {
             feedback
+            reducer
         }
 
         return SwiftUISpin(spin: spin)
