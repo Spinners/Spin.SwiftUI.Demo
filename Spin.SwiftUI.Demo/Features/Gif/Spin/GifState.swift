@@ -7,7 +7,7 @@
 //
 
 extension Gif {
-    enum State {
+    enum State: Equatable {
         case loading(id: String)
         case enablingFavorite(gif: GifDetail, favorite: Bool)
         case loaded(gif: GifDetail, favorite: Bool)

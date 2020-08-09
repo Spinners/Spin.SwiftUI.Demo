@@ -6,7 +6,7 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
-struct GifDetail: Decodable {
+struct GifDetail: Decodable, Equatable {
     let type: String
     let id: String
     let title: String

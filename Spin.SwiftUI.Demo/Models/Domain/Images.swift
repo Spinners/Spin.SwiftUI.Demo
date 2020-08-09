@@ -6,7 +6,7 @@
 //  Copyright © 2020 Spinners. All rights reserved.
 //
 
-struct Images: Decodable {
+struct Images: Decodable, Equatable {
     let fixedHeightData: ImageData
 
     enum CodingKeys: String, CodingKey {
@@ -14,7 +14,7 @@ struct Images: Decodable {
     }
 }
 
-struct ImageData: Decodable {
+struct ImageData: Decodable, Equatable {
     let url: String
     let mp4: String
 }

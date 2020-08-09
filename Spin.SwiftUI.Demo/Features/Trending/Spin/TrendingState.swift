@@ -7,13 +7,13 @@
 //
 
 extension Trending {
-    enum State {
+    enum State: Equatable {
         case idle
         case loading(page: Int = 0)
         case loaded(viewItems: [ViewItem], currentPage: Int, previousPage: Int, nextPage: Int, totalPage: Int)
         case failed
         
-        struct ViewItem: Identifiable {
+        struct ViewItem: Identifiable, Equatable {
             let id: String
             let title: String
             let isFavorite: Bool

@@ -50,7 +50,7 @@ extension Trending {
                                         nextPage: $0.2,
                                         totalPage: $0.3)
             }
-            .replaceError(with: Trending.Event.failLoad)
+            .catch { _ in Just<Trending.Event>(.failLoad).eraseToAnyPublisher() }
             .eraseToAnyPublisher()
         }
 
