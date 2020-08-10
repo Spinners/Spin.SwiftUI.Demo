@@ -67,7 +67,6 @@
 		7462043E24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043C24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift */; };
 		7462043F24566F4700BBB9C4 /* RxSwiftTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7462043D24566F4700BBB9C4 /* RxSwiftTrendingView.swift */; };
 		7464BA6223BE260800ACA419 /* ReactiveSwiftTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA6123BE260800ACA419 /* ReactiveSwiftTrendingView.swift */; };
-		7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */; };
 		7464BAA523BE302E00ACA419 /* FeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */; };
 		7472AE8C2458E8070094FC1B /* PlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472AE8B2458E8070094FC1B /* PlayerUIView.swift */; };
 		7472AE8E2458E9450094FC1B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472AE8D2458E9450094FC1B /* PlayerView.swift */; };
@@ -139,7 +138,6 @@
 		7462043C24566F4700BBB9C4 /* RxSwiftTrendingRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftTrendingRowView.swift; sourceTree = "<group>"; };
 		7462043D24566F4700BBB9C4 /* RxSwiftTrendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftTrendingView.swift; sourceTree = "<group>"; };
 		7464BA6123BE260800ACA419 /* ReactiveSwiftTrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSwiftTrendingView.swift; sourceTree = "<group>"; };
-		7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAssembly.swift; sourceTree = "<group>"; };
 		7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
 		7472AE8B2458E8070094FC1B /* PlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIView.swift; sourceTree = "<group>"; };
 		7472AE8D2458E9450094FC1B /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 				743BE5CA23BD7CC9000BE177 /* ServiceAssembly.swift */,
 				743BE5CC23BD7CC9000BE177 /* ApisAssembly.swift */,
 				743BE5CF23BD7CC9000BE177 /* EntityAssembly.swift */,
-				7464BA8123BE2FAD00ACA419 /* FeedbackAssembly.swift */,
 				74EDF15223F0BB760036EC4E /* SpinAssembly.swift */,
 				7464BAA423BE302E00ACA419 /* FeatureAssembly.swift */,
 			);
@@ -627,7 +624,6 @@
 				743BE57F23BD582D000BE177 /* AppView.swift in Sources */,
 				743BE5F123BD7CCA000BE177 /* Policy.swift in Sources */,
 				74B45A9D23CD1BDE009191DD /* LabelAndToggle.swift in Sources */,
-				7464BA8223BE2FAD00ACA419 /* FeedbackAssembly.swift in Sources */,
 				7464BA6223BE260800ACA419 /* ReactiveSwiftTrendingView.swift in Sources */,
 				74B45A9F23CE7AF8009191DD /* ViewBuilder.swift in Sources */,
 				74620436245652BF00BBB9C4 /* GifReducer.swift in Sources */,
@@ -872,7 +868,7 @@
 			repositoryURL = "https://github.com/Spinners/Spin.Swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.18.0;
+				minimumVersion = 0.19.0;
 			};
 		};
 		743BE59723BD786A000BE177 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
